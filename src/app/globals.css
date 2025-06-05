@@ -52,10 +52,10 @@ body {
 .gradient-hover-btn:hover {
   background: linear-gradient(
     90deg,
-    #9B303E 0%,
-    #9D3D3E 25%,
-    #9F4B3B 50%,
-    #A25B3B 75%,
+    rgba(185, 167, 138, 0.36) 0%,
+    rgba(185, 167, 138, 0.36) 25%,
+    rgba(185, 167, 138, 0.36) 50%,
+    rgba(185, 167, 138, 0.36) 75%,
     #A26B39 100%
   );
   color: #fff;

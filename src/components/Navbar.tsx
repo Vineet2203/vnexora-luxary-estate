@@ -14,7 +14,7 @@ return (
     <nav
         className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl border-b border-white/10"
         style={{
-            background: 'linear-gradient(0deg, rgb(223, 219, 219) 0%, rgba(90, 52, 16, 0.82) 100%)',
+            background: 'linear-gradient(90deg,rgba(185, 167, 138, 0.36) 0%,rgba(193, 176, 148, 0.36) 50%,rgba(135, 109, 72, 0.15) 75%,rgb(162, 109, 59))',
             WebkitBackdropFilter: 'blur(16px)',
             backdropFilter: 'blur(16px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
@@ -25,7 +25,6 @@ return (
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-white/40 blur-sm" />
       </div>
-
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between relative z-10">
         {/* Logo */}
         <Link href="/">
@@ -80,3 +79,5 @@ return (
 };
 
 export default Navbar;
+
+//'linear-gradient(0deg, rgba(242, 212, 186 ) 0%,rgba(119, 79, 41, 0.25) 25%, rgba(90, 52, 16,0.5) 50%, rgba(90, 52, 16, 0.9) 100%)',
