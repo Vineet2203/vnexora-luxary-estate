@@ -10,18 +10,18 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  return (
+return (
     <nav
-      className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl bg-white/10 border-b border-white/10"
-      style={{
-        background: 'rgba(255, 255, 255, 0.05)',
-        WebkitBackdropFilter: 'blur(16px)',
-        backdropFilter: 'blur(16px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
-      }}
+        className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl border-b border-white/10"
+        style={{
+            background: 'linear-gradient(0deg, rgb(223, 219, 219) 0%, rgba(90, 52, 16, 0.82) 100%)',
+            WebkitBackdropFilter: 'blur(16px)',
+            backdropFilter: 'blur(16px)',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
+            boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
+        }}
     >
-      {/* Decorative gloss layer */}
+        {/* Decorative gloss layer */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-[2px] bg-white/40 blur-sm" />
       </div>
