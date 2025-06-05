@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav
         className="text-[#F5E9D3] fixed top-0 left-0 w-full z-50 shadow-2xl backdrop-blur-lg bg-white/20"
         style={{
-        background: 'linear-gradient(90deg, #970747 0%, rgba(173, 131, 40, 0.85) 100%)',
+        background: 'linear-gradient(90deg,rgba(59, 31, 13, 1) 0%,rgba(102, 57, 18, 0.8) 50%,rgb(114, 97, 35) 100%);',
         WebkitBackdropFilter: 'blur(20px)',
         backdropFilter: 'blur(20px)',
         borderBottom: '2px solid rgba(255, 255, 255, 0.01)',
@@ -33,7 +33,7 @@ const Navbar = () => {
             alt ="Vnexora Logo"
             width={50}
             height={50}
-            className="rounded-full"
+            className="object-contain"
             />
             <span className="font-bold text-bronzeGold text-2xl"
                 style={{ fontFamily: 'Verdana, Geneva, Tahoma, sans-serif' }}>
