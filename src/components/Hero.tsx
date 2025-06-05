@@ -3,42 +3,44 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Hero = () => {
+export default function Hero() {
   return (
-    <section
-      className="relative w-full h-screen flex items-center justify-center text-center text-warmBeige"
-      id="hero"
-    >
+    <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+    
       {/* Background Image */}
-      <div className="absolute inset-0 -z-10">
-        <Image
-          src="/Images/hero-bg.jpg" // You can change this image later
-          alt="Luxury Background"
-          fill
-          className="object-cover brightness-75"
-        />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+        <div className="relative w-[80vw] h-[80vh] max-w-5xl max-h-[80vh]">
+          <Image
+            src="/Images/hero-bg.png"
+            alt="Vnexora Background"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
       </div>
+      {/* Transparent Shadow Layer */}
+      <div className="absolute inset-0 z-10 bg-black/50 pointer-events-none" />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm -z-10" />
 
-      {/* Hero Content */}
-      <div className="space-y-6 px-4">
-        <h1 className="text-4xl md:text-6xl font-heading text-bronzeGold drop-shadow-lg">
-          Vnexora Luxury Estate
+      {/* Centered Text Content */}
+      <div className="relative z-20 flex flex-col items-center text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-[#F5E9D3] drop-shadow-lg">
+          LET'S MAKE YOUR HOSPITALITY VISION A REALITY
         </h1>
-        <p className="text-xl md:text-2xl font-body text-warmBeige drop-shadow-md">
+        <p className="text-[#F5E9D3] text-lg md:text-2xl mt-4 italic drop-shadow-sm">
           Strategic Hospitality Solutions
         </p>
-        <Link
-          href="#services"
-          className="inline-block mt-4 bg-bronzeGold text-darkBrown font-semibold px-6 py-3 rounded-full hover:bg-burntGold transition-all duration-300 shadow-lg"
-        >
-          Explore Our Services
+        <p className="text-[#F5E9D3] text-lg md:text-xl mt-4 max-w-2xl">
+          At Vnexora, we specialize in transforming your hospitality dreams into reality. Our expert team is dedicated to providing strategic solutions that elevate your business to new heights.</p>
+        <Link href="#services">
+            <button
+             className="mt-6 px-6 py-3 font-semibold rounded-full shadow-md transition-all duration-300 gradient-hover-btn text-black" >
+            Explore Our Services
+            </button>
         </Link>
       </div>
     </section>
+    
   );
-};
-
-export default Hero;
+}

@@ -1,4 +1,4 @@
-@import "tailwindcss";
+/*@import "tailwindcss";
 
 :root {
   --background: #ffffff;
@@ -23,4 +23,40 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom CSS below */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.gradient-hover-btn {
+  background: #F5E9D3;
+  transition: background 0.4s;
+}
+.gradient-hover-btn:hover {
+  background: linear-gradient(
+    90deg,
+    #9B303E 0%,
+    #9D3D3E 25%,
+    #9F4B3B 50%,
+    #A25B3B 75%,
+    #A26B39 100%
+  );
+  color: #fff;
 }
