@@ -17,9 +17,9 @@ const Navbar = () => {
     // WebkitBackdropFilter: 'blur(12px)' }}>
     // className="bg-gradient-to-r from-darkBrown to-burntGold text-warmBeige"
     <nav
-        className="fixed top-0 left-0 w-full z-50 text-white shadow-2xl backdrop-blur-lg bg-white/20"
+        className="text-[#F5E9D3] fixed top-0 left-0 w-full z-50 shadow-2xl backdrop-blur-lg bg-white/20"
         style={{
-        background: 'linear-gradient(90deg, rgb(62, 18, 7) 0%, rgba(173, 131, 40, 0.85) 100%)',
+        background: 'linear-gradient(90deg, #970747 0%, rgba(173, 131, 40, 0.85) 100%)',
         WebkitBackdropFilter: 'blur(20px)',
         backdropFilter: 'blur(20px)',
         borderBottom: '2px solid rgba(255, 255, 255, 0.01)',
@@ -43,8 +43,8 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex gap-8 text-offwhite-700 font-medium">
-          <Link href="/" className="hover:text-bronzeGold transition-colors duration-300">Home</Link>
+        <div className="hidden md:flex gap-8 text-warmBeige font-medium">
+          <Link href="/" className="hover:text-darkPink transition-colors duration-300">Home</Link>
           <Link href="#about" className="hover:text-bronzeGold transition-colors duration-300">About</Link>
           <Link href="#services" className="hover:text-bronzeGold transition-colors duration-300">Services</Link>
           <Link href="#gallery" className="hover:text-bronzeGold transition-colors duration-300">Gallery</Link>
@@ -62,8 +62,8 @@ const Navbar = () => {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-md px-4 pb-4">
-          <li><a href="#about" className="hover:text-yellow-400">About</a></li>
-          <li><a href="#services" className="hover:text-yellow-400">Services</a></li>
+          <li><a href="#about" className="hover:text-[#970747]">About</a></li>
+          <li><a href="#services" className="hover:text-darkPink">Services</a></li>
           <li><a href="#clients" className="hover:text-yellow-400">Clients</a></li>
           <li><a href="#gallery" className="hover:text-yellow-400">Our Spaces</a></li>
           <li><a href="#contact" className="hover:text-yellow-400">Contact</a></li>
