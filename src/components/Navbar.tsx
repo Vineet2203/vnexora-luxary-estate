@@ -14,7 +14,7 @@ return (
     <nav
         className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl border-b border-white/10"
         style={{
-            background: 'linear-gradient(90deg,rgba(185, 167, 138, 0.36) 0%,rgba(193, 176, 148, 0.36) 50%,rgba(135, 109, 72, 0.15) 75%,rgb(162, 109, 59))',
+            background: 'linear-gradient(90deg,rgba(112, 92, 46, 0.8) 0%,rgba(182, 175, 92, 0.35) 50%,rgba(135, 109, 72, 0.21) 75%,rgba(126, 102, 46, 0.9))',
             WebkitBackdropFilter: 'blur(16px)',
             backdropFilter: 'blur(16px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
@@ -32,8 +32,8 @@ return (
             <Image
               src="/Images/logo.png"
               alt="Vnexora Logo"
-              width={50}
-              height={50}
+              width={60}
+              height={55}
               className="object-contain bg-transparent"
             />
             <span
