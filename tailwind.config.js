@@ -20,6 +20,9 @@ module.exports = {
       darkPink: "#970747"
       
     },
+    animation: {
+        'spin-slow': 'spin 8s linear infinite',
+      },
   },
 },
   plugins: [],

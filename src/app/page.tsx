@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/AboutUs";
 import AboutUs from "@/components/AboutUs";
 
 export default function Home() {

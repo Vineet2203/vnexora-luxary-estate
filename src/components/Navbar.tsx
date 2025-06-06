@@ -79,5 +79,4 @@ return (
 };
 
 export default Navbar;
-
-//'linear-gradient(0deg, rgba(242, 212, 186 ) 0%,rgba(119, 79, 41, 0.25) 25%, rgba(90, 52, 16,0.5) 50%, rgba(90, 52, 16, 0.9) 100%)',
+//'linear-gradient (0deg, rgba(242, 212, 186, 0.2 ) 0%,rgba(119, 79, 41, 0.25) 25%, rgba(90, 52, 16,0.5) 50%, rgba(90, 52, 16, 0.9) 100%)',
