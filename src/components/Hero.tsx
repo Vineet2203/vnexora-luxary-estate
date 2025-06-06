@@ -20,7 +20,7 @@ export default function Hero() {
         </div>
       </div>
       {/* Transparent Shadow Layer */}
-      <div className="absolute inset-0 z-10 bg-black/50 pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-black/20 pointer-events-none" />
 
 
       {/* Centered Text Content */}
