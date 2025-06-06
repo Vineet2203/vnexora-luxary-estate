@@ -1,13 +1,14 @@
 import Navbar from "../components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
+import About from "@/components/AboutUs";
+import AboutUs from "@/components/AboutUs";
 
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      <About />
+      <AboutUs />
       {/* Add other sections here one by one */}
       {/* Example: <Services /> */}
       {/* Example: <Gallery /> */}
