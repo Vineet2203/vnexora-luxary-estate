@@ -47,11 +47,11 @@ return (
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 font-medium text-[#F5E9D3]">
-          <Link href="/" className="hover:text-pink-300 transition duration-300">Home</Link>
-          <Link href="#about" className="hover:text-pink-300 transition duration-300">About</Link>
-          <Link href="#services" className="hover:text-pink-300 transition duration-300">Services</Link>
-          <Link href="#gallery" className="hover:text-pink-300 transition duration-300">Gallery</Link>
-          <Link href="#contact" className="hover:text-pink-300 transition duration-300">Contact</Link>
+          <Link href="/" className="hover:text-brown-300 transition duration-300">Home</Link>
+          <Link href="#about" className="hover:text-brown-300 transition duration-300">About</Link>
+          <Link href="#services" className="hover:text-brown-300 transition duration-300">Services</Link>
+          <Link href="#gallery" className="hover:text-brown-300 transition duration-300">Gallery</Link>
+          <Link href="#contact" className="hover:text-brown-300 transition duration-300">Contact</Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -66,11 +66,11 @@ return (
       {isOpen && (
         <div className="md:hidden bg-white/10 backdrop-blur-md shadow-md px-4 pb-4 text-[#F5E9D3] z-10">
           <ul className="space-y-2 pt-2">
-            <li><a href="#about" className="hover:text-pink-300">About</a></li>
-            <li><a href="#services" className="hover:text-pink-300">Services</a></li>
-            <li><a href="#clients" className="hover:text-pink-300">Clients</a></li>
-            <li><a href="#gallery" className="hover:text-pink-300">Our Spaces</a></li>
-            <li><a href="#contact" className="hover:text-pink-300">Contact</a></li>
+            <li><a href="#about" className="hover:text-red-300">About</a></li>
+            <li><a href="#services" className="hover:text-red-300">Services</a></li>
+            <li><a href="#clients" className="hover:text-red-300">Clients</a></li>
+            <li><a href="#gallery" className="hover:text-red-300">Our Spaces</a></li>
+            <li><a href="#contact" className="hover:text-red-300">Contact</a></li>
           </ul>
         </div>
       )}
