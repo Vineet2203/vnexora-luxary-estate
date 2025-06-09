@@ -51,13 +51,14 @@ const AboutUs = () => {
 
       {/* Rotating Logo Circle at Bottom Center */}
       <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
-        <div className="w-24 h-24 rounded-full border border-gray-300 flex items-center justify-center animate-spin-slow bg-white shadow-lg">
+        <div className="w-25 h-25 rounded-full border border-gray-300 flex items-center justify-center animate-spin-slow bg-rgba(84, 31, 21, 0.91) shadow-lg">
           {/* Replace with your logo or circular text */}
           <Image
             src="/Images/logo.png" // replace with your logo path
             alt="VNEXORA Logo"
-            width={40}
-            height={40}
+            width={70}
+            height={65}
+            
           />
         </div>
       </div>

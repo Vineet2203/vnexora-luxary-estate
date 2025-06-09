@@ -30,11 +30,11 @@ const WhyChooseUs = () => {
             </div>
             <div>
               <Image
-                src="/images/hotel-reception.jpg"
+                src="/Images/gen_images/staff_training.png"
                 alt="Modern Hotel Reception"
                 width={600}
                 height={400}
-                className="rounded-lg shadow-lg w-full h-auto"
+                className="rounded-lg shadow-lg  w-full h-auto"
               />
             </div>
           </div>
@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
             </div>
             <div>
               <Image
-                src="/images/hotel-exterior.jpg"
+                src="/Images/gen_images/strategy.png"
                 alt="Luxurious Hotel Exterior"
                 width={600}
                 height={400}
