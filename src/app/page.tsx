@@ -3,7 +3,8 @@ import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
 import WhyChooseUs from "../components/WhyChoose";
 import Gallery from "../components/Gallery";
-import Section from "../components/Section";
+import OurAllies from '../components/OurAllies';
+import Services from "../components/Services";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <Gallery />
-      <Section />
+      <OurAllies />
+      <Services />
 
       {/* Add other sections here one by one */}
       {/* Example: <Services /> */}
