@@ -14,7 +14,7 @@ return (
     <nav
         className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl border-b border-white/10"
         style={{
-            background: 'linear-gradient(90deg,rgba(112, 92, 46, 0.8) 0%,rgba(182, 175, 92, 0.35) 50%,rgba(135, 109, 72, 0.21) 75%,rgba(126, 102, 46, 0.9))',
+            background: 'linear-gradient(90deg,rgba(112, 92, 46, 0.8) 0%,rgba(182, 175, 92, 0.35) 50%,rgba(203, 172, 100, 0.51) 75%,rgba(126, 102, 46, 0.9))',
             WebkitBackdropFilter: 'blur(16px)',
             backdropFilter: 'blur(16px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
@@ -47,11 +47,11 @@ return (
 
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 font-medium text-[#F5E9D3]">
-          <Link href="/" className="hover:text-yellow-400 transition duration-300">Home</Link>
-          <Link href="#about" className="hover:text-yellow-400 transition duration-300">About</Link>
-          <Link href="#services" className="hover:text-yellow-400 transition duration-300">Services</Link>
-          <Link href="#gallery" className="hover:text-yellow-400 transition duration-300">Gallery</Link>
-          <Link href="#contact" className="hover:ttext-yellow-400 transition duration-300">Contact</Link>
+          <Link href="/" className="hover:text-yellow-400 transition duration-300"><b>Home</b></Link>
+          <Link href="#about" className="hover:text-yellow-400 transition duration-300"><b>About</b></Link>
+          <Link href="#services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
+          <Link href="#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
+          <Link href="#contact" className="hover:ttext-yellow-400 transition duration-300"><b>Contact</b></Link>
         </div>
 
         {/* Mobile Toggle */}
