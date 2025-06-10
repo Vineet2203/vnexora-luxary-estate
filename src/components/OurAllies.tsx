@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const allies = [
-  { name: 'Accor Hotels', logo: '/Images/allies/accor.png' },
+  { name: 'Accor Hotels', logo: '/Images/allies/accor.jpg' },
   { name: 'Ibis Hotels', logo: '/Images/allies/ibis.png' },
   { name: 'The Leela', logo: '/Images/allies/theleela.png' },
   { name: 'Sunday Hotels', logo: '/Images/allies/sunday.png' },
@@ -52,21 +52,21 @@ const OurAllies = () => {
   }, []);
 
   return (
-    <section className="py-12 px-4 md:px-16 bg-[#fdfaf7]">
+    <section className="py-12 px-4 md:px-16 bg-[#fdfaf7]" id ="OurAllies">
       <h2 className="text-4xl font-bold text-center text-[#432c15] mb-10">Our Allies</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {allies.map((ally, index) => (
           <div
             key={index}
-            className="bg-white shadow-md p-4 rounded-xl flex items-center justify-center hover:scale-105 transform transition duration-300"
+            className="bg-white shadow-md p-4 rounded-xl flex items-center justify-center hover:scale-105 transform transition duration-300 relative w-full h-32"
             data-aos="zoom-in"
           >
             <Image
               src={ally.logo}
               alt={ally.name}
-              width={100}
-              height={60}
-              className="object-contain"
+              fill
+              className="object-contain p-4"
+              style={{ maxWidth: '100%', maxHeight: '100%' }}
             />
           </div>
         ))}

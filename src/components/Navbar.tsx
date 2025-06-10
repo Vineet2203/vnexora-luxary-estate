@@ -14,7 +14,7 @@ return (
     <nav
         className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl border-b border-white/10"
         style={{
-            background: 'linear-gradient(90deg,rgba(112, 92, 46, 0.8) 0%,rgba(182, 175, 92, 0.35) 50%,rgba(203, 172, 100, 0.51) 75%,rgba(126, 102, 46, 0.9))',
+            background: 'linear-gradient(90deg,rgba(112, 103, 59, 0.87) 0%,rgba(180, 143, 84, 0.57) 50%,rgba(220, 152, 80, 0.64) 75%,rgba(106, 74, 38, 0.9))',
             WebkitBackdropFilter: 'blur(16px)',
             backdropFilter: 'blur(16px)',
             borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
@@ -50,6 +50,7 @@ return (
           <Link href="/" className="hover:text-yellow-400 transition duration-300"><b>Home</b></Link>
           <Link href="#about" className="hover:text-yellow-400 transition duration-300"><b>About</b></Link>
           <Link href="#services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
+          <Link href="#OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
           <Link href="#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
           <Link href="#contact" className="hover:ttext-yellow-400 transition duration-300"><b>Contact</b></Link>
         </div>

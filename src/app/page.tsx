@@ -16,9 +16,9 @@ export default function Home() {
       <Hero />
       <AboutUs />
       <WhyChooseUs />
-      <Gallery />
-      <OurAllies />
       <Services />
+      <OurAllies />
+      <Gallery />
       <Footer />
     </main>
   );
