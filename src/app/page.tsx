@@ -3,13 +3,11 @@ import Hero from "../components/Hero";
 import AboutUs from "../components/AboutUs";
 import WhyChooseUs from "../components/WhyChoose";
 import Gallery from "../components/Gallery";
-<<<<<<< Updated upstream
 import OurAllies from '../components/OurAllies';
 import Services from "../components/Services";
-=======
 import Footer from "../components/Footer";
 
->>>>>>> Stashed changes
+
 
 export default function Home() {
   return (
@@ -19,11 +17,11 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <Gallery />
-<<<<<<< Updated upstream
+
       <OurAllies />
       <Services />
 
-=======
+
       <Footer />
     
       {/* Add other sections here one by one */}
