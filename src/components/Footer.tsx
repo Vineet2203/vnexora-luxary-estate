@@ -17,16 +17,16 @@ const Footer = () => {
           </div>
           {/* Social Icons */}
           <div className="flex space-x-4 pt-4">
-            <a href="#" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.linkedin.com/company/vnexora" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
               <FaLinkedinIn size={16} />
             </a>
-            <a href="#" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.youtube.com/@VNEXORALUXURYESTATE" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
               <FaYoutube size={16} />
             </a>
-            <a href="#" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.facebook.com/people/Vnexora/" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
                 <FaFacebook size={16} />
             </a>
-            <a href="#" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.instagram.com/vnexora/" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
                 <FaInstagram size={16} />
             </a>
 
