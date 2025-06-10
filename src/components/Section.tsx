@@ -25,7 +25,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="bg-[#fffaf7] py-20 px-4 sm:px-8 lg:px-24 scroll-mt-24"
+      className="bg-[#fafaf7] py-20 px-4 sm:px-8 lg:px-24 scroll-mt-24"
     >
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold text-[#432c15] mb-2">Our Services</h2>
