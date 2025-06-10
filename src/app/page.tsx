@@ -17,41 +17,9 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <Gallery />
-
       <OurAllies />
       <Services />
-
-
       <Footer />
-    
-      {/* Add other sections here one by one */}
-      {/* Example: <About /> */}
-      {/* Example: <Services /> */}
-      {/* Example: <Gallery /> */}
-      {/* Example: <Contact /> */}
-    
-      {/* Add other sections here one by one */}
-      {/* Example: <About /> */}
-      {/* Example: <Services /> */}
-      {/* Example: <Gallery /> */}
-      {/* Example: <Contact /> */}
-      {/* Add other sections here one by one */}
-      {/* Example: <About /> */}
-      {/* Example: <Services /> */}
-      {/* Example: <Gallery /> */}
-      {/* Example: <Contact /> */}
-    
->>>>>>> Stashed changes
-      {/* Add other sections here one by one */}
-      {/* Example: <Services /> */}
-      {/* Example: <Gallery /> */}
-      {/* Example: <Contact /> */}
-      {/* Add other sections here one by one */}
-      {/* Example: <About /> */}
-      {/* Example: <Services /> */}
-      {/* Example: <Gallery /> */}
-      {/* Example: <Contact /> */}
-      {/* Add other sections here one by one */}
     </main>
   );
 }
