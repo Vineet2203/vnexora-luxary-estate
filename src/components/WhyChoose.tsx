@@ -52,7 +52,7 @@ const WhyChooseUs = () => {
   });
 
   return (
-    <section className="bg-[#f7f5f1] py-20 px-6 md:px-16" id="why-choose-us">
+    <section className="bg-[#f7f5f1] py-20 px-6 md:px-16" id="services">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-center text-[#1a1a1a] mb-4">
