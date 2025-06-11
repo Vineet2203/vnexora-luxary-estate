@@ -28,7 +28,7 @@ return (
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between relative z-10">
         {/* Logo */}
         <Link href="/">
-          <div className="flex items-center space-x-3">
+            <div className="flex items-end space-x-3" style={{ paddingBottom: '6px' }}>
             <Image
               src="/Images/logo.png"
               alt="Vnexora Logo"
@@ -36,13 +36,14 @@ return (
               height={55}
               className="object-contain bg-transparent"
             />
-            <span
-              className="font-bold text-2xl text-[#F5E9D3]"
-              style={{ fontFamily: 'Verdana, Geneva, Tahoma, sans-serif' }}
-            >
-              VNEXORA
-            </span>
-          </div>
+            <Image
+              src="/Images/textlogo.png"
+              alt="Vnexora Logo Text"
+              width={140}
+              height={50}
+              className="object-contain bg-transparent hidden md:block"
+            />
+            </div>
         </Link>
 
         {/* Desktop Links */}
