@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
- images: {
+  output: 'export',
+  images: {
     domains: ['hospitality-on.com',
       'www.asiamiles.com',
       'globalhospitalitysolution.com',
@@ -40,7 +41,7 @@ const nextConfig: NextConfig = {
       'media.licdn.com'
 
     ], 
-
+  
   },
 };
 
