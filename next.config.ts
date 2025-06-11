@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
       'mir-s3-cdn-cf.behance.net',
       'www.parksidehotels.com',
       'encrypted-tbn0.gstatic.com',
+      'img.favpng.com',
       'seeklogo.com',
       'svgmix.com',
       'upload.wikimedia.org',
@@ -25,7 +26,18 @@ const nextConfig: NextConfig = {
       'www.tnhglobal.com',
       'upload.wikimedia.org',
       'goeastofedmonton.com',
-      'digital.ihg.com'
+      'digital.ihg.com',
+      'logos-download.com',
+      'aniportalimages.s3.amazonaws.com',
+      'corporate.wyndhamhotels.com',
+      'logowik.com',
+      'i.ytimg.com',
+      'www.medellin.travel',
+      'canaltahotels.prevueaps.com',
+      'cdn-djonn.nitrocdn.com',
+      'vectorseek.com',
+      'tse3.mm.bing.net',
+      'media.licdn.com'
 
     ], 
 
