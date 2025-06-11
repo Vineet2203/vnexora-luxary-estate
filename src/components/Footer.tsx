@@ -17,16 +17,21 @@ const Footer = () => {
           </div>
           {/* Social Icons */}
           <div className="flex space-x-4 pt-4">
-            <a href="https://www.linkedin.com/company/vnexora" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.linkedin.com/company/vnexora" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition"
+            target="_blank" 
+            rel="noopener noreferrer">
               <FaLinkedinIn size={16} />
             </a>
-            <a href="https://www.youtube.com/@VNEXORALUXURYESTATE" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.youtube.com/@VNEXORALUXURYESTATE" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition"  target="_blank" 
+  rel="noopener noreferrer">
               <FaYoutube size={16} />
             </a>
-            <a href="https://www.facebook.com/people/Vnexora/" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.facebook.com/people/Vnexora/61577263220491/" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition"  target="_blank" 
+  rel="noopener noreferrer">
                 <FaFacebook size={16} />
             </a>
-            <a href="https://www.instagram.com/vnexora/" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
+            <a href="https://www.instagram.com/vnexora/" className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition"  target="_blank" 
+  rel="noopener noreferrer">
                 <FaInstagram size={16} />
             </a>
 
