@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const allies = [
-  { name: 'Accor Hotels', logo: '/Images/allies/accor.jpg' },
+  { name: 'Accor Hotels', logo: 'https://hospitality-on.com/sites/default/files/2020-01/accor-new-logo_1.jpg'},
   { name: 'Ibis Hotels', logo: '/Images/allies/ibis.png' },
   { name: 'The Leela', logo: '/Images/allies/theleela.png' },
   { name: 'Sunday Hotels', logo: '/Images/allies/sunday.png' },
@@ -57,18 +57,18 @@ const OurAllies = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {allies.map((ally, index) => (
           <div
-            key={index}
-            className="bg-white shadow-md p-4 rounded-xl flex items-center justify-center hover:scale-105 transform transition duration-300 relative w-full h-32"
-            data-aos="zoom-in"
-          >
-            <Image
-              src={ally.logo}
-              alt={ally.name}
-              fill
-              className="object-contain p-4"
-              style={{ maxWidth: '100%', maxHeight: '100%' }}
-            />
-          </div>
+  key={index}
+  className="bg-white shadow-md rounded-xl overflow-hidden hover:scale-105 transform transition duration-300 w-full h-32"
+  data-aos="zoom-in"
+>
+  <Image
+    src={ally.logo}
+    alt={ally.name}
+    className="w-full h-full object-cover"
+    width={300}
+    height={128}
+  />
+</div>
         ))}
       </div>
     </section>
