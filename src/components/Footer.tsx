@@ -74,7 +74,7 @@ const Footer = () => {
 
         {/* Contact */}
         <div>
-          <h4 className="font-semibold mb-4 text-[#705C2E]">Contact</h4>
+          <h4 className="font-semibold mb-4 text-[#705C2E]" id="contacts">Contact</h4>
           <ul className="space-y-2 text-sm">
             <li>VNEXORA Luxury Estate Pvt. Ltd.</li>
             <li>123 Luxury Lane, Mumbai, India</li>
@@ -86,7 +86,7 @@ const Footer = () => {
 
       {/* Divider */}
       <div className="mt-10 border-t border-gray-300 pt-6 text-center text-sm text-gray-500">
-        Designed & Developed by VNEXORA Tech Team.
+        Designed & Developed by VNEXORA TEAM.
       </div>
     </footer>
   );

@@ -33,7 +33,7 @@ const slides = [
     title: 'Scalable Growth Solutions',
     description:
       'Whether you run one hotel or many, we scale with your ambitions to drive sustainable growth.',
-    image: '/images/scalable-growth.jpg',
+    image: '/Images/gen_images/scale_growth.png',
   },
   {
     title: 'Transparent & Trusted Partnerships',
