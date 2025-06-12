@@ -19,13 +19,11 @@ const AboutUs = () => {
             <button className="bg-[#a17e4d] text-white font-medium px-6 py-3 rounded-full shadow-md hover:bg-[#926d3f] transition">
               Learn More
             </button>
-            <a
-              className="bg-white text-[#1a1a1a] border border-gray-300 px-6 py-3 rounded-full shadow-md hover:shadow-lg transition inline-block"
-              href="../Documents/brochure.pdf"
-              download
-            >
+            <a className="bg-white text-[#1a1a1a] border border-gray-300 px-6 py-3 rounded-full shadow-md hover:shadow-lg transition inline-block"
+              href="/Documents/Brochure.pdf"
+              download>
               Download Brochure
-            </a>
+              </a>
           </div>
         </div>
 
