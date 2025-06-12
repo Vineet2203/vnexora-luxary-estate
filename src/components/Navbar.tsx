@@ -35,6 +35,7 @@ return (
               width={60}
               height={55}
               className="object-contain bg-transparent"
+              unoptimized
             />
             <Image
               src="/Images/textlogo.png"
@@ -42,6 +43,7 @@ return (
               width={140}
               height={50}
               className="object-contain bg-transparent hidden md:block"
+              unoptimized
             />
             </div>
         </Link>
