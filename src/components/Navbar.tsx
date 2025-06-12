@@ -35,7 +35,7 @@ return (
               width={60}
               height={55}
               className="object-contain bg-transparent"
-              unoptimized
+              unoptimized 
             />
             <Image
               src="/Images/textlogo.png"
