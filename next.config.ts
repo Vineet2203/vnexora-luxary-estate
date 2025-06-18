@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
+  trailingSlash: true,
   images: {
     unoptimized: true,
     domains: ['hospitality-on.com',
@@ -39,7 +40,9 @@ const nextConfig: NextConfig = {
       'cdn-djonn.nitrocdn.com',
       'vectorseek.com',
       'tse3.mm.bing.net',
-      'media.licdn.com'
+      'media.licdn.com',
+      '1000logos.net',
+      'gos3.ibcdn.com'
 
     ], 
   

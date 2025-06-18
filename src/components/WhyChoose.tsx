@@ -52,10 +52,10 @@ const WhyChooseUs = () => {
   });
 
   return (
-    <section className="bg-[#f7f5f1] py-20 px-6 md:px-16" id="whychooseus">
+    <section className="bg-[#f7f5f1] py-20 px-6 md:px-16 font-serif" id="whychooseus">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-[#1a1a1a] mb-4">
+        <h2 className="text-4xl font-bold text-center text-[#432c15] mb-4 mt-20">
           Why Choose VNEXORA!
         </h2>
         <p className="text-lg text-center text-gray-600 mb-12">
