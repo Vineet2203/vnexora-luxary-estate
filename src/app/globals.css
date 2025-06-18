@@ -5,7 +5,7 @@
 @import 'keen-slider/keen-slider.min.css';
 
 :root {
-  --background: #faf4e5;
+  --background: #ebe4de;
   --foreground: #171717;
 }
 
@@ -19,7 +19,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0c0c0c;
-    --foreground: #ededed;
+    --foreground: #f4ecec;
   }
 }
 html {
@@ -65,4 +65,20 @@ body {
     #A26B39 100%
   );
   color: #fff;
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }

@@ -4,6 +4,10 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Playfair_Display, Poppins } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500'] });
 
 const allies = [
   { name: 'Accor Hotels', logo: 'https://hospitality-on.com/sites/default/files/2020-01/accor-new-logo_1.jpg'},
@@ -11,7 +15,7 @@ const allies = [
   { name: 'The Leela', logo: 'https://globalhospitalitysolution.com/wp-content/uploads/2021/01/leela_logo.jpg' },
   { name: 'Sunday Hotels', logo: 'https://mir-s3-cdn-cf.behance.net/projects/404/eca6fb180890227.Y3JvcCwxNDUxLDExMzUsMjgwLDA.jpg' },
   { name: 'Parkside Hotels', logo: 'https://www.parksidehotels.com/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-14-at-9.07.51-AM.jpeg' },
-  { name: 'Hyatt Hotels', logo: 'https://img.favpng.com/0/24/4/hyatt-logo-hotel-resort-beach-png-favpng-31kdiM6h10hiAehtA5LjtNfpX.jpg' },
+  { name: 'Hyatt Hotels', logo: 'https://1000logos.net/wp-content/uploads/2020/02/Hyatt-Logo-1990-1080x648.jpg' },
   { name: 'Bloom Hotels', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBETJmEGs2LeUCH7SKD0Cjw3E_3VnaOHfVKg&s' },
   { name: 'Treebo Hotels', logo: 'https://i.ytimg.com/vi/8x5IKkDrOhM/maxresdefault.jpg' },
   { name: 'JW Marriott', logo: 'https://svgmix.com/uploads/b0ceb1-jw-marriott-hotel-resorts.svg' },
@@ -26,12 +30,12 @@ const allies = [
   { name: 'IHG Hotels & Resorts', logo: 'https://www.salesforce.com/news/wp-content/uploads/sites/3/2024/04/IHC_Hotels_CustomerStory.png' },
   { name: 'the Hostellers', logo: 'https://img-cdn.publive.online/fit-in/1200x675/entrackr/media/post_attachments/wp-content/uploads/2022/06/the-hosteller-.jpg' },
   { name: 'Darwin Hotels', logo: 'https://images-platform.99static.com//hPCanOpBkJZgWLVYwFisxzz8YU4=/247x230:915x898/fit-in/500x500/99designs-contests-attachments/129/129576/attachment_129576888' },
-  { name: 'OYO Rooms', logo: 'https://logos-download.com/wp-content/uploads/2019/11/OYO_Rooms_Logo_full.png' },
+  { name: 'OYO Rooms', logo: 'https://mma.prnewswire.com/media/997097/OYO_Hotels_and_Homes_Logo.jpg?p=publish' },
   { name: 'Sarovar Hotels', logo: 'https://aniportalimages.s3.amazonaws.com/media/details/Sarovar_Hotels_and_Resorts2021102610474220211026110352.jpg' },
   { name: 'The fern', logo: 'https://safariplus.co.in/uploads/images/image_750x_665883390f47d.jpg' },
   { name: 'Fairmont Hotels', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJuD5VL9c7A2rkvvgQeriwtGKv2LSKbo7vYA&s' },
   { name: 'Mercure Hotels', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHOAmDokKyU0lzXw172GLoHbdt3efthOcX_w&s' },
-  { name: 'Spree Hotels', logo: 'https://tse3.mm.bing.net/th/id/OIP.HrtAcJjn29F06Xi3VJJeHAHaDV?rs=1&pid=ImgDetMain' },
+  { name: 'Spree Hotels', logo: 'https://gos3.ibcdn.com/Spree_Hotels-1424348746.jpg' },
   { name: 'Lords Hotels', logo: 'https://api.blessingsonthenet.com/uploads/hotel_groups/ae485c0c4fee053310702a304054017d-1701765710588-Lords-Hotels-And-Resorts.jpg' },
   { name: 'Ecko Hotels', logo: 'https://media.licdn.com/dms/image/v2/D560BAQGniYxIZTYR5A/company-logo_200_200/B56ZXv3DrPGQAI-/0/1743485942924/eckohotels_logo?e=2147483647&v=beta&t=w6uT67mC29mhGy97oRvDUT4F8TE5iFXBodH81R6NGJ8' },
   { name: 'Novotel Hotels', logo: 'https://www.medellin.travel/wp-content/uploads/2021/11/0000_Novotel_HResorts_logo_RVB-alta.jpg' },
@@ -52,23 +56,30 @@ const OurAllies = () => {
   }, []);
 
   return (
-    <section className="py-12 px-4 md:px-16 bg-[#fdfaf7]" id ="OurAllies">
-      <h2 className="text-4xl font-bold text-center text-[#432c15] mb-10">Our Allies</h2>
+    <section className="py-16 px-4 md:px-16 bg-[#fdfaf7]" id="OurAllies">
+      <h2 className={`${playfair.className} text-4xl font-bold text-center text-[#432c15] mb-6 mt-10`}>
+        Trusted by the hospitality&apos;s leading brands/partners
+      </h2>
+      <p className={`${poppins.className} text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto`}>
+        Proudly trusted by global hospitality trailblazers — relationships built on excellence and lasting impact.
+      </p>
+      <p>We&apos;re not just building hotels. We&apos;re building enduring legacies.</p>
+
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {allies.map((ally, index) => (
           <div
-  key={index}
-  className="bg-white shadow-md rounded-xl overflow-hidden hover:scale-105 transform transition duration-300 w-full h-32"
-  data-aos="zoom-in"
->
-  <Image
-    src={ally.logo}
-    alt={ally.name}
-    className="w-full h-full object-cover"
-    width={300}
-    height={128}
-  />
-</div>
+            key={index}
+            className="bg-white shadow-md rounded-xl overflow-hidden hover:scale-105 transform transition duration-300 w-full h-32 flex items-center justify-center p-2"
+            data-aos="zoom-in"
+          >
+            <Image
+              src={ally.logo}
+              alt={ally.name}
+              className="object-contain w-full h-full"
+              width={300}
+              height={128}
+            />
+          </div>
         ))}
       </div>
     </section>
