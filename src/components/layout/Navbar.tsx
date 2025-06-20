@@ -1,41 +1,65 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-return (
+  // Listen to scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // New style: FULLY TRANSPARENT at top, GLASSY GRADIENT on scroll
+  const navbarStyle = {
+    background: isScrolled
+      ? 'linear-gradient(90deg, rgba(112, 103, 59, 0.87) 0%, rgba(180, 143, 84, 0.57) 50%, rgba(220, 152, 80, 0.64) 75%, rgba(106, 74, 38, 0.9))'
+      : 'transparent',
+    WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
+    backdropFilter: isScrolled ? 'blur(16px)' : 'none',
+    borderBottom: isScrolled ? '1px solid rgba(255, 255, 255, 0.2)' : 'none',
+    boxShadow: isScrolled ? '0 8px 20px rgba(0, 0, 0, 0.2)' : 'none',
+    transition: 'all 0.4s ease'
+  };
+
+  return (
     <nav
-        className="fixed top-0 left-0 w-full z-50 shadow-xl backdrop-blur-xl border-b border-white/10"
-        style={{
-            background: 'linear-gradient(90deg,rgba(112, 103, 59, 0.87) 0%,rgba(180, 143, 84, 0.57) 50%,rgba(220, 152, 80, 0.64) 75%,rgba(106, 74, 38, 0.9))',
-            WebkitBackdropFilter: 'blur(16px)',
-            backdropFilter: 'blur(16px)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.2)',
-            boxShadow: '0 8px 20px rgba(0, 0, 0, 0.2)',
-        }}
+      className="fixed top-0 left-0 w-full z-50"
+      style={navbarStyle}
     >
-        {/* Decorative gloss layer */}
+      {/* Decorative gloss layer */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-[2px] bg-white/40 blur-sm" />
+        {isScrolled && (
+          <div className="absolute top-0 left-0 w-full h-[2px] bg-white/40 blur-sm" />
+        )}
       </div>
+
       <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between relative z-10">
         {/* Logo */}
         <Link href="/">
-            <div className="flex items-end space-x-3" style={{ paddingBottom: '6px' }}>
+          <div className="flex items-end space-x-3" style={{ paddingBottom: '6px' }}>
             <Image
               src="/Images/logo.png"
               alt="Vnexora Logo"
               width={55}
               height={51}
               className="object-contain bg-transparent"
-              unoptimized 
+              unoptimized
             />
             <Image
               src="/Images/textlogo.png"
@@ -45,7 +69,7 @@ return (
               className="object-contain bg-transparent hidden md:block"
               unoptimized
             />
-            </div>
+          </div>
         </Link>
 
         {/* Desktop Links */}
@@ -54,6 +78,7 @@ return (
           <Link href="#about" className="hover:text-yellow-400 transition duration-300"><b>About</b></Link>
           <Link href="#services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
           <Link href="#OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
+          <Link href="#careers" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
           <Link href="#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
           <Link href="#contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
         </div>
@@ -83,4 +108,3 @@ return (
 };
 
 export default Navbar;
-//'linear-gradient (0deg, rgba(242, 212, 186, 0.2 ) 0%,rgba(119, 79, 41, 0.25) 25%, rgba(90, 52, 16,0.5) 50%, rgba(90, 52, 16, 0.9) 100%)',
