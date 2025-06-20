@@ -1,0 +1,25 @@
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["extendedWhereUnique", "clientExtensions", "interactiveTransactions"]
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model CareerApplication {
+  id           String   @id @default(uuid())
+  firstName    String
+  lastName     String
+  email        String
+  phone        String
+  whatsapp     String?
+  contactOther String?
+  resumeUrl    String   // URL to file in Supabase Storage
+  portfolioUrl String?  // Optional portfolio link
+  coverLetter  String   // Message on why they want to work
+  createdAt    DateTime @default(now())
+}
