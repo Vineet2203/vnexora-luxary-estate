@@ -75,10 +75,10 @@ const Navbar = () => {
         {/* Desktop Links */}
         <div className="hidden md:flex gap-8 font-medium text-[#F5E9D3]">
           <Link href="/" className="hover:text-yellow-400 transition duration-300"><b>Home</b></Link>
-          <Link href="#about" className="hover:text-yellow-400 transition duration-300"><b>About</b></Link>
+          <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>About</b></Link>
           <Link href="#services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
           <Link href="#OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
-          <Link href="#careers" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
+          <Link href="/career" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
           <Link href="#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
           <Link href="#contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
         </div>
