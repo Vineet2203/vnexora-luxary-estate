@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'; // arrow icons from react-icons
+import { useState } from 'react';
 
 const slides = [
   {
@@ -44,47 +46,76 @@ const slides = [
 ];
 
 const WhyChooseUs = () => {
-  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
-    slides: {
-      perView: 1,
+    slides: { perView: 1 },
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel);
     },
   });
 
+  const handlePrev = () => {
+    instanceRef.current?.prev();
+  };
+
+  const handleNext = () => {
+    instanceRef.current?.next();
+  };
+
   return (
-    <section className="bg-[#f7f5f1] py-20 px-6 md:px-16 font-serif" id="whychooseus">
+    <section className="bg-[#f7f5f1] py-20 px-6 md:px-16 font-serif relative" id="whychooseus">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
         <h2 className="text-4xl font-bold text-center text-[#432c15] mb-4 mt-20">
-          Why Choose VNEXORA!
+          Why Choose VNEXORA ?
         </h2>
         <p className="text-lg text-center text-gray-600 mb-12">
           Redefining Excellence in Hospitality Management
         </p>
 
-        {/* Slider */}
-        <div ref={sliderRef} className="keen-slider">
-          {slides.map((item, index) => (
-            <div
-              key={index}
-              className="keen-slider__slide flex flex-col items-center text-center px-4"
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                width={700}
-                height={400}
-                className="rounded-lg shadow-lg mb-6 w-full h-auto object-cover"
-              />
-              <h3 className="text-2xl font-semibold text-[#705C2E] mb-2">
-                {item.title}
-              </h3>
-              <p className="text-gray-700 max-w-xl">{item.description}</p>
-            </div>
-          ))}
+        {/* Slider Container */}
+        <div className="relative">
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-[#705C2E] text-[#705C2E] p-2 rounded-full shadow-md hover:bg-[#f0e9dd] transition"
+          >
+            <FiChevronLeft size={24} />
+          </button>
+
+          {/* Slider */}
+          <div ref={sliderRef} className="keen-slider">
+            {slides.map((item, index) => (
+              <div
+                key={index}
+                className="keen-slider__slide flex flex-col items-center text-center px-4"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  width={700}
+                  height={400}
+                  className="rounded-lg shadow-lg mb-6 w-full h-auto object-cover"
+                />
+                <h3 className="text-2xl font-semibold text-[#705C2E] mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-700 max-w-xl">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-white border border-[#705C2E] text-[#705C2E] p-2 rounded-full shadow-md hover:bg-[#f0e9dd] transition"
+          >
+            <FiChevronRight size={24} />
+          </button>
         </div>
 
-        {/* CTA */}
+        {/* CTA Button */}
         <div className="text-center mt-16">
           <button className="bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] transition">
             Partner with Us
