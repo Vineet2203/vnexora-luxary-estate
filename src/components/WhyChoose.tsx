@@ -3,8 +3,11 @@
 import Image from 'next/image';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
+import { Playfair_Display, Poppins } from 'next/font/google';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi'; // arrow icons from react-icons
 import { useState } from 'react';
+const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
+const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 const slides = [
   {
@@ -67,11 +70,12 @@ const WhyChooseUs = () => {
     <section className="bg-[#f7f5f1] py-20 px-6 md:px-16 font-serif relative" id="whychooseus">
       <div className="max-w-5xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-center text-[#432c15] mb-4 mt-20">
+        <h2 className = {`${playfair.className} text-4xl font-bold text-center text-[#432c15] mb-4 mt-20`}>
           Why Choose VNEXORA ?
         </h2>
-        <p className="text-lg text-center text-gray-600 mb-12">
-          Redefining Excellence in Hospitality Management
+        <p className= {`${poppins.className} text-lg text-center text-gray-600 mb-12`}>
+          At VNEXORA Luxury Estate, we don’t just manage properties—we transform them into profitable, memorable, and luxurious destinations. 
+    Our end-to-end hospitality solutions combine global expertise with local insights, delivering tailored strategies that drive guest satisfaction, operational excellence, and sustainable growth for every client.
         </p>
 
         {/* Slider Container */}
@@ -98,10 +102,10 @@ const WhyChooseUs = () => {
                   height={400}
                   className="rounded-lg shadow-lg mb-6 w-full h-auto object-cover"
                 />
-                <h3 className="text-2xl font-semibold text-[#705C2E] mb-2">
+                <h3 className={`${poppins.className}text-2xl font-semibold text-[#705C2E] mb-2`}>
                   {item.title}
                 </h3>
-                <p className="text-gray-700 max-w-xl">{item.description}</p>
+                <p className={`${poppins.className} text-gray-700 max-w-xl`}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -117,7 +121,7 @@ const WhyChooseUs = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-16">
-          <button className="bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] transition">
+          <button className= {`${poppins.className} bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] transition`}>
             Partner with Us
           </button>
         </div>
