@@ -11,15 +11,15 @@ datasource db {
 }
 
 model CareerApplication {
-  id           String   @id @default(uuid())
-  firstName    String
-  lastName     String
-  email        String
-  phone        String
-  whatsapp     String?
-  contactOther String?
-  resumeUrl    String   // URL to file in Supabase Storage
-  portfolioUrl String?  // Optional portfolio link
-  coverLetter  String   // Message on why they want to work
-  createdAt    DateTime @default(now())
+  id            Int      @id @default(autoincrement())
+  firstName     String
+  lastName      String
+  email         String
+  phone         String
+  whatsapp      String?
+  contactOther  String?
+  portfolioUrl  String?
+  coverLetter   String
+  resumeUrl     String   
+  createdAt     DateTime @default(now())
 }

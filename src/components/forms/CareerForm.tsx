@@ -11,9 +11,9 @@ const CareerForm = () => {
     email: '',
     phone: '',
     whatsapp: '',
-    portfolio: '',
+    portfolioUrl: '',
     coverLetter: '',
-    resume: null as File | null,
+    resumeUrl: null as File | null,
   });
 
   const [submitting, setSubmitting] = useState(false);
@@ -25,13 +25,13 @@ const CareerForm = () => {
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData(prev => ({ ...prev, resume: e.target.files?.[0] || null }));
+    setFormData(prev => ({ ...prev, resumeUrl: e.target.files?.[0] || null }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!formData.resume) {
+    if (!formData.resumeUrl) {
       alert('Resume is required');
       return;
     }
@@ -43,6 +43,8 @@ const CareerForm = () => {
 
     setSubmitting(true);
     try {
+      console.log("Sending portfolioUrl:", formData.portfolioUrl);
+  
       const res = await fetch('/api/career', {
         method: 'POST',
         body,
@@ -56,9 +58,9 @@ const CareerForm = () => {
           email: '',
           phone: '',
           whatsapp: '',
-          portfolio: '',
+          portfolioUrl: '',
           coverLetter: '',
-          resume: null,
+          resumeUrl: null,
         });
       } else {
         alert('Submission failed. Try again.');
@@ -71,7 +73,8 @@ const CareerForm = () => {
   };
 
   return (
-    <section id="career">
+    <main className="pt-30 pb-5 px-2 max-w-5xl mx-auto space-y-16">
+    
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto p-6 bg-white rounded-xl shadow-lg space-y-4">
       <h2 className="text-3xl font-bold text-[#432c15] text-center">Join Our Team</h2>
 
@@ -84,12 +87,19 @@ const CareerForm = () => {
         <input name="phone" required value={formData.phone} onChange={handleChange} placeholder="Phone" className="input" />
       </div>
       <input name="whatsapp" value={formData.whatsapp} onChange={handleChange} placeholder="WhatsApp (Optional)" className="input" />
-      <input name="portfolio" value={formData.portfolio} onChange={handleChange} placeholder="Portfolio URL (Optional)" className="input" />
+      <input name="portfolioUrl" value={formData.portfolioUrl} onChange={handleChange} placeholder="Portfolio URL (Optional)" className="input" />
       <textarea name="coverLetter" rows={4} value={formData.coverLetter} onChange={handleChange} placeholder="Why do you want to work with us?" className="input" />
 
       <div>
         <label className="block mb-1 font-medium">Upload Resume <span className="text-red-500">*</span></label>
-        <input type="file" accept=".pdf,.jpg,.jpeg,.txt" onChange={handleFileChange} className="input" required />
+        <input
+  type="file"
+  name="resumeUrl"
+  accept=".pdf,.jpg,.jpeg,.txt"
+  onChange={handleFileChange}
+  className="input"
+  required
+/>
       </div>
 
       <button type="submit" disabled={submitting} className="w-full bg-[#705C2E] text-white py-3 rounded-lg hover:bg-[#926d3f] transition">
@@ -98,7 +108,8 @@ const CareerForm = () => {
 
       {success && <p className="text-green-600 text-center mt-4">Application submitted successfully!</p>}
     </form>
-    </section>
+    </main>
+    
   );
 };
 
