@@ -63,7 +63,7 @@ const OurAllies = () => {
       <p className={`${poppins.className} text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto`}>
         Proudly trusted by global hospitality trailblazers — relationships built on excellence and lasting impact.
       </p>
-      <p>We&apos;re not just building hotels. We&apos;re building enduring legacies.</p>
+      <p className={`${poppins.className} text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto`}>We&apos;re not just building hotels. We&apos;re building enduring legacies.</p>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {allies.map((ally, index) => (
