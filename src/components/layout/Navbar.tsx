@@ -28,7 +28,7 @@ const Navbar = () => {
   // New style: FULLY TRANSPARENT at top, GLASSY GRADIENT on scroll
   const navbarStyle = {
     background: isScrolled
-      ? 'linear-gradient(90deg, rgba(112, 103, 59, 0.87) 0%, rgba(180, 143, 84, 0.57) 50%, rgba(220, 152, 80, 0.64) 75%, rgba(106, 74, 38, 0.9))'
+      ? 'linear-gradient(90deg, rgba(112, 103, 59, 0.87) 0%,rgba(191, 162, 132, 0.72) 25%, rgba(180, 143, 84, 0.57) 50%, rgba(220, 152, 80, 0.64) 75%, rgba(106, 74, 38, 0.9))'
       : 'transparent',
     WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
     backdropFilter: isScrolled ? 'blur(16px)' : 'none',
