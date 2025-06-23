@@ -72,10 +72,10 @@ const AboutUs = () => {
           <h2 className={`${playfair.className} text-4xl font-bold text-[#432c15] mb-6`}>
             About Us
           </h2>
-          <p className={`${poppins.className} text-base text-gray-700 leading-relaxed mb-4`}>
+          <p className={`${poppins.className} text-base text-gray-700 text-justify leading-relaxed mb-4`}>
             At VNEXORA Luxury Estate Private Limited, we redefine hospitality by empowering hotel and resort owners with bespoke operational and strategic solutions. Rooted in excellence and driven by innovation, VNEXORA partners with visionary property owners to unlock the full potential of their assets. Whether through long-term leasing, management contracts, or curated brand alliances, our approach is built on trust, transparency, and transformative growth.
           </p>
-          <p className={`${poppins.className} text-base text-gray-700 leading-relaxed mb-6`}>
+          <p className={`${poppins.className} text-base text-gray-700 text-justify leading-relaxed mb-6`}>
             With deep expertise in property management, marketing, design consultation, and performance analytics, we collaborate with hospitality leaders across India to craft legacies in luxury hospitality.
           </p>
           <div className="flex gap-4">
