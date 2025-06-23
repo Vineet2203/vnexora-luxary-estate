@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-50"
+      className="fixed top-0 left-0 w-full h-20 z-50"
       style={navbarStyle}
     >
       {/* Decorative gloss layer */}
@@ -49,37 +49,38 @@ const Navbar = () => {
         )}
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between relative z-10">
-        {/* Logo */}
-        <Link href="/">
-          <div className="flex items-end space-x-3" style={{ paddingBottom: '6px' }}>
-            <Image
-              src="/Images/logo.png"
-              alt="Vnexora Logo"
-              width={55}
-              height={51}
-              className="object-contain bg-transparent"
-              unoptimized
-            />
-            <Image
-              src="/Images/textlogo.png"
-              alt="Vnexora Logo Text"
-              width={140}
-              height={50}
-              className="object-contain bg-transparent hidden md:block"
-              unoptimized
-            />
-          </div>
-        </Link>
-
-        {/* Desktop Links */}
-        <div className="hidden md:flex gap-8 font-medium text-[#F5E9D3]">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between relative h-20">
+  
+        {/* Left Links */}
+        <div className="hidden md:flex gap-8 items-center font-medium text-[#F5E9D3]">
           <Link href="/" className="hover:text-yellow-400 transition duration-300"><b>Home</b></Link>
-          <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>About</b></Link>
+          <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>Our Story</b></Link>
           <Link href="#services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
+          <Link href="#team" className="hover:text-yellow-400 transition duration-300"><b>Team</b></Link>
+        </div>
+
+        {/* Center Logo */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <Link href="/">
+            <div className="flex items-center space-x-3">
+              <Image
+                src="/Images/logo.png"
+                alt="Vnexora Logo"
+                width={55}
+                height={51}
+                className="object-contain bg-transparent"
+                unoptimized
+              />
+            </div>
+          </Link>
+        </div>
+
+        {/* Right Links */}
+        <div className="hidden md:flex gap-8 items-center font-medium text-[#F5E9D3]">
+          <Link href="#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
           <Link href="#OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
           <Link href="/career" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
-          <Link href="#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
+          
           <Link href="#contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
         </div>
 
