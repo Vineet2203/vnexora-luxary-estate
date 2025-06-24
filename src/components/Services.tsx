@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { FiArrowUpRight } from "react-icons/fi";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -24,7 +23,7 @@ const services = [
       'Revenue-Sharing Models',
       'Tailored Hybrid Models',
     ],
-    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg', // replace with your actual image path
+    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg',
   },
   {
     title: 'Property Development & Consulting',
@@ -42,7 +41,7 @@ const services = [
   },
   {
     title: 'Hotel Operations & Management',
-    description: 'Operational excellence is the backbone of every successful hotel. VNEXORA provides hands-on daily management solutions across departments to enhance guest satisfaction,increase profitability, and ensure brand compliance.',
+    description: 'Operational excellence is the backbone of every successful hotel. VNEXORA provides hands-on daily management solutions across departments to enhance guest satisfaction, increase profitability, and ensure brand compliance.',
     points: [
       'Day-to-day Hotel Management',
       'Rooms Division & Front Office Oversight',
@@ -81,13 +80,12 @@ const services = [
   },
   {
     title: 'Finance & Accounting',
-    description: 'Financial transparency and strategic control are vital for sustainable growth. VNEXORA offers full-suite financial services tailored to hospitality businesses,allowing owners to make data-backed decisions with confidence.',
+    description: 'Financial transparency and strategic control are vital for sustainable growth. VNEXORA offers full-suite financial services tailored to hospitality businesses, allowing owners to make data-backed decisions with confidence.',
     points: [
       'Budgeting & Forecasting',
       'Cash Flow & Working Capital Management',
       'Financial Reporting (Compliant with USALI Standards)',
       'Accounts Payable & Receivable Management',
-      ''
     ],
     image: 'https://images.pexels.com/photos/6779716/pexels-photo-6779716.jpeg',
   },
@@ -118,10 +116,10 @@ const Services = () => {
       >
         {services.map((service, idx) => (
           <SwiperSlide key={idx}>
-            <div className="grid md:grid-cols-2 gap-8 bg-white border border-[#f1e3d3] rounded-2xl overflow-hidden shadow-xl">
-              
+            <div className="grid md:grid-cols-2 gap-0 bg-white border border-[#f1e3d3] rounded-2xl overflow-hidden shadow-xl h-[600px]"> {/* Fixed Height */}
+
               {/* Left - Image */}
-              <div className="relative w-full h-[300px] md:h-auto">
+              <div className="relative w-full h-full">
                 <Image
                   src={service.image}
                   alt={service.title}
@@ -131,27 +129,23 @@ const Services = () => {
               </div>
 
               {/* Right - Content */}
-              <div className="p-8 flex flex-col justify-center">
-                <h3 className={`${playfair.className} text-3xl text-[#432c15] mb-4`}>
-                  {service.title}
-                </h3>
-                <p className={`${poppins.className} text-gray-700 mb-4`}>
-                  {service.description}
-                </p>
+              <div className="p-8 flex flex-col justify-between h-full">
+                <div>
+                  <h3 className={`${playfair.className} text-3xl text-[#432c15] mb-4`}>
+                    {service.title}
+                  </h3>
+                  <p className={`${poppins.className} text-gray-700 mb-4`}>
+                    {service.description}
+                  </p>
 
-                {/* Points if any */}
-                {service.points.length > 0 && (
-                  <ul className={`${poppins.className} text-gray-700 list-disc pl-5 space-y-2 mb-4`}>
-                    {service.points.map((point, index) => (
-                      <li key={index}>{point}</li>
-                    ))}
-                  </ul>
-                )}
-
-                <button className="flex items-center gap-2 bg-[#705C2E] text-white font-medium px-6 py-3 rounded-full shadow-md hover:bg-[#926d3f] transition w-max">
-                  Learn More
-                  <FiArrowUpRight className="w-4 h-4" />
-                </button>
+                  {service.points.length > 0 && (
+                    <ul className={`${poppins.className} text-gray-700 list-disc pl-5 space-y-2 mb-4 `}>
+                      {service.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </div>
             </div>
           </SwiperSlide>
