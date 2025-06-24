@@ -28,7 +28,7 @@ const Navbar = () => {
   // New style: FULLY TRANSPARENT at top, GLASSY GRADIENT on scroll
   const navbarStyle = {
     background: isScrolled
-      ? 'linear-gradient(90deg, rgba(112, 103, 59, 0.87) 0%,rgba(191, 162, 132, 0.72) 25%, rgba(180, 143, 84, 0.57) 50%, rgba(220, 152, 80, 0.64) 75%, rgba(106, 74, 38, 0.9))'
+      ? 'linear-gradient(90deg, rgba(106, 74, 38, 0.9) 0%,rgba(205, 140, 59, 0.63) 25%, rgba(128, 111, 64, 0.85) 50%, rgba(220, 180, 80, 0.73) 75%, rgba(106, 74, 38, 0.9))'
       : 'transparent',
     WebkitBackdropFilter: isScrolled ? 'blur(16px)' : 'none',
     backdropFilter: isScrolled ? 'blur(16px)' : 'none',
@@ -64,10 +64,10 @@ const Navbar = () => {
           <Link href="/">
             <div className="flex items-center space-x-3">
               <Image
-                src="/Images/logo.png"
+                src="/Images/vnlogo.png"
                 alt="Vnexora Logo"
-                width={55}
-                height={51}
+                width={79}
+                height={75}
                 className="object-contain bg-transparent"
                 unoptimized
               />
@@ -98,7 +98,7 @@ const Navbar = () => {
           <ul className="space-y-2 pt-2">
             <li><a href="#about" className="hover:text-red-300">About</a></li>
             <li><a href="#services" className="hover:text-red-300">Services</a></li>
-            <li><a href="#clients" className="hover:text-red-300">Clients</a></li>
+            <li><a href="#career" className="hover:text-red-300">Career</a></li>
             <li><a href="#gallery" className="hover:text-red-300">Gallery</a></li>
             <li><a href="#contact" className="hover:text-red-300">Contact</a></li>
           </ul>

@@ -48,11 +48,11 @@ export async function POST(req: Request) {
     }
 
     // Upload resume to Supabase Storage
-    const fileExt = resumeFile.name.split('.').pop();
+    
     const fileName = `${Date.now()}_${resumeFile.name}`;
     const fileBuffer = Buffer.from(await resumeFile.arrayBuffer());
 
-    const { data: uploadData, error: uploadError} = await supabase.storage
+    const {error: uploadError} = await supabase.storage
       .from('resume')
       .upload(fileName, fileBuffer, {
         contentType: resumeFile.type,
