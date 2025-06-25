@@ -8,14 +8,13 @@ const AboutPage = () => {
       {/* Hero Section with Video Background */}
       <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
       <video 
+        src="/Videos/girl_hotel.mp4"
         autoPlay 
         loop 
         muted 
         playsInline 
         className="absolute w-full h-full object-cover"
         >
-      <source src="/videos/girl_hotel.mp4" type="video/mp4" />
-      <source src="/videos/pool_hotel.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
   <div className="absolute text-center text-[#f5e8d7] z-10">
