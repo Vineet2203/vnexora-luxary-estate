@@ -106,17 +106,17 @@ const AboutUs = () => {
               <p className={`${poppins.className} text-gray-700 mt-1`}>{stat.label}</p>
             </div>
           ))}
-       <div className="flex justify-center items-center gap-4 mt-8">
-  {slides.map((_, idx) => (
-    <div
-      key={idx}
-      onClick={() => setActiveSlide(idx)}
-      className={`w-3 h-3 transform rotate-45 cursor-pointer border border-[#705C2E] ${
-        activeSlide === idx ? 'bg-[#705C2E]' : 'bg-transparent'
-      } transition-all duration-300`}
-    />
-  ))}
-</div>
+          <div className="flex justify-center items-center gap-4 mt-8">
+            {slides.map((_, idx) => (
+              <div
+                key={idx}
+                onClick={() => setActiveSlide(idx)}
+                className={`w-3 h-3 transform rotate-45 cursor-pointer border border-[#705C2E] ${
+                  activeSlide === idx ? 'bg-[#705C2E]' : 'bg-transparent'
+                } transition-all duration-300`}
+              />
+            ))}
+          </div>
 
         </div>
 
@@ -124,7 +124,7 @@ const AboutUs = () => {
         <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-gray-300 z-0" />
       </div>  
       {/* Rotating Logo Circle at Bottom Center */}
-      <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2">
+      <div className="absolute -bottom-[-50px] left-1/2 transform -translate-x-1/2 z-20">
         <div className="w-[100px] h-[100px] rounded-full border border-gray-300 flex items-center justify-center bg-[rgba(62,24,6,0.97)] shadow-lg">
           <Image
             src="/Images/Logo.png"
