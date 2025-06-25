@@ -66,8 +66,8 @@ const Navbar = () => {
               <Image
                 src="/Images/vnlogo.png"
                 alt="Vnexora Logo"
-                width={79}
-                height={75}
+                width={85}
+                height={79}
                 className="object-contain bg-transparent"
                 unoptimized
               />
