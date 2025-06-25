@@ -1,10 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+//import { useRouter } from 'next/navigation';
 
 const CareerForm = () => {
-  const router = useRouter();
+  // const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -38,7 +38,12 @@ const CareerForm = () => {
 
     const body = new FormData();
     for (const key in formData) {
-      body.append(key, formData[key as keyof typeof formData] as any);
+      const value = formData[key as keyof typeof formData];
+      if (value instanceof Blob || typeof value === 'string') {
+        body.append(key, value);
+      } else if (value !== null && value !== undefined) {
+        body.append(key, String(value));
+      }
     }
 
     setSubmitting(true);
@@ -67,7 +72,8 @@ const CareerForm = () => {
       }
     } catch (err) {
       alert('Something went wrong.');
-    } finally {
+      console.error(err);} 
+    finally {
       setSubmitting(false);
     }
   };

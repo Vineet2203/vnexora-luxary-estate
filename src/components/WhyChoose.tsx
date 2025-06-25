@@ -1,14 +1,11 @@
 'use client';
 
-import React, { useEffect } from 'react';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import { Playfair_Display, Poppins } from 'next/font/google';
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
@@ -54,14 +51,6 @@ const slides = [
 ];
 
 const WhyChooseUs = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      offset: 120,
-    });
-  }, []);
-
   return (
     <section
       className="bg-[#f7f5f1] py-20 px-6 md:px-16 font-serif relative"
@@ -71,14 +60,11 @@ const WhyChooseUs = () => {
         {/* Heading */}
         <h2
           className={`${playfair.className} text-4xl font-bold text-center text-[#432c15] mb-4 mt-20`}
-          data-aos="fade-up"
         >
           Why Choose VNEXORA?
         </h2>
         <p
           className={`${poppins.className} text-lg text-justify text-gray-600 mb-12`}
-          data-aos="fade-up"
-          data-aos-delay="100"
         >
           At VNEXORA Luxury Estate, we don’t just manage properties—we
           transform them into profitable, memorable, and luxurious
@@ -99,11 +85,7 @@ const WhyChooseUs = () => {
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div
-                className="flex flex-col items-center text-center px-4"
-                data-aos="zoom-in-up"
-                data-aos-delay={index * 100}
-              >
+              <div className="flex flex-col items-center text-center px-4">
                 <Image
                   src={slide.image}
                   alt={slide.title}
@@ -127,7 +109,7 @@ const WhyChooseUs = () => {
         </Swiper>
 
         {/* CTA Button */}
-        <div className="text-center mt-16" data-aos="fade-up">
+        <div className="text-center mt-16">
           <button
             className={`${poppins.className} bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] transition`}
           >
@@ -139,8 +121,9 @@ const WhyChooseUs = () => {
       <style jsx global>{`
         .swiper-button-next,
         .swiper-button-prev {
-          color: #705c2e;
-        }
+          color: #705c2e; 
+
+      }
         .swiper-pagination-bullet {
           background: #705c2e;
         }
