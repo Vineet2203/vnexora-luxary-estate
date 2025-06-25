@@ -1,6 +1,5 @@
 // src/app/about/page.tsx
 import React from "react";
-
 import Card from '@/components/common/Card';
 
 const AboutPage = () => {
