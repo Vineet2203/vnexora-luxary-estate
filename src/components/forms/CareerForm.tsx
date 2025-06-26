@@ -48,8 +48,6 @@ const CareerForm = () => {
 
     setSubmitting(true);
     try {
-      console.log("Sending portfolioUrl:", formData.portfolioUrl);
-  
       const res = await fetch('/api/career', {
         method: 'POST',
         body,
