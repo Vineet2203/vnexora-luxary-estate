@@ -48,7 +48,7 @@ const CareerForm = () => {
 
     setSubmitting(true);
     try {
-      const res = await fetch('/api/career', {
+      const res = await fetch('https://cpypybqnlqevfdsihrem.functions.supabase.co/submit-career', {
         method: 'POST',
         body,
       });
