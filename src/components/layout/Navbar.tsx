@@ -96,9 +96,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white/10 backdrop-blur-md shadow-md px-4 pb-4 text-[#F5E9D3] z-10">
           <ul className="space-y-2 pt-2">
-            <li><a href="#about" className="hover:text-red-300">About</a></li>
+            <li><a href="/about" className="hover:text-red-300">About</a></li>
             <li><a href="#services" className="hover:text-red-300">Services</a></li>
-            <li><a href="#career" className="hover:text-red-300">Career</a></li>
+            <li><a href="/career" className="hover:text-red-300">Career</a></li>
             <li><a href="#gallery" className="hover:text-red-300">Gallery</a></li>
             <li><a href="#contact" className="hover:text-red-300">Contact</a></li>
           </ul>

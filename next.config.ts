@@ -45,7 +45,7 @@ const nextConfig: NextConfig = {
       'gos3.ibcdn.com'
 
     ], 
-  
+    
   },
 };
 
