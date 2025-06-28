@@ -53,63 +53,70 @@ const slides = [
 const WhyChooseUs = () => {
   return (
     <section
-      className="bg-[#f7f5f1] py-20 px-6 md:px-16 font-serif relative"
+      className="bg-[#f7f5f1] min-h-screen w-full px-0 md:px-8 py-16 relative"
       id="whychooseus"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <h2
-          className={`${playfair.className} text-4xl font-bold text-center text-[#432c15] mb-4 mt-20`}
+          className={`${playfair.className} text-4xl font-bold text-center text-[#432c15] mb-6`}
         >
           Why Choose VNEXORA?
         </h2>
         <p
-          className={`${poppins.className} text-lg text-justify text-gray-600 mb-12`}
+          className={`${poppins.className} text-lg text-center text-gray-600 mb-12 max-w-4xl mx-auto`}
         >
-          At VNEXORA Luxury Estate, we don’t just manage properties—we
-          transform them into profitable, memorable, and luxurious
-          destinations. Our end-to-end hospitality solutions combine global
-          expertise with local insights, delivering tailored strategies that
-          drive guest satisfaction, operational excellence, and sustainable
-          growth for every client.
+          At VNEXORA Luxury Estate, we don’t just manage properties—we transform
+          them into profitable, memorable, and luxurious destinations. Our
+          end-to-end hospitality solutions combine global expertise with local
+          insights, delivering tailored strategies that drive guest
+          satisfaction, operational excellence, and sustainable growth for every
+          client.
         </p>
 
         {/* === Swiper Slider === */}
         <Swiper
-          modules={[Navigation, Pagination]}
-          navigation
-          pagination={{ clickable: true }}
-          spaceBetween={30}
-          slidesPerView={1}
-          className="w-full max-w-4xl"
+  modules={[Navigation, Pagination]}
+  navigation
+  pagination={{ clickable: true }}
+  spaceBetween={30}
+  slidesPerView={1}
+  className="w-full max-w-8xl mx-auto"
+>
+  {slides.map((slide, index) => (
+    <SwiperSlide key={index}>
+      <div className="flex flex-col items-center text-center">
+        {/* === Image === */}
+        <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg mb-6">
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+        </div>
+
+        {/* === Text BELOW image === */}
+        <h3
+          className={`${poppins.className} text-2xl font-semibold text-[#705C2E] mb-2`}
         >
-          {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div className="flex flex-col items-center text-center px-4">
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  width={700}
-                  height={400}
-                  className="rounded-lg shadow-lg mb-6 w-full h-auto object-cover"
-                />
-                <h3
-                  className={`${poppins.className} text-2xl font-semibold text-[#705C2E] mb-2`}
-                >
-                  {slide.title}
-                </h3>
-                <p
-                  className={`${poppins.className} text-gray-700 max-w-xl`}
-                >
-                  {slide.description}
-                </p>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+          {slide.title}
+        </h3>
+        <p
+          className={`${poppins.className} text-gray-700 max-w-xl px-6`}
+        >
+          {slide.description}
+        </p>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
 
         {/* CTA Button */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12">
           <button
             className={`${poppins.className} bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] transition`}
           >
@@ -118,16 +125,19 @@ const WhyChooseUs = () => {
         </div>
       </div>
 
+      {/* Custom Styling */}
       <style jsx global>{`
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: #705c2e; 
-
-      }
-        .swiper-pagination-bullet {
-          background: #705c2e;
-        }
-      `}</style>
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #705c2e;
+  }
+  .swiper-pagination-bullet {
+    background: #705c2e;
+  }
+  .swiper-pagination {
+    bottom: 10px !important;
+  }
+`}</style>
     </section>
   );
 };
