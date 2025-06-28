@@ -81,7 +81,7 @@ const Navbar = () => {
           <Link href="#OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
           <Link href="/career" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
           
-          <Link href="#contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
+          <Link href="/contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
         </div>
 
         {/* Mobile Toggle */}
