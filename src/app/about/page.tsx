@@ -137,7 +137,7 @@ const AboutPage = () => {
       </section>
 
       {/* Who We Are */}
-      <section className="max-w-7xl mx-auto px-4">
+      <section id="who" className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-4 text-[#432c15] text-center mt-15">Who We Are</h2>
         <p className="text-lg text-gray-600 text-justify">
           Founded in April 2025 by IIT BHU alumnus Vineet Mishra, VNEXORA Luxury Estate is a Varanasi-based premium hospitality management and consulting firm. We specialize in transforming hotels and resorts into profitable, branded destinations through strategic partnerships and comprehensive services. From daily operations and revenue optimization to branding, HR, and guest experience innovation, we deliver tailored solutions that elevate every property we touch. Backed by deep industry expertise and global partnerships—from luxury giants to boutique brands—we empower property owners to unlock their full potential while crafting unforgettable guest journeys. At VNEXORA, we don’t just manage hotels—we redefine hospitality excellence.
@@ -195,7 +195,7 @@ const AboutPage = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden">
+      <section id="philosophy" className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden">
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
           <img
             src="/Images/story_glass.jpg"
