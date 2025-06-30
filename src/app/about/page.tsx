@@ -11,30 +11,78 @@ const AboutPage = () => {
   const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'purpose'>('vision');
   const teamMembers = [
     {
+      name: "Deepak Mishra",
+      role: "Brand Delegate",
+      image: "/Images/deepak.jpg",
+      linkedin: "https://www.linkedin.com/in/rohit-saini",
+      instagram: "https://www.instagram.com/rohit.digital",
+    },
+    {
       name: "Pooja Tripathi",
       role: "Co-Founder & COO",
-      image: "/Images/team/ananya.jpg",
+      image: "/Images/pooja.jpg",
       email: "pooja.tripathi@vnexora.com",
       instagram: "https://www.instagram.com/ananya.architect",
     },
-    {
-      name: "Shib Roy",
-      role: "Principle Architect Consultant",
-      image: "/Images/team/rahul.jpg",
-      linkedin: "https://www.linkedin.com/in/rahul-mehta",
-      instagram: "https://www.instagram.com/shibroy?igsh=MTJmdGJ5M2FnZ2Y5MA==",
-    },
+    
     {
       name: "Shachi Mishra",
       role: "Co-Founder",
-      image: "/Images/team/sneha.jpg",
+      image: "/Images/sachi.jpg",
       linkedin: "https://www.linkedin.com/in/sneha-kapoor",
       instagram: "https://www.instagram.com/sneha.tech",
     },
     {
+      name: "Shib Roy",
+      role: "Principle Architect Consultant",
+      image: "/Images/shib.jpg",
+      linkedin: "https://www.linkedin.com/in/rahul-mehta",
+      instagram: "https://www.instagram.com/shibroy?igsh=MTJmdGJ5M2FnZ2Y5MA==",
+    },
+    {
+      name: "Akanscha Roy",
+      role: "Business Executive",
+      image: "/Images/akanscha.jpg",
+      email: "kumarakshat1706@gmail.com",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      instagram: "https://www.instagram.com/rohit.digital",
+    },
+
+    {
+      name: "Kumar Akshat",
+      role: "Technical Head",
+      image: "/Images/akshat.jpg",
+      email: "kumarakshat1706@gmail.com",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      instagram: "https://www.instagram.com/rohit.digital",
+    },
+    {
+      name: "Ashu Singh",
+      role: "Techie",
+      image: "/Images/ashu.jpg",
+      email: "kumarakshat1706@gmail.com",
+      linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+    },
+    {
+      name: "Ankush Rai",
+      role: "Architect & Project Planner",
+      image: "/Images/ankush.jpg",
+      email: "",
+      linkedin: "https://www.linkedin.com/in/rohit-saini",
+      instagram: "https://www.instagram.com/rohit.digital",
+    },
+    {
       name: "Shikha Mishra",
       role: "PR & Media Head",
-      image: "/Images/team/arjun.jpg",
+      image: "/Images/shikha.jpg",
+      email: "arjun@vnexora.com",
+      linkedin: "https://www.linkedin.com/in/arjun-verma",
+      instagram: "https://www.instagram.com/arjun.ops",
+    },
+        {
+      name: "Aparajita Bose",
+      role: "Astrologer & Vastu",
+      image: "/Images/aparajita.jpg",
       email: "arjun@vnexora.com",
       linkedin: "https://www.linkedin.com/in/arjun-verma",
       instagram: "https://www.instagram.com/arjun.ops",
@@ -42,80 +90,47 @@ const AboutPage = () => {
     {
       name: "Devesh Mishra",
       role: "Chartered Accountant & Insolvency Professional",
-      image: "/Images/team/priya.jpg",
+      image: "/Images/devesh.jpg",
       linkedin: "https://www.linkedin.com/in/priya-joshi",
       instagram: "https://www.instagram.com/priya.brand",
     },
-    {
-      name: "Pragya Gupta",
-      role: "Head HR",
-      image: "/Images/team/karan.jpg",
-      linkedin: "https://www.linkedin.com/in/karan-singh",
-      instagram: "https://www.instagram.com/karan.analytics",
-    },
-    {
-      name: "Monica Sharma",
-      role: "Architect, Interior Designer & Project Planner Consultant",
-      image: "/Images/team/isha.jpg",
-      linkedin: "https://www.linkedin.com/in/isha-dutta",
-      instagram: "https://www.instagram.com/isha.hosp",
-    },
-    {
-      name: "Sneha Giri",
-      role: "Legal Head Consultant",
-      image: "/Images/team/rohit.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
-    },
-    {
-      name: "Namira",
-      role: "Sales and Event Manager",
-      image: "/Images/team/rohit.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
-    },
-    {
-      name: "Deepak Mishra",
-      role: "Brand Delegate",
-      image: "/Images/team/rohit.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
-    },
-    {
-      name: "Ankush Rai",
-      role: "Architect & Project Planner",
-      image: "/Images/team/rohit.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
-    },
-    {
-      name: "Rakesh Singh",
-      role: "Restaurant & Bar Setup Head",
-      image: "/Images/team/rohit.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
-    },
+    // {
+    //   name: "Monica Sharma",
+    //   role: "Architect, Interior Designer & Project Planner Consultant",
+    //   image: "/Images/team/isha.jpg",
+    //   linkedin: "https://www.linkedin.com/in/isha-dutta",
+    //   instagram: "https://www.instagram.com/isha.hosp",
+    // },
+    // {
+    //   name: "Sneha Giri",
+    //   role: "Legal Head Consultant",
+    //   image: "/Images/team/rohit.jpg",
+    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
+    //   instagram: "https://www.instagram.com/rohit.digital",
+    // },
+    // {
+    //   name: "Namira",
+    //   role: "Sales and Event Manager",
+    //   image: "/Images/team/rohit.jpg",
+    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
+    //   instagram: "https://www.instagram.com/rohit.digital",
+    // },
+    
+    // {
+    //   name: "Rakesh Singh",
+    //   role: "Restaurant & Bar Setup Head",
+    //   image: "/Images/team/rohit.jpg",
+    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
+    //   instagram: "https://www.instagram.com/rohit.digital",
+    // },
     {
       name: "Shyam Lal Singh",
       role: "Planner India Founder & Mentor",
-      image: "/Images/team/rohit.jpg",
+      image: "/Images/shyam.jpg",
       linkedin: "https://www.linkedin.com/in/rohit-saini",
       instagram: "https://www.instagram.com/rohit.digital",
     },
-    {
-      name: "Kumar Akshat",
-      role: "Tech",
-      image: "/Images/team/rohit.jpg",
-      email: "kumarakshat1706@gmail.com",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-      instagram: "https://www.instagram.com/rohit.digital",
-    },
-    {
-      name: "Ashu Singh",
-      role: "",
-      image: "/Images/team/rohit.jpg",
-      linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
-    },
+    
   ];
 
  return (
@@ -201,9 +216,9 @@ const AboutPage = () => {
       <section id="philosophy" className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden">
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
           <img
-            src="/Images/story_glass.jpg"
+            src="/Images/philosophy.jpg"
             alt="Philosophy Visual"
-            className="rounded-2xl w-[300px] md:w-[350px] lg:w-[400px]"
+            className="rounded-2xl w-[420px] md:w-[770px] lg:w-[560px]"
           />
         </div>
 
