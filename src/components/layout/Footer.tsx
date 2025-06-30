@@ -18,15 +18,15 @@ const Footer = () => {
           <h3 className={`text-3xl font-bold text-[#432c15] ${playfair.className}`}>VNEXORA</h3>
           <p className="text-sm">&copy; 2025 VNEXORA Luxury Estate Pvt. Ltd.</p>
           <div className="space-y-2">
-            <a href="#" className="block text-sm hover:underline hover:decoration-[#432c15]">Terms & Conditions</a>
-            <a href="#" className="block text-sm hover:underline hover:decoration-[#432c15]">Privacy Policy</a>
+            <a href="#" className="block text-sm  hover:decoration-[#432c15]">Terms & Conditions</a>
+            <a href="#" className="block text-sm  hover:decoration-[#432c15]">Privacy Policy</a>
           </div>
           <div className="flex space-x-3 pt-4">
             <a href="https://www.linkedin.com/company/vnexora" target="_blank" rel="noopener noreferrer"
               className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
               <FaLinkedinIn size={16} />
             </a>
-            <a href="https://www.youtube.com/@VNEXORALUXURYESTATE" target="_blank" rel="noopener noreferrer"
+            <a href="https://www.youtube.com/@VNEXORA" target="_blank" rel="noopener noreferrer"
               className="p-2 border border-gray-400 rounded-full hover:bg-[#705C2E] hover:text-white transition">
               <FaYoutube size={16} />
             </a>
@@ -45,11 +45,11 @@ const Footer = () => {
         <div>
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>ABOUT</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="/about" className="hover:underline hover:decoration-[#705C2E]">About Us</a></li>
-            <li><a href="/about#who" className="hover:underline hover:decoration-[#705C2E]">Introduction</a></li>
-            <li><a href="/about#philosophy" className="hover:underline hover:decoration-[#705C2E]">Our Mission</a></li>
-            <li><a href="#" className="hover:underline hover:decoration-[#705C2E]">Milestones</a></li>
-            <li><a href="#" className="hover:underline hover:decoration-[#705C2E]">Awards and Recognition</a></li>
+            <li><a href="/about" className=" hover:decoration-[#705C2E]">About Us</a></li>
+            <li><a href="/about#who" className=" hover:decoration-[#705C2E]">Introduction</a></li>
+            <li><a href="/about#philosophy" className=" hover:decoration-[#705C2E]">Our Mission</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Milestones</a></li>
+            <li><a href="#" className="hover:decoration-[#705C2E]">Awards and Recognition</a></li>
           </ul>
         </div>
 
@@ -57,13 +57,13 @@ const Footer = () => {
         <div>
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>SERVICES</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Strategic Consulting</a></li>
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Operational Excellence</a></li>
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Hotel Management</a></li>
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Marketing Plan</a></li>
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Finance & Accounting</a></li>
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Brand Development</a></li>
-            <li><a href="#services" className="hover:underline hover:decoration-[#705C2E]">Property Management</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Strategic Consulting</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Operational Excellence</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Hotel Management</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Marketing Plan</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Finance & Accounting</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Brand Development</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Property Management</a></li>
           </ul>
         </div>
 
@@ -71,10 +71,10 @@ const Footer = () => {
         <div>
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>PORTFOLIO</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className="hover:underline hover:decoration-[#705C2E]">Luxury Hotels</a></li>
-            <li><a href="#" className="hover:underline hover:decoration-[#705C2E]">Resorts</a></li>
-            <li><a href="#" className="hover:underline hover:decoration-[#705C2E]">Urban Properties</a></li>
-            <li><a href="#" className="hover:underline hover:decoration-[#705C2E]">Boutique Hotels</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Luxury Hotels</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Resorts</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Urban Properties</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Boutique Hotels</a></li>
           </ul>
         </div>
 
@@ -90,7 +90,7 @@ const Footer = () => {
             </li>
             <li>+91 7980829403</li>
             <li>
-              <a href="mailto:connect@vnexora.com" className="hover:underline hover:decoration-[#705C2E]">
+              <a href="mailto:connect@vnexora.com" className=" hover:decoration-[#705C2E]">
                 connect@vnexora.com
               </a>
             </li>
