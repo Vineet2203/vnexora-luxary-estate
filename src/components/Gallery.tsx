@@ -4,16 +4,21 @@ import React from 'react';
 import Image from 'next/image';
 
 const images = [
-  '/images/IMG-20250626-WA0005.jpg',
-  '/images/IMG-20250626-WA0007.jpg',
-  '/images/IMG-20250626-WA0006.jpg',
-  '/images/IMG-20250626-WA0008.jpg',
-  '/images/IMG-20250626-WA0009.jpg',
+  '/Images/gallery/gl1.jpg',
+  '/Images/gallery/gl2.jpg',
+  '/Images/gallery/gl3.jpg',
+  '/Images/gallery/gl4.jpg',
+  '/Images/gallery/gl5.jpg',
+  '/Images/gallery/gl6.jpg',
+  '/Images/gallery/gl7.jpg',
+  '/Images/gallery/gl8.jpg',
+  '/Images/gallery/gl9.jpg',
+  '/Images/gallery/gl10.jpg',
 ];
 
 const Gallery = () => {
   return (
-    <section className="py-10 px-4 ">
+    <section className="py-16 px-4 " id="gallery">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-[#432c15] text-center">Gallery</h2>
         <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">

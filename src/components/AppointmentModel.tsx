@@ -9,10 +9,10 @@ const timeSlots = ['10:00 AM', '12:00 PM', '2:00 PM', '4:00 PM'];
 export default function AppointmentModal({ onClose }: { onClose: () => void }) {
   const [date, setDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
-  const [showForm, setShowForm] = useState(false);
+  //onst [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '' });
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Appointment:', { date, selectedTime, formData });
     onClose(); // Close after submission
