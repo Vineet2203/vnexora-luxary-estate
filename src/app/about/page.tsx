@@ -213,6 +213,8 @@ const AboutPage = () => {
             src="/Images/philosophy.jpg"
             alt="Philosophy Visual"
             className="rounded-2xl w-[420px] md:w-[770px] lg:w-[560px]"
+            width={560}
+            height={360}
           />
         </div>
 
