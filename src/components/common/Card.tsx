@@ -16,8 +16,8 @@ interface CardProps {
 }
 
 const sizeMap = {
-  small: 'w-64 h-80',
-  medium: 'w-72 h-96',
+  small: 'w-64 h-64',
+  medium: 'w-75 h-75',
   large: 'w-80 h-[28rem]',
 };
 

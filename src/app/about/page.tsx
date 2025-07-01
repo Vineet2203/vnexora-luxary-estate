@@ -14,8 +14,7 @@ const AboutPage = () => {
       name: "Deepak Mishra",
       role: "Brand Delegate",
       image: "/Images/deepak.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
+      linkedin: "https://www.linkedin.com/in/deepak-mishra-6b88318/",
     },
     {
       name: "Pooja Tripathi",
@@ -50,49 +49,39 @@ const AboutPage = () => {
 
     {
       name: "Kumar Akshat",
-      role: "Technical Head",
+      role: "Techie",
       image: "/Images/akshat.jpg",
-      email: "kumarakshat1706@gmail.com",
+      email: "kumar.akshat@vnexora.com",
       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-      instagram: "https://www.instagram.com/rohit.digital",
     },
     {
       name: "Ashu Singh",
       role: "Techie",
       image: "/Images/ashu.jpg",
-      email: "kumarakshat1706@gmail.com",
+      email: "ashu.singh@vnexora.com",
       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
     },
     {
       name: "Ankush Rai",
       role: "Architect & Project Planner",
       image: "/Images/ankush.jpg",
-      email: "",
+      email: "ar.ankushrai@gmail.com",
       linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
     },
     {
       name: "Shikha Mishra",
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
-      email: "arjun@vnexora.com",
-      linkedin: "https://www.linkedin.com/in/arjun-verma",
-      instagram: "https://www.instagram.com/arjun.ops",
     },
         {
       name: "Aparajita Bose",
       role: "Astrologer & Vastu",
       image: "/Images/aparajita.jpg",
-      email: "arjun@vnexora.com",
-      linkedin: "https://www.linkedin.com/in/arjun-verma",
-      instagram: "https://www.instagram.com/arjun.ops",
     },
     {
       name: "Devesh Mishra",
       role: "Chartered Accountant & Insolvency Professional",
       image: "/Images/devesh.jpg",
-      linkedin: "https://www.linkedin.com/in/priya-joshi",
-      instagram: "https://www.instagram.com/priya.brand",
     },
     // {
     //   name: "Monica Sharma",
@@ -247,17 +236,17 @@ const AboutPage = () => {
                   <div className="bg-white text-left text-slate-600 text-base px-6 py-4 rounded-2xl shadow-sm transition-all duration-300">
                     {key === "vision" && (
                       <p>
-                        To be a well reputed boutique hospitality management company operating in growing & emerging destinations worldwide...
-                      </p>
+                        To be India’s most trusted and admired name in luxury hospitality development and hotel transformation.<br></br>VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
+ </p>
                     )}
                     {key === "mission" && (
                       <p>
-                        To deliver authentic, memorable guest experiences...
+                        To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery.<br></br>Our mission is to unlock each property's full potential by integrating strategic planning, guest-first thinking, and global standards.
                       </p>
                     )}
                     {key === "purpose" && (
                       <p>
-                        To provide our guests with a transformative experience worth sharing...
+                        To bridge the gap between unrealized hotel potential and sustainable success through vision, innovation, and execution.<br></br>At VNEXORA, our purpose is to make every hotel not just operational—but aspirational.
                       </p>
                     )}
                   </div>
