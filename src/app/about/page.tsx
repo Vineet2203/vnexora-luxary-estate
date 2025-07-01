@@ -1,14 +1,19 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import Card from '@/components/common/Card';
 import { Poppins, Playfair_Display } from 'next/font/google';
+
+type TabKey = "vision" | "mission" | "purpose";
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 
 const AboutPage = () => {
-  const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'purpose'>('vision');
+  //const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'purpose'>('vision');
+  const tabOptions: TabKey[] = ["vision", "mission", "purpose"];
+  const [activeTab, setActiveTab] = useState<TabKey>("vision");
   const teamMembers = [
     {
       name: "Deepak Mishra",
@@ -204,7 +209,7 @@ const AboutPage = () => {
       {/* Philosophy Section */}
       <section id="philosophy" className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden">
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-          <img
+          <Image
             src="/Images/philosophy.jpg"
             alt="Philosophy Visual"
             className="rounded-2xl w-[420px] md:w-[770px] lg:w-[560px]"
@@ -213,18 +218,16 @@ const AboutPage = () => {
 
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4">
           <h2 className={`text-4xl font-extrabold tracking-wider text-[#432c15] ${playfair.className}`}>Philosophy</h2>
-
           <div className="space-y-4">
-            {["vision", "mission", "purpose"].map((key, idx) => (
+            {tabOptions.map((key, idx) => (
               <div key={key}>
                 <button
-                  onClick={() => setActiveTab(key as any)}
+                  onClick={() => setActiveTab(key)}
                   className={`flex justify-between items-center w-full px-6 py-3 text-lg transition rounded-2xl ${
                     activeTab === key
                       ? "bg-white shadow text-[#1e1e1e]"
                       : "bg-transparent text-[#1e1e1e]"
-                  }`}
-                >
+                  }`}>
                   <span className={`${poppins.className}`}>
                     {key === "vision" && "Our Vision"}
                     {key === "mission" && "Our Mission"}
@@ -236,12 +239,12 @@ const AboutPage = () => {
                   <div className="bg-white text-left text-slate-600 text-base px-6 py-4 rounded-2xl shadow-sm transition-all duration-300">
                     {key === "vision" && (
                       <p>
-                        To be India’s most trusted and admired name in luxury hospitality development and hotel transformation.<br></br>VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
- </p>
+                        To be India&apos;s most trusted and admired name in luxury hospitality development and hotel transformation.<br></br>VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
+                      </p>
                     )}
                     {key === "mission" && (
                       <p>
-                        To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery.<br></br>Our mission is to unlock each property's full potential by integrating strategic planning, guest-first thinking, and global standards.
+                        To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery.<br></br>Our mission is to unlock each property&apos;s full potential by integrating strategic planning, guest-first thinking, and global standards.
                       </p>
                     )}
                     {key === "purpose" && (

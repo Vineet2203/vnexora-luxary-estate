@@ -69,7 +69,7 @@ const Navbar = () => {
                 width={85}
                 height={79}
                 className="object-contain bg-transparent"
-                unoptimized
+                //unoptimized
               />
             </div>
           </Link>
@@ -94,7 +94,13 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/10 backdrop-blur-md shadow-md px-4 pb-4 text-[#F5E9D3] z-10">
+        <div className="md:hidden backdrop-blur-lg shadow-md px-4 pb-4 text-[#F5E9D3] z-40"
+          style={{
+          background: 'linear-gradient(90deg, rgba(106, 74, 38, 0.9) 0%, rgba(205, 140, 59, 0.63) 25%, rgba(128, 111, 64, 0.85) 50%, rgba(220, 180, 80, 0.73) 75%, rgba(106, 74, 38, 0.9))',
+          WebkitBackdropFilter: 'blur(16px)',
+          backdropFilter: 'blur(16px)',
+          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+    }}>
           <ul className="space-y-2 pt-2">
             <li><a href="/about" className="hover:text-red-300">About</a></li>
             <li><a href="#services" className="hover:text-red-300">Services</a></li>
