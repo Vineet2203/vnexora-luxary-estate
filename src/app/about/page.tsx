@@ -52,20 +52,20 @@ const AboutPage = () => {
       instagram: "https://www.instagram.com/rohit.digital",
     },
 
-    {
-      name: "Kumar Akshat",
-      role: "Techie",
-      image: "/Images/akshat.jpg",
-      email: "kumar.akshat@vnexora.com",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-    },
-    {
-      name: "Ashu Singh",
-      role: "Techie",
-      image: "/Images/ashu.jpg",
-      email: "ashu.singh@vnexora.com",
-      linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
-    },
+    // {
+    //   name: "Kumar Akshat",
+    //   role: "Techie",
+    //   image: "/Images/akshat.jpg",
+    //   email: "kumar.akshat@vnexora.com",
+    //   linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+    // },
+    // {
+    //   name: "Ashu Singh",
+    //   role: "Techie",
+    //   image: "/Images/ashu.jpg",
+    //   email: "ashu.singh@vnexora.com",
+    //   linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+    // },
     {
       name: "Ankush Rai",
       role: "Architect & Project Planner",
