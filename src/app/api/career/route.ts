@@ -98,8 +98,9 @@ export async function POST(req: NextRequest) {
       appliedAt: new Date(),
     });
 
-    // Email to candidate
-    await transporter.sendMail({
+  // Send emails after response (non-blocking)
+  // Email to candidate
+  Promise.all([await transporter.sendMail({
       from: `"Vnexora" <${process.env.NODEMAILER_USER}>`,
       to: email,
       subject: 'Application Received – Thank You!',
@@ -110,7 +111,7 @@ export async function POST(req: NextRequest) {
         <p>We will review your resume and contact you if you’re shortlisted.</p>
         <p>Best regards,<br/>HR Team</p>
       `,
-    });
+    }),
 
     // Email to HR
     await transporter.sendMail({
@@ -129,10 +130,10 @@ export async function POST(req: NextRequest) {
         <p><strong>Resume:</strong> <a href="${resumeUrl}">View Resume</a></p>
         <p>Applied At: ${new Date().toLocaleString()}</p>
       `,
-    });
+    })]).catch((err) => console.error('Email sending error:', err));
 
     return NextResponse.json(
-      { success: true, resumeUrl, message: 'Application submitted and email sent.' },
+      { success: true, resumeUrl, message: 'Application submitted.' },
       { status: 201 }
     );
   } catch (error) {
