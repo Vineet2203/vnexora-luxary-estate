@@ -2,6 +2,10 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { Playfair_Display, Poppins } from 'next/font/google';
+
+const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
+const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 const images = [
   '/Images/gallery/gl1.jpg',
@@ -38,6 +42,32 @@ const images = [
 
 const Gallery = () => {
   return (
+    <>
+   {/* Hero Section */}
+<section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+  <video
+    src="/Videos/gallery.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute w-full h-full object-cover"
+  />
+  
+  {/* Black overlay for better text visibility */}
+  <div className="absolute w-full h-full bg-black/40 z-10" />
+
+  {/* Text content */}
+  <div className="absolute text-center text-[#f5e8d7] z-20 px-4">
+    <h1 className={`text-4xl md:text-5xl font-extrabold ${playfair.className}`}>
+      VNEXORA Moments
+    </h1>
+    <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+      A Visual Journey Through Our Signature Hospitality, Design, and Experiences
+    </p>
+  </div>
+</section>
+
     <main className={`w-full mx-auto space-y-16 px-0 pb-10 relative bg-[#f7f5f1]`}>
     <section className="py-16 px-4 " id="gallery">
       <div className="max-w-6xl mx-auto">
@@ -58,6 +88,7 @@ const Gallery = () => {
       </div>
     </section>
     </main>
+    </>
   );
 };
 

@@ -30,6 +30,7 @@ const GetInTouchForm = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+     console.log("✅ Custom submit triggered");
     e.preventDefault();
     if (!formData.agree) {
       alert("You must agree to receive offers before submitting.");
