@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 import React, { useState } from 'react';
 import Card from '@/components/common/Card';
@@ -204,7 +205,7 @@ const AboutPage = () => {
       {/* Philosophy Section */}
       <section id="philosophy" className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden">
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-          <img
+          <Image
             src="/Images/philosophy.jpg"
             alt="Philosophy Visual"
             className="rounded-2xl w-[420px] md:w-[770px] lg:w-[560px]"
