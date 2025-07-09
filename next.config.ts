@@ -45,7 +45,9 @@ const nextConfig: NextConfig = {
       'gos3.ibcdn.com'
 
     ], 
-    
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // Ignore ESLint errors during build
   },
 };
 

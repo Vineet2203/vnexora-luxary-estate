@@ -5,7 +5,7 @@ import Gallery from "../components/Gallery";
 import OurAllies from '../components/OurAllies';
 import Services from "../components/Services";
 import AppointmentFAB from '@/components/AppointmentFAB';
-import GalleryGrid from "@/components/GalleryGrid";
+
 
 
 
