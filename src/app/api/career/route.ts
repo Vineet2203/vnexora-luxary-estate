@@ -1,0 +1,149 @@
+// /app/api/career/route.ts (Next.js 13+ with Edge API)
+
+import { NextRequest, NextResponse } from 'next/server';
+import { google } from 'googleapis';
+import nodemailer from 'nodemailer';
+import { Readable } from 'stream';
+import connectDB from '@/lib/db';
+import Career from '@/models/Career';
+
+// Google OAuth2 Setup
+const oauth2Client = new google.auth.OAuth2(
+  process.env.GOOGLE_CLIENT_ID!,
+  process.env.GOOGLE_CLIENT_SECRET!,
+  'https://developers.google.com/oauthplayground'
+);
+oauth2Client.setCredentials({ refresh_token: process.env.GOOGLE_REFRESH_TOKEN! });
+const drive = google.drive({ version: 'v3', auth: oauth2Client });
+
+// Nodemailer setup
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.NODEMAILER_USER,
+    pass: process.env.NODEMAILER_PASS,
+  },
+});
+
+export async function POST(req: NextRequest) {
+  try {
+    await connectDB();
+    const formData = await req.formData();
+
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'coverLetter', 'resumeUrl'];
+    const missingFields = requiredFields.filter((field) => !formData.get(field));
+    if (missingFields.length > 0) {
+      return NextResponse.json(
+        { error: `Missing required fields: ${missingFields.join(', ')}` },
+        { status: 400 }
+      );
+    }
+
+    const firstName = formData.get('firstName') as string;
+    const lastName = formData.get('lastName') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const whatsapp = (formData.get('whatsapp') as string) || '';
+    const portfolioUrl = (formData.get('portfolioUrl') as string) || '';
+    const coverLetter = formData.get('coverLetter') as string;
+    const file = formData.get('resumeUrl') as File;
+
+    // Validation: PDF only and size < 2MB
+    if (!file || typeof file === 'string' || file.type !== 'application/pdf') {
+      return NextResponse.json({ error: 'Only PDF files are allowed' }, { status: 400 });
+    }
+    const maxSize = 2 * 1024 * 1024;
+    if (file.size > maxSize) {
+      return NextResponse.json({ error: 'File size exceeds 2MB limit' }, { status: 400 });
+    }
+
+    // Upload to Google Drive
+    const buffer = Buffer.from(await file.arrayBuffer());
+    const stream = Readable.from(buffer);
+    const uploadRes = await drive.files.create({
+      requestBody: {
+        name: file.name,
+        mimeType: 'application/pdf',
+      },
+      media: {
+        mimeType: 'application/pdf',
+        body: stream,
+      },
+    });
+    const fileId = uploadRes.data.id;
+
+    // Make public
+    await drive.permissions.create({
+      fileId: fileId!,
+      requestBody: { role: 'reader', type: 'anyone' },
+    });
+
+    // Get shareable link
+    const driveFile = await drive.files.get({
+      fileId: fileId!,
+      fields: 'webViewLink',
+    });
+    const resumeUrl = driveFile.data.webViewLink;
+
+    // Save to DB
+    await Career.create({
+      firstName,
+      lastName,
+      email,
+      phone,
+      whatsapp,
+      portfolioUrl,
+      coverLetter,
+      resumeUrl,
+      appliedAt: new Date(),
+    });
+
+  // Send emails after response (non-blocking)
+  // Email to candidate
+  Promise.all([await transporter.sendMail({
+      from: `"Vnexora" <${process.env.NODEMAILER_USER}>`,
+      to: email,
+      subject: 'Application Received – Thank You!',
+      html: `
+        <p>Dear ${firstName},</p>
+        <p>Thank you for applying. We’ve received your application successfully.</p>
+        <p><strong>Resume Link:</strong> <a href="${resumeUrl}" target="_blank">View Resume</a></p>
+        <p>We will review your resume and contact you if you’re shortlisted.</p>
+        <p>Best regards,<br/>HR Team</p>
+      `,
+    }),
+
+    // Email to HR
+    await transporter.sendMail({
+      from: `"Career Portal" <${process.env.NODEMAILER_USER}>`,
+      to: process.env.HR_EMAIL!,
+      subject: `New Application from ${firstName} ${lastName}`,
+      html: `
+        <h3>New Candidate Applied</h3>
+        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>WhatsApp:</strong> ${whatsapp}</p>
+        <p><strong>Portfolio:</strong> ${portfolioUrl || 'N/A'}</p>
+        <p><strong>Cover Letter:</strong></p>
+        <p>${coverLetter}</p>
+        <p><strong>Resume:</strong> <a href="${resumeUrl}">View Resume</a></p>
+        <p>Applied At: ${new Date().toLocaleString()}</p>
+      `,
+    })]).catch((err) => console.error('Email sending error:', err));
+
+    return NextResponse.json(
+      { success: true, resumeUrl, message: 'Application submitted.' },
+      { status: 201 }
+    );
+  } catch (error) {
+    console.error('Career submission error:', error);
+    return NextResponse.json(
+      {
+        error: 'Failed to process application',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    );
+  }
+}
