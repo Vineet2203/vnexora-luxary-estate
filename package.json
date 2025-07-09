@@ -21,7 +21,7 @@
     "gsap": "^3.13.0",
     "keen-slider": "^6.8.6",
     "lucide-react": "^0.512.0",
-    "mongoose": "^8.16.1",
+    "mongoose": "^8.16.2",
     "next": "15.3.3",
     "nodemailer": "^7.0.5",
     "phosphor-react": "^1.4.1",
