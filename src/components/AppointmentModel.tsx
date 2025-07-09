@@ -23,7 +23,6 @@ const timeSlots = ['10:00am - 10:30am','11:00am - 11:30am', '11:30am - 12:00noon
 export default function AppointmentModal({ onClose }: { onClose: () => void }) {
   const [date, setDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
-  const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', address: '' });
 
   const handleSubmit = (e: any) => {
