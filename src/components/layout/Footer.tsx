@@ -10,7 +10,7 @@ const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 const Footer = () => {
   return (
-    <footer className={`bg-[#fdf6e9] text-black pt-14 px-6 md:px-20 ${poppins.className}`} id="contact">
+    <footer className={`np text-black pt-14 px-6 md:px-20 ${poppins.className}`} id="contact">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-10 text-left">
 
         {/* VNEXORA Branding */}
@@ -62,7 +62,7 @@ const Footer = () => {
             <li><a href="#services" className=" hover:decoration-[#705C2E]">Hotel Management</a></li>
             <li><a href="#services" className=" hover:decoration-[#705C2E]">Marketing Plan</a></li>
             <li><a href="#services" className=" hover:decoration-[#705C2E]">Finance & Accounting</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Brand Development</a></li>
+            <li><a href="#services" className=" hover:decoration-[#705C2E]">Brand Collaboration</a></li>
             <li><a href="#services" className=" hover:decoration-[#705C2E]">Property Management</a></li>
           </ul>
         </div>
@@ -71,10 +71,13 @@ const Footer = () => {
         <div>
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>PORTFOLIO</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Luxury Hotels</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Resorts</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Urban Properties</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Boutique Hotels</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Restaurants</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Banquerts</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Destination Wedding</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Retails</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Co-Working</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Villas</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Residentials</a></li>
           </ul>
         </div>
 
@@ -89,6 +92,7 @@ const Footer = () => {
               Varanasi - 221005
             </li>
             <li>+91 7980829403</li>
+            <li>+91 8318195911</li>
             <li>
               <a href="mailto:connect@vnexora.com" className=" hover:decoration-[#705C2E]">
                 connect@vnexora.com

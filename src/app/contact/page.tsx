@@ -1,3 +1,4 @@
+'use client';
 import GetInTouchForm from '@/components/forms/GetInTouch'; 
 
 export default function GetInTouchPage() {

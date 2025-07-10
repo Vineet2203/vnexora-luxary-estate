@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-//import { useRouter } from 'next/navigation';
 
 const CareerForm = () => {
-  // const router = useRouter();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -14,12 +12,15 @@ const CareerForm = () => {
     portfolioUrl: '',
     coverLetter: '',
     resumeUrl: null as File | null,
+    positionType: '',
+    department: '',
+    otherDepartment: '',
   });
 
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -48,8 +49,6 @@ const CareerForm = () => {
 
     setSubmitting(true);
     try {
-      console.log("Sending portfolioUrl:", formData.portfolioUrl);
-  
       const res = await fetch('/api/career', {
         method: 'POST',
         body,
@@ -66,14 +65,17 @@ const CareerForm = () => {
           portfolioUrl: '',
           coverLetter: '',
           resumeUrl: null,
+          positionType: '',
+          department: '',
+          otherDepartment: '',
         });
       } else {
         alert('Submission failed. Try again.');
       }
     } catch (err) {
       alert('Something went wrong.');
-      console.error(err);} 
-    finally {
+      console.error(err);
+    } finally {
       setSubmitting(false);
     }
   };
@@ -82,9 +84,9 @@ const CareerForm = () => {
     <main
       className="pt-30 pb-5 px-2 w-full mx-auto shadow-lg space-y-16 relative"
       style={{
-      background: 'linear-gradient(100deg, rgba(248, 243, 217, 0.82) 0%,rgba(191, 162, 132, 0.72) 25%, rgba(165, 158, 147, 0.57) 50%, rgba(227, 210, 192, 0.64) 75%, rgba(227, 195, 159, 0.9))',
-      opacity: 0.9,
-      backgroundBlendMode: 'multiply',
+        background: 'linear-gradient(100deg, rgba(248, 243, 217, 0.82) 0%,rgba(191, 162, 132, 0.72) 25%, rgba(165, 158, 147, 0.57) 50%, rgba(227, 210, 192, 0.64) 75%, rgba(227, 195, 159, 0.9))',
+        opacity: 0.9,
+        backgroundBlendMode: 'multiply',
       }}
     >
       <form
@@ -98,29 +100,63 @@ const CareerForm = () => {
           border: '1px solid rgba(184, 197, 197, 0.75)',
         }}
       >
-        <h2 className="text-3xl font-bold text-[#432c15] text-center">Join Our Team</h2>
 
         <div className="grid md:grid-cols-2 gap-4">
           <input name="firstName" required value={formData.firstName} onChange={handleChange} placeholder="First Name" className="input" />
           <input name="lastName" required value={formData.lastName} onChange={handleChange} placeholder="Last Name" className="input" />
         </div>
+
         <div className="grid md:grid-cols-2 gap-4">
           <input name="email" type="email" required value={formData.email} onChange={handleChange} placeholder="Email" className="input" />
           <input name="phone" required value={formData.phone} onChange={handleChange} placeholder="Phone" className="input" />
         </div>
-        <input name="whatsapp" value={formData.whatsapp} onChange={handleChange} placeholder="WhatsApp (Optional)" className="input" />
+
+        <input name="whatsapp" value={formData.whatsapp} onChange={handleChange} placeholder="WhatsApp" className="input" />
         <input name="portfolioUrl" value={formData.portfolioUrl} onChange={handleChange} placeholder="Portfolio URL (Optional)" className="input" />
+
+        <select name="positionType" value={formData.positionType} onChange={handleChange} required className="input">
+          <option value="">Applying For Position</option>
+          <option value="Intern">Intern</option>
+          <option value="Full-time">Full-time</option>
+          <option value="Part-time">Part-time</option>
+          <option value="Freelancer">Freelancer</option>
+          <option value="Mentor">Mentor</option>
+          <option value="Business Associate">Business Associate</option>
+        </select>
+
+        <select name="department" value={formData.department} onChange={handleChange} required className="input">
+          <option value="">Department</option>
+          <option value="Business Development">Business Development</option>
+          <option value="HR">HR</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Sales">Sales</option>
+          <option value="Branding & Promotion">Branding & Promotion</option>
+          <option value="Finance">Finance</option>
+          <option value="Others">Others (Specify)</option>
+        </select>
+
+        {formData.department === 'Others' && (
+          <input
+            name="otherDepartment"
+            value={formData.otherDepartment}
+            onChange={handleChange}
+            placeholder="Specify Other Department"
+            className="input"
+            required
+          />
+        )}
+
         <textarea name="coverLetter" rows={4} value={formData.coverLetter} onChange={handleChange} placeholder="Why do you want to work with us?" className="input" />
 
         <div>
           <label className="block mb-1 font-medium">Upload Resume <span className="text-red-500">*</span></label>
           <input
-        type="file"
-        name="resumeUrl"
-        accept=".pdf,.jpg,.jpeg,.txt"
-        onChange={handleFileChange}
-        className="input"
-        required
+            type="file"
+            name="resumeUrl"
+            accept=".pdf,.jpg,.jpeg,.txt"
+            onChange={handleFileChange}
+            className="input"
+            required
           />
         </div>
 
@@ -131,7 +167,6 @@ const CareerForm = () => {
         {success && <p className="text-green-600 text-center mt-4">Application submitted successfully!</p>}
       </form>
     </main>
-    
   );
 };
 
