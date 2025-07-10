@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-
 import React, { useState } from 'react';
 import Card from '@/components/common/Card';
 import { Poppins, Playfair_Display } from 'next/font/google';
@@ -8,8 +7,11 @@ import { Poppins, Playfair_Display } from 'next/font/google';
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 
+type TabType = 'vision' | 'mission' | 'purpose';
+
 const AboutPage = () => {
-  const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'purpose'>('vision');
+  const [activeTab, setActiveTab] = useState<TabType>('vision');
+
   const teamMembers = [
     {
       name: "Deepak Mishra",
@@ -24,7 +26,6 @@ const AboutPage = () => {
       email: "pooja.tripathi@vnexora.com",
       instagram: "https://www.instagram.com/ananya.architect",
     },
-    
     {
       name: "Shachi Mishra",
       role: "Co-Founder",
@@ -47,7 +48,6 @@ const AboutPage = () => {
       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
       instagram: "https://www.instagram.com/rohit.digital",
     },
-
     {
       name: "Kumar Akshat",
       role: "Techie",
@@ -74,7 +74,7 @@ const AboutPage = () => {
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
     },
-        {
+    {
       name: "Aparajita Bose",
       role: "Astrologer & Vastu",
       image: "/Images/aparajita.jpg",
@@ -84,35 +84,6 @@ const AboutPage = () => {
       role: "Chartered Accountant & Insolvency Professional",
       image: "/Images/devesh.jpg",
     },
-    // {
-    //   name: "Monica Sharma",
-    //   role: "Architect, Interior Designer & Project Planner Consultant",
-    //   image: "/Images/team/isha.jpg",
-    //   linkedin: "https://www.linkedin.com/in/isha-dutta",
-    //   instagram: "https://www.instagram.com/isha.hosp",
-    // },
-    // {
-    //   name: "Sneha Giri",
-    //   role: "Legal Head Consultant",
-    //   image: "/Images/team/rohit.jpg",
-    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-    // },
-    // {
-    //   name: "Namira",
-    //   role: "Sales and Event Manager",
-    //   image: "/Images/team/rohit.jpg",
-    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-    // },
-    
-    // {
-    //   name: "Rakesh Singh",
-    //   role: "Restaurant & Bar Setup Head",
-    //   image: "/Images/team/rohit.jpg",
-    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-    // },
     {
       name: "Shyam Lal Singh",
       role: "Planner India Founder & Mentor",
@@ -120,12 +91,10 @@ const AboutPage = () => {
       linkedin: "https://www.linkedin.com/in/rohit-saini",
       instagram: "https://www.instagram.com/rohit.digital",
     },
-    
   ];
 
- return (
+  return (
     <main className={`w-full mx-auto space-y-16 px-0 pb-10 relative bg-[#f7f5f1] ${poppins.className}`}>
-
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
         <video
@@ -148,7 +117,7 @@ const AboutPage = () => {
       <section id="who" className="max-w-7xl mx-auto px-4">
         <h2 className={`text-3xl font-bold mb-4 text-[#432c15] text-center mt-15 ${playfair.className}`}>Who We Are</h2>
         <p className="text-lg text-gray-600 text-justify">
-             Founded in April 2025 by IIT BHU alumnus Vineet Mishra, VNEXORA Luxury Estate is a Varanasi-based premium hospitality management and consulting firm. We specialize in transforming hotels and resorts into profitable, branded destinations through strategic partnerships and comprehensive services. From daily operations and revenue optimization to branding, HR, and guest experience innovation, we deliver tailored solutions that elevate every property we touch. Backed by deep industry expertise and global partnerships—from luxury giants to boutique brands—we empower property owners to unlock their full potential while crafting unforgettable guest journeys. At VNEXORA, we don’t just manage hotels—we redefine hospitality excellence.
+          Founded in April 2025 by IIT BHU alumnus Vineet Mishra, VNEXORA Luxury Estate is a Varanasi-based premium hospitality management and consulting firm. We specialize in transforming hotels and resorts into profitable, branded destinations through strategic partnerships and comprehensive services. From daily operations and revenue optimization to branding, HR, and guest experience innovation, we deliver tailored solutions that elevate every property we touch. Backed by deep industry expertise and global partnerships—from luxury giants to boutique brands—we empower property owners to unlock their full potential while crafting unforgettable guest journeys. At VNEXORA, we don&apos;t just manage hotels—we redefine hospitality excellence.
         </p>
       </section>
 
@@ -157,12 +126,12 @@ const AboutPage = () => {
       <section className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-start gap-6">
         <div className="w-full md:w-2/3">
           <p className="text-lg text-gray-600 text-base leading-relaxed mb-4 mt-10 text-justify">
-              Mr. Vineet Mishra, the visionary behind Vnexora Luxury Estate Private Limited, brings with him over 15 years of rich experience in the hospitality and real estate industry. As an alumnus of the prestigious <strong>IIT (B.H.U), Varanasi</strong>, he combines the analytical rigor and technical acumen of an engineer with the creative foresight of an industry leader.
+            Mr. Vineet Mishra, the visionary behind Vnexora Luxury Estate Private Limited, brings with him over 15 years of rich experience in the hospitality and real estate industry. As an alumnus of the prestigious <strong>IIT (B.H.U), Varanasi</strong>, he combines the analytical rigor and technical acumen of an engineer with the creative foresight of an industry leader.
           </p>
           <p className="text-lg text-gray-600 text-base leading-relaxed mb-4 mt-10 text-justify">
-            Born and raised in Varanasi, Mr. Mishra’s deep-rooted understanding of both traditional values and modern business dynamics uniquely positions him to bridge global standards with local relevance.
+            Born and raised in Varanasi, Mr. Mishra&apos;s deep-rooted understanding of both traditional values and modern business dynamics uniquely positions him to bridge global standards with local relevance.
           </p>
-           <p className="text-lg text-gray-600 text-base leading-relaxed mb-4 mt-10 text-justify">
+          <p className="text-lg text-gray-600 text-base leading-relaxed mb-4 mt-10 text-justify">
             Under his leadership, Vnexora has emerged as a disruptive force — offering a new paradigm in property management, hotel operations, and strategic consulting.
           </p>
         </div>
@@ -203,30 +172,32 @@ const AboutPage = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section id="philosophy" className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden">
+      <section
+        id="philosophy"
+        className="max-w-7xl mx-auto px-4 py-16 flex flex-col lg:flex-row items-center gap-10 bg-[#fdf6e9] relative rounded-xl overflow-hidden"
+      >
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
           <Image
             src="/Images/philosophy.jpg"
             alt="Philosophy Visual"
             className="rounded-2xl w-[420px] md:w-[770px] lg:w-[560px]"
+            width={560}
+            height={420}
           />
         </div>
 
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4">
           <h2 className={`text-4xl font-extrabold tracking-wider text-[#432c15] ${playfair.className}`}>Philosophy</h2>
-
           <div className="space-y-4">
-            {["vision", "mission", "purpose"].map((key, idx) => (
+            {(["vision", "mission", "purpose"] as TabType[]).map((key, idx) => (
               <div key={key}>
                 <button
-                  onClick={() => setActiveTab(key as any)}
+                  onClick={() => setActiveTab(key)}
                   className={`flex justify-between items-center w-full px-6 py-3 text-lg transition rounded-2xl ${
-                    activeTab === key
-                      ? "bg-white shadow text-[#1e1e1e]"
-                      : "bg-transparent text-[#1e1e1e]"
+                    activeTab === key ? "bg-white shadow text-[#1e1e1e]" : "bg-transparent text-[#1e1e1e]"
                   }`}
                 >
-                  <span className={`${poppins.className}`}>
+                  <span className={poppins.className}>
                     {key === "vision" && "Our Vision"}
                     {key === "mission" && "Our Mission"}
                     {key === "purpose" && "Our Purpose"}
@@ -237,17 +208,17 @@ const AboutPage = () => {
                   <div className="bg-white text-left text-slate-600 text-base px-6 py-4 rounded-2xl shadow-sm transition-all duration-300">
                     {key === "vision" && (
                       <p>
-                        To be India’s most trusted and admired name in luxury hospitality development and hotel transformation.<br></br>VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
- </p>
+                        To be India&apos;s most trusted and admired name in luxury hospitality development and hotel transformation. <br /> VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
+                      </p>
                     )}
                     {key === "mission" && (
                       <p>
-                        To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery.<br></br>Our mission is to unlock each property's full potential by integrating strategic planning, guest-first thinking, and global standards.
+                        To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery. <br /> Our mission is to unlock each property&apos;s full potential by integrating strategic planning, guest-first thinking, and global standards.
                       </p>
                     )}
                     {key === "purpose" && (
                       <p>
-                        To bridge the gap between unrealized hotel potential and sustainable success through vision, innovation, and execution.<br></br>At VNEXORA, our purpose is to make every hotel not just operational—but aspirational.
+                        To bridge the gap between unrealized hotel potential and sustainable success through vision, innovation, and execution. <br /> At VNEXORA, our purpose is to make every hotel not just operational—but aspirational.
                       </p>
                     )}
                   </div>
