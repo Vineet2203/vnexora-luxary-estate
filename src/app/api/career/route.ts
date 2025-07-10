@@ -1,5 +1,4 @@
 // /app/api/career/route.ts (Next.js 13+ with Edge API)
-
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 import nodemailer from 'nodemailer';
@@ -29,7 +28,6 @@ export async function POST(req: NextRequest) {
   try {
     await connectDB();
     const formData = await req.formData();
-
     const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'coverLetter', 'resumeUrl'];
     const missingFields = requiredFields.filter((field) => !formData.get(field));
     if (missingFields.length > 0) {
