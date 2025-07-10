@@ -9,7 +9,10 @@ const CareerSchema = new mongoose.Schema({
   whatsapp: String,
   portfolioUrl: String,
   coverLetter: String,
-  resumeUrl: String, // stores Cloudinary URL
+  resumeUrl: String,
+  positionType: String,//new
+  department: String,//new  
+  otherDepartment: String, //new
 }, { timestamps: true });
 
 export default mongoose.models.Career || mongoose.model('Career', CareerSchema);
