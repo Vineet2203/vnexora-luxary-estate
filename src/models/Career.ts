@@ -9,10 +9,11 @@ const CareerSchema = new Schema({
   whatsapp: String,
   portfolioUrl: String,
   coverLetter: String,
-  resumeUrl: String,
-  positionType: String,//new
-  department: String,//new  
-  otherDepartment: String, //new
+  positionType: String,
+  department: String,  
+  otherDepartment: String,
+  resumeFileId: mongoose.Schema.Types.ObjectId, //  GridFS file reference
+  resumeFilename: String,                       //  Optional original file name
   createdAt: { type: Date, default: Date.now },
 });
 
