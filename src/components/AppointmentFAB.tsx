@@ -17,7 +17,7 @@ const AppointmentFAB = () => {
         <span className="hidden group-hover:inline text-sm font-medium">Schedule Video Call</span>
       </button>
 
-      {isOpen && <AppointmentModal onClose={() => setIsOpen(false)} />}
+      {isOpen && <AppointmentModal onClose={() => setIsOpen(false)} type="video" />}
     </>
   );
 };
