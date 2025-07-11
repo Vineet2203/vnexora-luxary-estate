@@ -7,7 +7,7 @@ import Career from '@/models/Career';
 
 export const runtime = 'nodejs';
 
-export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
+export async function GET(req: NextRequest) {
   try {
     await connectDB();
     const db = mongoose.connection.db;
@@ -16,7 +16,11 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
     }
     const bucket = new GridFSBucket(db, { bucketName: 'resumes' });
 
-    const career = await Career.findById(params.id);
+    // Extract id from the URL
+    const urlParts = req.nextUrl.pathname.split('/');
+    const id = urlParts[urlParts.length - 2]; // /career/[id]/resume
+
+    const career = await Career.findById(id);
     if (!career || !career.resumeFileId) {
       return new Response('Resume not found', { status: 404 });
     }
