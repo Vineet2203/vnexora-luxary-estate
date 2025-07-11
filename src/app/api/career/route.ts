@@ -24,7 +24,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const runtime = 'node';
+export const runtime = 'nodejs';
 
 export async function POST(req: NextRequest) {
   try {
