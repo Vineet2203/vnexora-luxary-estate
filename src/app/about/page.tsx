@@ -17,7 +17,7 @@ const AboutPage = () => {
   const teamMembers = [
     {
       name: "Shyam Lal Singh",
-      role: "Planner India Founder & Mentor",
+      role: "Mentor & Advisor",
       image: "/Images/shyam.jpg",
       linkedin: "https://www.linkedin.com/in/shyam-lal-singh-260710161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
@@ -47,7 +47,7 @@ const AboutPage = () => {
     },
     {
       name: "Ankush Rai",
-      role: "Architect & Project Planner",
+      role: "Architect & Project Manager",
       image: "/Images/ankush.jpg",
       linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
@@ -63,8 +63,7 @@ const AboutPage = () => {
        image: "/Images/ashu.jpg",
        linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
      },
-  
-    {
+      {
       name: "Getanjali Chauhan",
       role: "Branding & Digital Media Expert",
       image: "/Images/getanjali.jpg",
@@ -72,7 +71,7 @@ const AboutPage = () => {
     },
     {
       name: "Shib Roy",
-      role: "Principle Architect Consultant",
+      role: "Principal Architect",
       image: "/Images/shib.jpg",
       linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
@@ -83,26 +82,37 @@ const AboutPage = () => {
     },
      {
       name: "Aparajita Bose",
-      role: "Astrologer & Vastu",
+      role: "Vastu Expert",
       image: "/Images/aparajita.jpg",
       linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Devesh Mishra",
-      role: "Chartered Accountant & Insolvency Professional",
+      role: "CA & Finance Expert",
       image: "/Images/devesh.jpg",
       linkedin: "https://www.linkedin.com/in/devesh-mishra-6a5ba125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
+    {
+       name: "Kesar Chaurasia",
+       role: "Training & Development Assistant",
+       image: "/Images/kesar.jpg",
+       linkedin: "http://www.linkedin.com/in/kesar-chaurasia-97703533b",
+    },
+    { name: "Anshu Aanand",
+      role: "Business Growth Expert",
+      image: "/Images/anshu.jpg",
+      linkedin: "https://www.linkedin.com/in/anshuaanandofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+     },
      {
        name: "Namira",
-       role: "Sales and Event Manager",
+       role: "Sales & Event Manager",
        image: "/Images/namira.jpg",
       // linkedin: "https://www.linkedin.com/in/rohit-saini",
       //instagram: "https://www.instagram.com/rohit.digital",
     },
     {
        name: "Rakesh Singh",
-       role: "Restaurant & Bar Setup Head",
+       role: "F&B Expert",
        image: "/Images/rakesh.jpg",
        linkedin: "https://www.linkedin.com/in/rakesh-singh-3072b9374/",
     //   instagram: "https://www.instagram.com/rohit.digital",
