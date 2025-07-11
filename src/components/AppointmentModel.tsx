@@ -34,7 +34,7 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', address: '' });
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Appointment:', { type, date, selectedTime, formData });
     onClose();
@@ -148,7 +148,7 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
 
               <p className="text-xs text-center text-gray-500">
                 By proceeding, you confirm that you have read and agree to
-                <a href="#" className="text-blue-600 ml-1 underline">Calendly's Terms of Use</a> and
+                <a href="#" className="text-blue-600 ml-1 underline">Calendly&apos;s Terms of Use</a> and
                 <a href="#" className="text-blue-600 ml-1 underline">Privacy Notice</a>.
               </p>
             </form>
