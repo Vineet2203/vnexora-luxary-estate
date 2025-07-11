@@ -5,7 +5,6 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { ArrowLeft } from 'lucide-react';
 
-// Props Interface
 type AppointmentType = 'video' | 'office' | 'site';
 
 interface AppointmentModalProps {

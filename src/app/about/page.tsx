@@ -4,14 +4,17 @@ import React, { useState } from 'react';
 import Card from '@/components/common/Card';
 import { Poppins, Playfair_Display } from 'next/font/google';
 
+type TabKey = "vision" | "mission" | "purpose";
+
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 
 type TabType = 'vision' | 'mission' | 'purpose';
 
 const AboutPage = () => {
-  const [activeTab, setActiveTab] = useState<TabType>('vision');
-
+  //const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'purpose'>('vision');
+  const tabOptions: TabKey[] = ["vision", "mission", "purpose"];
+  const [activeTab, setActiveTab] = useState<TabKey>("vision");
   const teamMembers = [
     {
       name: "Deepak Mishra",
@@ -23,30 +26,25 @@ const AboutPage = () => {
       name: "Pooja Tripathi",
       role: "Co-Founder & COO",
       image: "/Images/pooja.jpg",
-      email: "pooja.tripathi@vnexora.com",
-      instagram: "https://www.instagram.com/ananya.architect",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Shachi Mishra",
       role: "Co-Founder",
       image: "/Images/sachi.jpg",
-      linkedin: "https://www.linkedin.com/in/sneha-kapoor",
-      instagram: "https://www.instagram.com/sneha.tech",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Shib Roy",
       role: "Principle Architect Consultant",
       image: "/Images/shib.jpg",
-      linkedin: "https://www.linkedin.com/in/rahul-mehta",
-      instagram: "https://www.instagram.com/shibroy?igsh=MTJmdGJ5M2FnZ2Y5MA==",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
-      name: "Akanscha Roy",
+      name: "Akansha Roy",
       role: "Business Executive",
       image: "/Images/akanscha.jpg",
-      email: "kumarakshat1706@gmail.com",
       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-      instagram: "https://www.instagram.com/rohit.digital",
     },
     {
       name: "Kumar Akshat",
@@ -62,34 +60,48 @@ const AboutPage = () => {
       email: "ashu.singh@vnexora.com",
       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
     },
+
+     {
+       name: "Kumar Akshat",
+       role: "Tech",
+       image: "/Images/akshat.jpg",
+       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
+      },
+     {
+       name: "Ashu Singh",
+       role: "Tech",
+       image: "/Images/ashu.jpg",
+       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+     },
     {
       name: "Ankush Rai",
       role: "Architect & Project Planner",
       image: "/Images/ankush.jpg",
-      email: "ar.ankushrai@gmail.com",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Shikha Mishra",
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Aparajita Bose",
       role: "Astrologer & Vastu",
       image: "/Images/aparajita.jpg",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Devesh Mishra",
       role: "Chartered Accountant & Insolvency Professional",
       image: "/Images/devesh.jpg",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Shyam Lal Singh",
       role: "Planner India Founder & Mentor",
       image: "/Images/shyam.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
   ];
 
@@ -162,9 +174,7 @@ const AboutPage = () => {
               name={member.name}
               role={member.role}
               image={member.image}
-              email={member.email}
               linkedin={member.linkedin}
-              instagram={member.instagram}
               size="medium"
             />
           ))}
@@ -182,50 +192,54 @@ const AboutPage = () => {
             alt="Philosophy Visual"
             className="rounded-2xl w-[420px] md:w-[770px] lg:w-[560px]"
             width={560}
-            height={420}
+            height={400}
           />
         </div>
 
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-4">
           <h2 className={`text-4xl font-extrabold tracking-wider text-[#432c15] ${playfair.className}`}>Philosophy</h2>
           <div className="space-y-4">
-            {(["vision", "mission", "purpose"] as TabType[]).map((key, idx) => (
-              <div key={key}>
-                <button
-                  onClick={() => setActiveTab(key)}
-                  className={`flex justify-between items-center w-full px-6 py-3 text-lg transition rounded-2xl ${
-                    activeTab === key ? "bg-white shadow text-[#1e1e1e]" : "bg-transparent text-[#1e1e1e]"
-                  }`}
-                >
-                  <span className={poppins.className}>
-                    {key === "vision" && "Our Vision"}
-                    {key === "mission" && "Our Mission"}
-                    {key === "purpose" && "Our Purpose"}
-                  </span>
-                  <span className="text-[#432c15] font-semibold text-xl">{`0${idx + 1}`}</span>
-                </button>
-                {activeTab === key && (
-                  <div className="bg-white text-left text-slate-600 text-base px-6 py-4 rounded-2xl shadow-sm transition-all duration-300">
-                    {key === "vision" && (
-                      <p>
-                        To be India&apos;s most trusted and admired name in luxury hospitality development and hotel transformation. <br /> VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
-                      </p>
-                    )}
-                    {key === "mission" && (
-                      <p>
-                        To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery. <br /> Our mission is to unlock each property&apos;s full potential by integrating strategic planning, guest-first thinking, and global standards.
-                      </p>
-                    )}
-                    {key === "purpose" && (
-                      <p>
-                        To bridge the gap between unrealized hotel potential and sustainable success through vision, innovation, and execution. <br /> At VNEXORA, our purpose is to make every hotel not just operational—but aspirational.
-                      </p>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+  {tabOptions.map((key, idx) => (
+    <div key={key}>
+      <button
+        onClick={() => setActiveTab(key)}
+        className={`flex justify-between items-center w-full px-6 py-3 text-lg transition rounded-2xl ${
+          activeTab === key ? "bg-white shadow text-[#1e1e1e]" : "bg-transparent text-[#1e1e1e]"
+        }`}
+      >
+        <span className={poppins.className}>
+          {key === "vision" && "Our Vision"}
+          {key === "mission" && "Our Mission"}
+          {key === "purpose" && "Our Purpose"}
+        </span>
+        <span className="text-[#432c15] font-semibold text-xl">{`0${idx + 1}`}</span>
+      </button>
+      {activeTab === key && (
+        <div className="bg-white text-left text-slate-600 text-base px-6 py-4 rounded-2xl shadow-sm transition-all duration-300">
+          {key === "vision" && (
+            <p>
+              To be India&apos;s most trusted and admired name in luxury hospitality development and hotel transformation. <br />
+              VNEXORA envisions a future where every property we touch becomes a landmark of excellence, experience, and profitability.
+            </p>
+          )}
+          {key === "mission" && (
+            <p>
+              To partner with hotels, resorts, and investors to deliver tailored hospitality solutions—ranging from brand collaborations to operational mastery. <br />
+              Our mission is to unlock each property&apos;s full potential by integrating strategic planning, guest-first thinking, and global standards.
+            </p>
+          )}
+          {key === "purpose" && (
+            <p>
+              To bridge the gap between unrealized hotel potential and sustainable success through vision, innovation, and execution. <br />
+              At VNEXORA, our purpose is to make every hotel not just operational—but aspirational.
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
         </div>
       </section>
     </main>
