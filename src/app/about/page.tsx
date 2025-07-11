@@ -80,12 +80,6 @@ const AboutPage = () => {
       image: "/Images/ankit.jpg",
       linkedin: "https://www.linkedin.com/in/ankit-saini-462643a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-     {
-      name: "Aparajita Bose",
-      role: "Vastu Expert",
-      image: "/Images/aparajita.jpg",
-      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
     {
       name: "Devesh Mishra",
       role: "CA & Finance Expert",
@@ -98,18 +92,24 @@ const AboutPage = () => {
        image: "/Images/kesar.jpg",
        linkedin: "http://www.linkedin.com/in/kesar-chaurasia-97703533b",
     },
+     {
+      name: "Aparajita Bose",
+      role: "Vastu Expert",
+      image: "/Images/aparajita.jpg",
+      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
     { name: "Anshu Aanand",
       role: "Business Growth Expert",
       image: "/Images/anshu.jpg",
       linkedin: "https://www.linkedin.com/in/anshuaanandofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
      },
-     {
+     /*{
        name: "Namira",
        role: "Sales & Event Manager",
        image: "/Images/namira.jpg",
       // linkedin: "https://www.linkedin.com/in/rohit-saini",
       //instagram: "https://www.instagram.com/rohit.digital",
-    },
+    },*/
     {
        name: "Rakesh Singh",
        role: "F&B Expert",
@@ -122,7 +122,7 @@ const AboutPage = () => {
        image: "/Images/subhash.jpg",
        linkedin: "https://www.linkedin.com/in/subhash-chandra-9002a7374/",
       },
-      {
+     /* {
        name: "Sneha Giri",
        role: "Legal Advisor",
        image: "/Images/sneha.jpg",
@@ -134,7 +134,7 @@ const AboutPage = () => {
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
     //  linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-    },
+    },*/
     
    
     // {
@@ -144,28 +144,9 @@ const AboutPage = () => {
     //   linkedin: "https://www.linkedin.com/in/isha-dutta",
     //   instagram: "https://www.instagram.com/isha.hosp",
     // },
-    // {
-    //   name: "Sneha Giri",
-    //   role: "Legal Head Consultant",
-    //   image: "/Images/team/rohit.jpg",
-    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-    // },
-    // {
-    //   name: "Namira",
-    //   role: "Sales and Event Manager",
-    //   image: "/Images/team/rohit.jpg",
-    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-    // },
+
+   
     
-    // {
-    //   name: "Rakesh Singh",
-    //   role: "Restaurant & Bar Setup Head",
-    //   image: "/Images/team/rohit.jpg",
-    //   linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-    // },
     
     
   ];
