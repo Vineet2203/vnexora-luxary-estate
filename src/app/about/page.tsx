@@ -34,22 +34,16 @@ const AboutPage = () => {
       linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
     },
     {
-      name: "Pooja Tripathi",
-      role: "Co-Founder & COO",
-      image: "/Images/pooja.jpg",
-      linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
-    {
       name: "Akansha Roy",
       role: "Co-Founder & CBO",
       image: "/Images/akanscha.jpg",
       linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
     },
     {
-      name: "Shib Roy",
-      role: "Principle Architect Consultant",
-      image: "/Images/shib.jpg",
-      linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      name: "Pooja Tripathi",
+      role: "Co-Founder & COO",
+      image: "/Images/pooja.jpg",
+      linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Ankush Rai",
@@ -58,10 +52,29 @@ const AboutPage = () => {
       linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
-      name: "Gitanjali Chauhan",
+       name: "Kumar Akshat",
+       role: "Tech",
+       image: "/Images/akshat.jpg",
+       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
+      },
+     {
+       name: "Ashu Singh",
+       role: "Tech",
+       image: "/Images/ashu.jpg",
+       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+     },
+  
+    {
+      name: "Getanjali Chauhan",
       role: "Branding & Digital Media Expert",
-      image: "/Images/gitanjali.jpg",
+      image: "/Images/getanjali.jpg",
       linkedin: "https://www.linkedin.com/in/gitanjali-chauhan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      name: "Shib Roy",
+      role: "Principle Architect Consultant",
+      image: "/Images/shib.jpg",
+      linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
       { name: "Ankit Saini",
       role: "Tech & Web Expert",
@@ -84,7 +97,7 @@ const AboutPage = () => {
        name: "Namira",
        role: "Sales and Event Manager",
        image: "/Images/namira.jpg",
-       linkedin: "https://www.linkedin.com/in/rohit-saini",
+      // linkedin: "https://www.linkedin.com/in/rohit-saini",
       //instagram: "https://www.instagram.com/rohit.digital",
     },
     {
@@ -106,25 +119,11 @@ const AboutPage = () => {
        linkedin: "https://www.linkedin.com/in/rohit-saini",
     //   instagram: "https://www.instagram.com/rohit.digital",
      },
-
-     {
-       name: "Kumar Akshat",
-       role: "Tech",
-       image: "/Images/akshat.jpg",
-       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
-      },
-     {
-       name: "Ashu Singh",
-       role: "Tech",
-       image: "/Images/ashu.jpg",
-       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
-     },
-  
     {
       name: "Shikha Mishra",
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+    //  linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     
    
