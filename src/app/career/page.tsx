@@ -1,3 +1,4 @@
+'use client';
 import CareerForm from '@/components/forms/CareerForm';
 import { Poppins, Playfair_Display } from 'next/font/google';
 
