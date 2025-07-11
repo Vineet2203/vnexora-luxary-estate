@@ -150,7 +150,6 @@ const Navbar = () => {
           </ul>
         </div>
       )}
-
       {/* Appointment Modal */}
       {openModalType && (
         <AppointmentModel
