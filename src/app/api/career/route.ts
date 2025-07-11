@@ -24,6 +24,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
+export const runtime = 'node';
+
 export async function POST(req: NextRequest) {
   try {
     await connectDB();
