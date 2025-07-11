@@ -42,7 +42,7 @@ const AboutPage = () => {
     },
     {
       name: "Akansha Roy",
-      role: "Business Executive",
+      role: "Co-Founder & CBO",
       image: "/Images/akanscha.jpg",
       linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
     },
