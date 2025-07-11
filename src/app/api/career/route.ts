@@ -28,7 +28,10 @@ export async function POST(req: NextRequest) {
   try {
     await connectDB();
     const formData = await req.formData();
-    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'coverLetter', 'resumeUrl'];
+
+    const requiredFields = ['firstName', 'lastName', 'email', 'phone', 'whatsapp', 'coverLetter', 'resumeUrl', 'positionType', 'department'];
+
+
     const missingFields = requiredFields.filter((field) => !formData.get(field));
     if (missingFields.length > 0) {
       return NextResponse.json(
@@ -41,10 +44,13 @@ export async function POST(req: NextRequest) {
     const lastName = formData.get('lastName') as string;
     const email = formData.get('email') as string;
     const phone = formData.get('phone') as string;
-    const whatsapp = (formData.get('whatsapp') as string) || '';
+    const whatsapp = formData.get('whatsapp') as string;
     const portfolioUrl = (formData.get('portfolioUrl') as string) || '';
     const coverLetter = formData.get('coverLetter') as string;
     const file = formData.get('resumeUrl') as File;
+    const positionType = formData.get('positionType') as string;
+    const department = formData.get('department') as string;
+    const otherDepartment = (formData.get('otherDepartment') as string) || '';
 
     // Validation: PDF only and size < 2MB
     if (!file || typeof file === 'string' || file.type !== 'application/pdf') {
@@ -93,6 +99,9 @@ export async function POST(req: NextRequest) {
       portfolioUrl,
       coverLetter,
       resumeUrl,
+      positionType,
+      department,
+      otherDepartment,
       appliedAt: new Date(),
     });
 
@@ -103,11 +112,7 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: 'Application Received – Thank You!',
       html: `
-        <p>Dear ${firstName},</p>
-        <p>Thank you for applying. We’ve received your application successfully.</p>
-        <p><strong>Resume Link:</strong> <a href="${resumeUrl}" target="_blank">View Resume</a></p>
-        <p>We will review your resume and contact you if you’re shortlisted.</p>
-        <p>Best regards,<br/>HR Team</p>
+          <p>Thank you for applying for <strong>${positionType}</strong> in <strong>${department}${department === 'Others' ? ' - ' + otherDepartment : ''}</strong>.</p>
       `,
     }),
 
@@ -126,6 +131,8 @@ export async function POST(req: NextRequest) {
         <p><strong>Cover Letter:</strong></p>
         <p>${coverLetter}</p>
         <p><strong>Resume:</strong> <a href="${resumeUrl}">View Resume</a></p>
+        <p><strong>Position:</strong> ${positionType}</p>
+        <p><strong>Department:</strong> ${department}${department === 'Others' ? ' - ' + otherDepartment : ''}</p>
         <p>Applied At: ${new Date().toLocaleString()}</p>
       `,
     })]).catch((err) => console.error('Email sending error:', err));
