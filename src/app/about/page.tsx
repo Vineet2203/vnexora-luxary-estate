@@ -25,26 +25,26 @@ const AboutPage = () => {
       name: "Pooja Tripathi",
       role: "Co-Founder & COO",
       image: "/Images/pooja.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     
     {
       name: "Shachi Mishra",
       role: "Co-Founder",
       image: "/Images/sachi.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
     },
     {
       name: "Shib Roy",
       role: "Principle Architect Consultant",
       image: "/Images/shib.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Akansha Roy",
       role: "Business Executive",
       image: "/Images/akanscha.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
     },
 
      {
@@ -63,7 +63,7 @@ const AboutPage = () => {
       name: "Ankush Rai",
       role: "Architect & Project Planner",
       image: "/Images/ankush.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Shikha Mishra",
@@ -75,13 +75,13 @@ const AboutPage = () => {
       name: "Aparajita Bose",
       role: "Astrologer & Vastu",
       image: "/Images/aparajita.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Devesh Mishra",
       role: "Chartered Accountant & Insolvency Professional",
       image: "/Images/devesh.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/devesh-mishra-6a5ba125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     // {
     //   name: "Monica Sharma",
@@ -116,7 +116,7 @@ const AboutPage = () => {
       name: "Shyam Lal Singh",
       role: "Planner India Founder & Mentor",
       image: "/Images/shyam.jpg",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      linkedin: "https://www.linkedin.com/in/shyam-lal-singh-260710161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     
   ];
