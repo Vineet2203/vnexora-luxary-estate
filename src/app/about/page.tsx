@@ -25,68 +25,63 @@ const AboutPage = () => {
       name: "Pooja Tripathi",
       role: "Co-Founder & COO",
       image: "/Images/pooja.jpg",
-      email: "pooja.tripathi@vnexora.com",
-      instagram: "https://www.instagram.com/ananya.architect",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     
     {
       name: "Shachi Mishra",
       role: "Co-Founder",
       image: "/Images/sachi.jpg",
-      linkedin: "https://www.linkedin.com/in/sneha-kapoor",
-      instagram: "https://www.instagram.com/sneha.tech",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Shib Roy",
       role: "Principle Architect Consultant",
       image: "/Images/shib.jpg",
-      linkedin: "https://www.linkedin.com/in/rahul-mehta",
-      instagram: "https://www.instagram.com/shibroy?igsh=MTJmdGJ5M2FnZ2Y5MA==",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
-      name: "Akanscha Roy",
+      name: "Akansha Roy",
       role: "Business Executive",
       image: "/Images/akanscha.jpg",
-      email: "kumarakshat1706@gmail.com",
       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-      instagram: "https://www.instagram.com/rohit.digital",
     },
 
-    {
-      name: "Kumar Akshat",
-      role: "Techie",
-      image: "/Images/akshat.jpg",
-      email: "kumar.akshat@vnexora.com",
-      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-    },
-    {
-      name: "Ashu Singh",
-      role: "Techie",
-      image: "/Images/ashu.jpg",
-      email: "ashu.singh@vnexora.com",
-      linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
-    },
+     {
+       name: "Kumar Akshat",
+       role: "Tech",
+       image: "/Images/akshat.jpg",
+       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
+      },
+     {
+       name: "Ashu Singh",
+       role: "Tech",
+       image: "/Images/ashu.jpg",
+       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+     },
     {
       name: "Ankush Rai",
       role: "Architect & Project Planner",
       image: "/Images/ankush.jpg",
-      email: "ar.ankushrai@gmail.com",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Shikha Mishra",
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
         {
       name: "Aparajita Bose",
       role: "Astrologer & Vastu",
       image: "/Images/aparajita.jpg",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     {
       name: "Devesh Mishra",
       role: "Chartered Accountant & Insolvency Professional",
       image: "/Images/devesh.jpg",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     // {
     //   name: "Monica Sharma",
@@ -121,8 +116,7 @@ const AboutPage = () => {
       name: "Shyam Lal Singh",
       role: "Planner India Founder & Mentor",
       image: "/Images/shyam.jpg",
-      linkedin: "https://www.linkedin.com/in/rohit-saini",
-      instagram: "https://www.instagram.com/rohit.digital",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
     
   ];
@@ -197,9 +191,7 @@ const AboutPage = () => {
               name={member.name}
               role={member.role}
               image={member.image}
-              email={member.email}
               linkedin={member.linkedin}
-              instagram={member.instagram}
               size="medium"
             />
           ))}

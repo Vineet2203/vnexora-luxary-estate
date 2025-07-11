@@ -1,5 +1,4 @@
 // /app/api/career/route.ts (Next.js 13+ with Edge API)
-
 import { NextRequest, NextResponse } from 'next/server';
 import { google } from 'googleapis';
 import nodemailer from 'nodemailer';

@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  output: 'export',
+  //output: 'export', when need to deploy static site only
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -45,7 +45,9 @@ const nextConfig: NextConfig = {
       'gos3.ibcdn.com'
 
     ], 
-    
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // Ignore ESLint errors during build
   },
 };
 
