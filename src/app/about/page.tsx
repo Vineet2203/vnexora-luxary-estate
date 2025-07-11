@@ -16,10 +16,22 @@ const AboutPage = () => {
   const [activeTab, setActiveTab] = useState<TabKey>("vision");
   const teamMembers = [
     {
+      name: "Shyam Lal Singh",
+      role: "Planner India Founder & Mentor",
+      image: "/Images/shyam.jpg",
+      linkedin: "https://www.linkedin.com/in/shyam-lal-singh-260710161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+    {
       name: "Deepak Mishra",
       role: "Brand Delegate",
       image: "/Images/deepak.jpg",
       linkedin: "https://www.linkedin.com/in/deepak-mishra-6b88318/",
+    },
+    {
+      name: "Shachi Mishra",
+      role: "Co-Founder",
+      image: "/Images/sachi.jpg",
+      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
     },
     {
       name: "Pooja Tripathi",
@@ -27,12 +39,11 @@ const AboutPage = () => {
       image: "/Images/pooja.jpg",
       linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
-    
     {
-      name: "Shachi Mishra",
-      role: "Co-Founder",
-      image: "/Images/sachi.jpg",
-      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
+      name: "Akansha Roy",
+      role: "Co-Founder & CBO",
+      image: "/Images/akanscha.jpg",
+      linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
     },
     {
       name: "Shib Roy",
@@ -41,11 +52,44 @@ const AboutPage = () => {
       linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
-      name: "Akansha Roy",
-      role: "Co-Founder & CBO",
-      image: "/Images/akanscha.jpg",
-      linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
+      name: "Ankush Rai",
+      role: "Architect & Project Planner",
+      image: "/Images/ankush.jpg",
+      linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
+     {
+      name: "Aparajita Bose",
+      role: "Astrologer & Vastu",
+      image: "/Images/aparajita.jpg",
+      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+    {
+      name: "Devesh Mishra",
+      role: "Chartered Accountant & Insolvency Professional",
+      image: "/Images/devesh.jpg",
+      linkedin: "https://www.linkedin.com/in/devesh-mishra-6a5ba125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+     {
+       name: "Namira",
+       role: "Sales and Event Manager",
+       image: "/Images/team/rohit.jpg",
+       linkedin: "https://www.linkedin.com/in/rohit-saini",
+      //instagram: "https://www.instagram.com/rohit.digital",
+    },
+    {
+       name: "Rakesh Singh",
+       role: "Restaurant & Bar Setup Head",
+       image: "/Images/team/rohit.jpg",
+       linkedin: "https://www.linkedin.com/in/rohit-saini",
+    //   instagram: "https://www.instagram.com/rohit.digital",
+     },
+      {
+       name: "Sneha Giri",
+       role: "Legal Head Consultant",
+       image: "/Images/team/rohit.jpg",
+       linkedin: "https://www.linkedin.com/in/rohit-saini",
+    //   instagram: "https://www.instagram.com/rohit.digital",
+     },
 
      {
        name: "Kumar Akshat",
@@ -59,30 +103,15 @@ const AboutPage = () => {
        image: "/Images/ashu.jpg",
        linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
      },
-    {
-      name: "Ankush Rai",
-      role: "Architect & Project Planner",
-      image: "/Images/ankush.jpg",
-      linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
+  
     {
       name: "Shikha Mishra",
       role: "PR & Media Head",
       image: "/Images/shikha.jpg",
       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
     },
-        {
-      name: "Aparajita Bose",
-      role: "Astrologer & Vastu",
-      image: "/Images/aparajita.jpg",
-      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
-    {
-      name: "Devesh Mishra",
-      role: "Chartered Accountant & Insolvency Professional",
-      image: "/Images/devesh.jpg",
-      linkedin: "https://www.linkedin.com/in/devesh-mishra-6a5ba125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
+    
+   
     // {
     //   name: "Monica Sharma",
     //   role: "Architect, Interior Designer & Project Planner Consultant",
@@ -112,12 +141,7 @@ const AboutPage = () => {
     //   linkedin: "https://www.linkedin.com/in/rohit-saini",
     //   instagram: "https://www.instagram.com/rohit.digital",
     // },
-    {
-      name: "Shyam Lal Singh",
-      role: "Planner India Founder & Mentor",
-      image: "/Images/shyam.jpg",
-      linkedin: "https://www.linkedin.com/in/shyam-lal-singh-260710161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
+    
     
   ];
 
