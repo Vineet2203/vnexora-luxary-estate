@@ -101,7 +101,7 @@ const AboutPage = () => {
       },
       {
        name: "Sneha Giri",
-       role: "Legal Head Consultant",
+       role: "Legal Advisor",
        image: "/Images/sneha.jpg",
        linkedin: "https://www.linkedin.com/in/rohit-saini",
     //   instagram: "https://www.instagram.com/rohit.digital",
