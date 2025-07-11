@@ -17,4 +17,4 @@ const CareerSchema = new Schema({
 });
 
 const Career = models.Career || model('Career', CareerSchema);
-export { CareerSchema };
+export default Career;
