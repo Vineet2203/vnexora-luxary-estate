@@ -1,7 +1,7 @@
 // src/models/Career.ts
-import mongoose from 'mongoose';
+import mongoose, { Schema, model, models } from 'mongoose';
 
-const CareerSchema = new mongoose.Schema({
+const CareerSchema = new Schema({
   firstName: String,
   lastName: String,
   email: String,
@@ -12,4 +12,5 @@ const CareerSchema = new mongoose.Schema({
   resumeUrl: String,
 }, { timestamps: true });
 
-export default mongoose.models.Career || mongoose.model('Career', CareerSchema);
+const Career = models.Career || model('Career', CareerSchema);
+export default Career;
