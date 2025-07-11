@@ -197,13 +197,10 @@ export async function POST(req: NextRequest) {
     const lastName = formData.get('lastName') as string;
     const email = formData.get('email') as string;
     const phone = formData.get('phone') as string;
-    const whatsapp = formData.get('whatsapp') as string;
+    const whatsapp = (formData.get('whatsapp') as string) || '';
     const portfolioUrl = (formData.get('portfolioUrl') as string) || '';
     const coverLetter = formData.get('coverLetter') as string;
     const file = formData.get('resumeUrl') as File;
-    const positionType = formData.get('positionType') as string;
-    const department = formData.get('department') as string;
-    const otherDepartment = (formData.get('otherDepartment') as string) || '';
 
     // ✅ Validate resume file
     if (!file || typeof file === 'string' || file.type !== 'application/pdf') {
