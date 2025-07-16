@@ -55,8 +55,8 @@ const Navbar = () => {
         <div className="hidden md:flex gap-8 items-center font-medium text-[#F5E9D3]">
           <Link href="/" className="hover:text-yellow-400 transition duration-300"><b>Home</b></Link>
           <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>Our Story</b></Link>
-          <Link href="/#services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
-          <Link href="/#gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
+          <Link href="/services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
+          <Link href="/gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
         </div>
 
         {/* Center Logo */}
@@ -78,7 +78,7 @@ const Navbar = () => {
         {/* Right Links */}
         <div className="hidden md:flex gap-8 items-center font-medium text-[#F5E9D3]">
         
-          <Link href="/#OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
+          <Link href="/OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link>
           <Link href="/career" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
         
           <Link href="/contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
@@ -141,13 +141,39 @@ const Navbar = () => {
           backdropFilter: 'blur(16px)',
           borderTop: '1px solid rgba(255, 255, 255, 0.2)',
     }}>
-          <ul className="space-y-2 pt-2">
-            <li><a href="/about" className="hover:text-red-300">About</a></li>
-            <li><a href="#services" className="hover:text-red-300">Services</a></li>
-            <li><a href="/career" className="hover:text-red-300">Career</a></li>
-            <li><link href="/#gallery" className="hover:text-red-300">Gallery</link></li>
-            <li><a href="#contact" className="hover:text-red-300">Contact</a></li>
-          </ul>
+      <ul className="space-y-2 pt-2">
+        <li>
+          <Link href="/about" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link href="/services" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            Services
+          </Link>
+        </li>
+        <li>
+          <Link href="/career" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            Career
+          </Link>
+        </li>
+        <li>
+          <Link href="/gallery" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            Gallery
+          </Link>
+        </li>
+        <li>
+          <Link href="/OurAllies" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            Our Allies
+          </Link>
+        </li>
+        <li>
+          <Link href="/contact" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            Contact
+          </Link>
+        </li>
+      </ul>
+
         </div>
       )}
       {/* Appointment Modal */}
