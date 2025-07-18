@@ -199,7 +199,7 @@ const AboutPage = () => {
           <Card
             name="Mr. Vineet Mishra"
             role="Founder & CEO"
-            image="/Images/founder.jpg"
+            image="/Images/vineet.jpg"
             stake="Major Stakeholder"
             email="founder@vnexora.com"
             linkedin="https://www.linkedin.com/in/vineet-mishra-98151a6a/"
