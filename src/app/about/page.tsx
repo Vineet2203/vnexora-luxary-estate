@@ -27,12 +27,7 @@ const AboutPage = () => {
       image: "/Images/deepak.jpg",
       linkedin: "https://www.linkedin.com/in/deepak-mishra-6b88318/",
     },
-    {
-      name: "Shachi Mishra",
-      role: "Co-Founder",
-      image: "/Images/sachi.jpg",
-      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
-    },
+    
     {
       name: "Akansha Roy",
       role: "Co-Founder & CBO",
@@ -44,6 +39,12 @@ const AboutPage = () => {
       role: "Co-Founder & COO",
       image: "/Images/pooja.jpg",
       linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+    {
+      name: "Shachi Mishra",
+      role: "Co-Founder",
+      image: "/Images/sachi.jpg",
+      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
     },
     {
       name: "Ankush Rai",
@@ -198,7 +199,7 @@ const AboutPage = () => {
           <Card
             name="Mr. Vineet Mishra"
             role="Founder & CEO"
-            image="/Images/founder.jpg"
+            image="/Images/vineet.jpg"
             stake="Major Stakeholder"
             email="founder@vnexora.com"
             linkedin="https://www.linkedin.com/in/vineet-mishra-98151a6a/"

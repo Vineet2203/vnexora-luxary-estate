@@ -1,7 +1,7 @@
 // src/models/Career.ts
-import mongoose from 'mongoose';
+import mongoose, { Schema, model, models } from 'mongoose';
 
-const CareerSchema = new mongoose.Schema({
+const CareerSchema = new Schema({
   firstName: String,
   lastName: String,
   email: String,
@@ -9,7 +9,13 @@ const CareerSchema = new mongoose.Schema({
   whatsapp: String,
   portfolioUrl: String,
   coverLetter: String,
-  resumeUrl: String, // stores Cloudinary URL
-}, { timestamps: true });
+  positionType: String,
+  department: String,  
+  otherDepartment: String,
+  resumeFileId: mongoose.Schema.Types.ObjectId, //  GridFS file reference
+  resumeFilename: String,                       //  Optional original file name
+  createdAt: { type: Date, default: Date.now },
+});
 
-export default mongoose.models.Career || mongoose.model('Career', CareerSchema);
+const Career = models.Career || model('Career', CareerSchema);
+export default Career;
