@@ -24,132 +24,103 @@ const AboutPage = () => {
     {
       name: "Deepak Mishra",
       role: "Brand Delegate",
-      image: "/Images/deepak.jpg",
+      image: "/Images/deepak.png",
       linkedin: "https://www.linkedin.com/in/deepak-mishra-6b88318/",
     },
     
     {
       name: "Akansha Roy",
       role: "Co-Founder & CBO",
-      image: "/Images/akanscha.jpg",
+      image: "/Images/akanscha.png",
       linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
     },
     {
       name: "Pooja Tripathi",
       role: "Co-Founder & COO",
-      image: "/Images/pooja.jpg",
+      image: "/Images/pooja.png",
       linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       name: "Shachi Mishra",
       role: "Co-Founder",
-      image: "/Images/sachi.jpg",
+      image: "/Images/sachi.png",
       linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
     },
     {
       name: "Ankush Rai",
       role: "Architect & Project Manager",
-      image: "/Images/ankush.jpg",
+      image: "/Images/ankush.png",
       linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
        name: "Kumar Akshat",
-       role: "Tech",
-       image: "/Images/akshat.jpg",
+       role: "Lead Developer",
+       image: "/Images/akshat.png",
        linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
       },
      {
        name: "Ashu Singh",
-       role: "Tech",
-       image: "/Images/ashu.jpg",
+       role: "Developer",
+       image: "/Images/ashu.png",
        linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
      },
       {
       name: "Getanjali Chauhan",
       role: "Branding & Digital Media Expert",
-      image: "/Images/getanjali.jpg",
+      image: "/Images/getanjali.png",
       linkedin: "https://www.linkedin.com/in/gitanjali-chauhan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "Shib Roy",
       role: "Principal Architect",
-      image: "/Images/shib.jpg",
+      image: "/Images/shib.png",
       linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
       { name: "Ankit Saini",
       role: "Tech & Web Expert",
-      image: "/Images/ankit.jpg",
+      image: "/Images/ankit.png",
       linkedin: "https://www.linkedin.com/in/ankit-saini-462643a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       name: "Devesh Mishra",
       role: "CA & Finance Expert",
-      image: "/Images/devesh.jpg",
+      image: "/Images/devesh.png",
       linkedin: "https://www.linkedin.com/in/devesh-mishra-6a5ba125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
        name: "Kesar Chaurasia",
        role: "Training & Development Assistant",
-       image: "/Images/kesar.jpg",
+       image: "/Images/kesar.png",
        linkedin: "http://www.linkedin.com/in/kesar-chaurasia-97703533b",
     },
      {
       name: "Aparajita Bose",
       role: "Vastu Expert",
-      image: "/Images/aparajita.jpg",
+      image: "/Images/aparajita.png",
       linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     { name: "Anshu Aanand",
       role: "Business Growth Expert",
-      image: "/Images/anshu.jpg",
+      image: "/Images/anshu.png",
       linkedin: "https://www.linkedin.com/in/anshuaanandofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
      },
-     /*{
+     {
        name: "Namira",
        role: "Sales & Event Manager",
-       image: "/Images/namira.jpg",
-      // linkedin: "https://www.linkedin.com/in/rohit-saini",
-      //instagram: "https://www.instagram.com/rohit.digital",
-    },*/
-    {
+       image: "/Images/shikha.png",
+       linkedin: "https://www.linkedin.com/in/rohit-saini",
+    },
+        {
        name: "Rakesh Singh",
        role: "F&B Expert",
-       image: "/Images/rakesh.jpg",
+       image: "/Images/rakesh.png",
        linkedin: "https://www.linkedin.com/in/rakesh-singh-3072b9374/",
-    //   instagram: "https://www.instagram.com/rohit.digital",
      },
       {name: "Subhash Chandra",
        role: "Banquet & Event Manager",
-       image: "/Images/subhash.jpg",
+       image: "/Images/subhash.png",
        linkedin: "https://www.linkedin.com/in/subhash-chandra-9002a7374/",
-      },
-     /* {
-       name: "Sneha Giri",
-       role: "Legal Advisor",
-       image: "/Images/sneha.jpg",
-       linkedin: "https://www.linkedin.com/in/rohit-saini",
-    //   instagram: "https://www.instagram.com/rohit.digital",
-     },
-    {
-      name: "Shikha Mishra",
-      role: "PR & Media Head",
-      image: "/Images/shikha.jpg",
-    //  linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
-    },*/
-    
-   
-    // {
-    //   name: "Monica Sharma",
-    //   role: "Architect, Interior Designer & Project Planner Consultant",
-    //   image: "/Images/team/isha.jpg",
-    //   linkedin: "https://www.linkedin.com/in/isha-dutta",
-    //   instagram: "https://www.instagram.com/isha.hosp",
-    // },
-
-   
-    
-    
-    
+      },  
   ];
 
  return (
@@ -199,7 +170,7 @@ const AboutPage = () => {
           <Card
             name="Mr. Vineet Mishra"
             role="Founder & CEO"
-            image="/Images/vineet.jpg"
+            image="/Images/vineet.png"
             stake="Major Stakeholder"
             email="founder@vnexora.com"
             linkedin="https://www.linkedin.com/in/vineet-mishra-98151a6a/"

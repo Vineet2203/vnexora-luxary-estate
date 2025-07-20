@@ -116,7 +116,7 @@ const Services = () => {
       >
         {services.map((service, idx) => (
           <SwiperSlide key={idx}>
-            <div className="grid md:grid-cols-2 gap-0 bg-white border border-[#f1e3d3] rounded-2xl overflow-hidden shadow-xl h-[600px]"> {/* Fixed Height */}
+            <div className="flex flex-col md:grid md:grid-cols-2 bg-white border border-[#f1e3d3] rounded-2xl overflow-hidden shadow-xl"> 
 
               {/* Left - Image */}
               <div className="relative w-full h-full">
