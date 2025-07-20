@@ -33,20 +33,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
- /*Your custom CSS below 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}*/
-
 body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
@@ -87,26 +73,47 @@ body {
   @apply w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#705C2E];
 }
 .react-calendar {
-  border: none;
-  font-family: inherit;
-  width: 100%;
-  padding: 1rem;
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 1rem;
-  box-shadow: 0 0 0 1px #e5e7eb;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  margin: 0 auto;
 }
 
 .react-calendar__tile {
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
   padding: 0.75rem 0;
-  border-radius: 0.5rem;
   font-weight: 500;
-  transition: background 0.3s ease;
+}
+
+.react-calendar__tile:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 
 .react-calendar__tile--active {
-  background: #2563eb !important;
-  color: white !important;
+  background-color: #ffdd57 !important;
+  color: #000;
+  font-weight: bold;
 }
 
-.react-calendar__tile:enabled:hover {
-  background: #e0e7ff;
+.react-calendar__tile--now {
+  background-color: white/40;
+  color: #333;
+  font-weight: bold;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: #e74c3c;
 }

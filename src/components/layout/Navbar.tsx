@@ -115,7 +115,7 @@ const Navbar = () => {
                       onClick={() => { setOpenModalType('site'); setIsDropdownOpen(false); }}
                       className="w-full text-left px-4 py-2 hover:bg-white/50 cursor-pointer"
                     >
-                      Meeting at Site
+                     Site Visit
                     </button>
                   </li>
                 </ul>
