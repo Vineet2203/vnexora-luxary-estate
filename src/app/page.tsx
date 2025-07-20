@@ -4,7 +4,6 @@ import WhyChooseUs from "../components/WhyChoose";
 import Gallery from "../components/Gallery";
 import OurAllies from '../components/OurAllies';
 import Services from "../components/Services";
-import AppointmentFAB from '@/components/AppointmentFAB';
 
 
 
@@ -18,7 +17,7 @@ export default function Home() {
       <Services />
       <OurAllies />
       <Gallery />
-      <AppointmentFAB />
+      
     </main>
   );
 }
