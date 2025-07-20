@@ -32,7 +32,7 @@ const timeSlots = [
 export default function AppointmentModal({ onClose, type }: AppointmentModalProps) {
   const [date, setDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', address: '' });
+  const [formData, setFormData] = useState({ Fname: '', Lname:'', email: '', phone: '', subject: '', address: '' });
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -92,14 +92,16 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
                   placeholder="First Name"
                   required
                   className="w-1/2 border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  value={formData.Fname}
+                  onChange={(e) => setFormData({ ...formData, Fname: e.target.value })}
                 />
                 <input
                   type="text"
                   placeholder="Last Name"
                   required
                   className="w-1/2 border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  value={formData.Lname}
+                  onChange={(e) => setFormData({ ...formData, Lname: e.target.value })}
                 />
               </div>
 
@@ -111,50 +113,58 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               />
+              <input
+                type="subject"
+                placeholder="Subject of Connect"
+                required
+                className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                value={formData.subject}
+                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+              />
 
               {type === 'video' && (
-  <div>
-    <p className="font-medium mb-1">Video Call Platform</p>
-    <div className="flex gap-4">
-      {['WhatsApp', 'Zoom', 'Google Meet'].map((method) => (
-        <label key={method} className="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2 cursor-pointer hover:bg-gray-100">
-          <input type="radio" name="meeting" value={method} required />
-          <span>{method}</span>
-        </label>
-      ))}
-    </div>
-  </div>
-)}
+                  <div>
+                    <p className="font-medium mb-1">Video Call Platform</p>
+                    <div className="flex gap-4">
+                      {['WhatsApp', 'Zoom', 'Google Meet'].map((method) => (
+                        <label key={method} className="flex items-center gap-2 border border-gray-300 rounded-md px-3 py-2 cursor-pointer hover:bg-gray-100">
+                          <input type="radio" name="meeting" value={method} required />
+                          <span>{method}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+              )}
 
-{type === 'office' && (
-  <div className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-  <p className="text-base text-black font-semibold mb-2">Office Address</p>
-  <p>Vnexora Luxury Estate Pvt. Ltd. 5th Floor, CDC Building, AIC, BHU Campus,</p>
-  <p>Varanasi - 221005</p>
-  <p className="mt-2">📞 +91 7980829403</p>
-  <p>📞 +91 8318195911</p>
-  <p className="mt-2">Gmail: connect@vnexora.com</p>
-</div>
+              {type === 'office' && (
+                <div className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <p className="text-base text-black font-semibold mb-2">Office Address</p>
+                <p>Vnexora Luxury Estate Pvt. Ltd. 5th Floor, CDC Building, AIC, BHU Campus,</p>
+                <p>Varanasi - 221005</p>
+                <p className="mt-2">📞 +91 7980829403</p>
+                <p>📞 +91 8318195911</p>
+                <p className="mt-2">Gmail: connect@vnexora.com</p>
+              </div>
 
-)}
+              )}
 
-{type === 'site' && (
-  <div>
-    <textarea
-      required
-      placeholder=" Enter the full address of the site."
-      className="w-full border border-gray-300 px-4 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-      rows={3}
-      value={formData.address}
-      onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-    />
-  </div>
-)}
+              {type === 'site' && (
+                <div>
+                  <textarea
+                    required
+                    placeholder=" Enter the full address of the site."
+                    className="w-full border border-gray-300 px-4 py-2 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    rows={3}
+                    value={formData.address}
+                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                  />
+                </div>
+              )}
 
 
               <input
                 type="tel"
-                placeholder="Phone"
+                placeholder="Mobile"
                 required
                 className="w-full border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 value={formData.phone}
