@@ -14,6 +14,22 @@ const AboutPage = () => {
   //const [activeTab, setActiveTab] = useState<'vision' | 'mission' | 'purpose'>('vision');
   const tabOptions: TabKey[] = ["vision", "mission", "purpose"];
   const [activeTab, setActiveTab] = useState<TabKey>("vision");
+  const teamMember = [
+    {
+      name: "Kumar Akshat",
+      role: "Lead Developer",
+      image: "/Images/akshat.png",
+      linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",
+      github: "",
+    },
+    {
+      name: "Ashu Singh",
+      role: "Developer",
+      image: "/Images/ashu.png",
+      linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+      github: "https://github.com/ashu1706",
+    },
+  ];
   const teamMembers = [
     {
       name: "Shyam Lal Singh",
@@ -21,15 +37,14 @@ const AboutPage = () => {
       image: "/Images/shyam.jpg",
       linkedin: "https://www.linkedin.com/in/shyam-lal-singh-260710161?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
+     {
+      name: "Shachi Mishra",
+      role: "Co-Founder",
+      image: "/Images/sachi.png",
+      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
+    }, 
     {
-      name: "Deepak Mishra",
-      role: "Brand Delegate",
-      image: "/Images/deepak.png",
-      linkedin: "https://www.linkedin.com/in/deepak-mishra-6b88318/",
-    },
-    
-    {
-      name: "Akansha Roy",
+      name: "Akancsha Roy",
       role: "Co-Founder & CBO",
       image: "/Images/akanscha.png",
       linkedin: "https://www.linkedin.com/in/akanscha-roy-61641121b/",
@@ -41,30 +56,12 @@ const AboutPage = () => {
       linkedin: "https://www.linkedin.com/in/pooja-tripathi-80542490?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
-      name: "Shachi Mishra",
-      role: "Co-Founder",
-      image: "/Images/sachi.png",
-      linkedin: "https://www.linkedin.com/in/shachi-mishra-513051374/",
+      name: "Deepak Mishra",
+      role: "Brand Delegate",
+      image: "/Images/deepak.png",
+      linkedin: "https://www.linkedin.com/in/deepak-mishra-6b88318/",
     },
     {
-      name: "Ankush Rai",
-      role: "Architect & Project Manager",
-      image: "/Images/ankush.png",
-      linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
-    {
-       name: "Kumar Akshat",
-       role: "Lead Developer",
-       image: "/Images/akshat.png",
-       linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
-      },
-     {
-       name: "Ashu Singh",
-       role: "Developer",
-       image: "/Images/ashu.png",
-       linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
-     },
-      {
       name: "Getanjali Chauhan",
       role: "Branding & Digital Media Expert",
       image: "/Images/getanjali.png",
@@ -76,10 +73,33 @@ const AboutPage = () => {
       image: "/Images/shib.png",
       linkedin: "https://www.linkedin.com/in/shib-shankar-roy-bb39319b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
-      { name: "Ankit Saini",
+    { name: "Namira",
+      role: "Business Growth Expert",
+      image: "/Images/namira.png",
+      linkedin: "https://www.linkedin.com/in/anshuaanandofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+     },
+    {
+      name: "Ankush Rai",
+      role: "Architect & Project Manager",
+      image: "/Images/ankush.png",
+      linkedin: "https://www.linkedin.com/in/ankushrai1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+    {
+      name: "Aparajita Bose",
+      role: "Vastu Expert",
+      image: "/Images/aparajita.png",
+      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+    },
+    { name: "Ankit Saini",
       role: "Tech & Web Expert",
       image: "/Images/ankit.png",
       linkedin: "https://www.linkedin.com/in/ankit-saini-462643a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+     {
+       name: "Shikha Mishra",
+       role: "Sales & Event Manager",
+       image: "/Images/shikha.png",
+       linkedin: "https://www.linkedin.com/in/rohit-saini",
     },
     {
       name: "Devesh Mishra",
@@ -87,35 +107,36 @@ const AboutPage = () => {
       image: "/Images/devesh.png",
       linkedin: "https://www.linkedin.com/in/devesh-mishra-6a5ba125?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
+    { name: "Anshu Aanand",
+      role: "Business Growth Expert",
+      image: "/Images/anshu.png",
+      linkedin: "https://www.linkedin.com/in/anshuaanandofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+     },
+    {
+       name: "Rakesh Singh",
+       role: "F&B Expert",
+       image: "/Images/rakesh.png",
+       linkedin: "https://www.linkedin.com/in/rakesh-singh-3072b9374/",
+    },
+    // {
+    //    name: "Kumar Akshat",
+    //    role: "Lead Developer",
+    //    image: "/Images/akshat.png",
+    //    linkedin: "https://www.linkedin.com/in/kumar-akshat-9646891b3/",  
+    //   },
+    //  {
+    //    name: "Ashu Singh",
+    //    role: "Developer",
+    //    image: "/Images/ashu.png",
+    //    linkedin: "https://www.linkedin.com/in/ashu-singh-a49307262/",
+    //  },
+    
     {
        name: "Kesar Chaurasia",
        role: "Training & Development Assistant",
        image: "/Images/kesar.png",
        linkedin: "http://www.linkedin.com/in/kesar-chaurasia-97703533b",
     },
-     {
-      name: "Aparajita Bose",
-      role: "Vastu Expert",
-      image: "/Images/aparajita.png",
-      linkedin: "https://www.linkedin.com/in/aparajita-bose-she-her-151b551a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-    },
-    { name: "Anshu Aanand",
-      role: "Business Growth Expert",
-      image: "/Images/anshu.png",
-      linkedin: "https://www.linkedin.com/in/anshuaanandofficial?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-     },
-     {
-       name: "Namira",
-       role: "Sales & Event Manager",
-       image: "/Images/shikha.png",
-       linkedin: "https://www.linkedin.com/in/rohit-saini",
-    },
-        {
-       name: "Rakesh Singh",
-       role: "F&B Expert",
-       image: "/Images/rakesh.png",
-       linkedin: "https://www.linkedin.com/in/rakesh-singh-3072b9374/",
-     },
       {name: "Subhash Chandra",
        role: "Banquet & Event Manager",
        image: "/Images/subhash.png",
@@ -182,7 +203,7 @@ const AboutPage = () => {
 
       {/* Team Section */}
       <section id="team" className="max-w-7xl mx-auto px-4 py-16">
-        <h2 className={`text-3xl font-bold mb-4 text-[#432c15] text-center ${playfair.className}`}>Our Diverse Team</h2>
+        <h2 className={`text-3xl font-bold mb-4 text-[#432c15] text-center ${playfair.className}`}>Our Leadership & Management Team</h2>
         <p className="text-lg text-gray-600 text-center mb-10">
           Our team blends tradition and innovation—comprising architects, interior designers, and tech professionals.
         </p>
@@ -194,6 +215,20 @@ const AboutPage = () => {
               role={member.role}
               image={member.image}
               linkedin={member.linkedin}
+              size="medium"
+            />
+          ))}
+        </div>
+        <h2 className={`text-3xl font-bold mb-4 py-16 text-[#432c15] text-center ${playfair.className}`}>Our Tech Team</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamMember.map((member, idx) => (
+            <Card
+              key={idx}
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              linkedin={member.linkedin}
+              github={member.github}
               size="medium"
             />
           ))}
