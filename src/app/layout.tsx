@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Vnexora Luxury Estate",
-  description: "Strategic Hospitality Solutions",
+  description: "Strategic Hospitality Solutions.  We help luxury hotels and resorts scale with personalized branding, operational excellence.",
   keywords: [
     "Luxury Estate",
     "Hospitality Solutions",
@@ -64,6 +64,19 @@ export const metadata: Metadata = {
     title: "Vnexora Luxury Estate",
     description: "Strategic Hospitality Solutions",
     images: ["/Images/Logo.png"]
+  },
+  // Google Search Headlines (Sitelinks Searchbox & Rich Results)
+  alternates: {
+    canonical: "https://vnexora.com",
+  },
+  other: {
+    "google-site-verification": "YOUR_GOOGLE_SITE_VERIFICATION_CODE",
+    "headline": [
+      "Luxury Hospitality Solutions",
+      "Personalized Branding for Hotels",
+      "Operational Excellence for Resorts",
+      "India's Leading Hospitality Solutions"
+    ].join(" | ")
   }
 };
 
