@@ -15,8 +15,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vnexora  Luxury Estate",
+  title: "Vnexora Luxury Estate",
   description: "Strategic Hospitality Solutions",
+  keywords: [
+    "Luxury Estate",
+    "Real Estate",
+    "Hospitality",
+    "Vnexora",
+    "Property",
+    "Investment",
+    "Hotel",
+    "Resort",
+    "Luxury Living"
+  ],
+  authors: [{ name: "Vnexora Team", url: "https://vnexora.com" }],
+  creator: "Vnexora",
+  openGraph: {
+    title: "Vnexora Luxury Estate",
+    description: "Strategic Hospitality Solutions",
+    url: "https://vnexora.com",
+    siteName: "Vnexora Luxury Estate",
+    images: [
+      {
+        url: "/Images/Logo.png",
+        width: 800,
+        height: 600,
+        alt: "Vnexora Logo"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vnexora Luxury Estate",
+    description: "Strategic Hospitality Solutions",
+    images: ["/Images/Logo.png"]
+  }
 };
 
 export default function RootLayout({
