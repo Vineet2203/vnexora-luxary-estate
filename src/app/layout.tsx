@@ -19,6 +19,10 @@ export const metadata: Metadata = {
   description: "Strategic Hospitality Solutions",
   keywords: [
     "Luxury Estate",
+    "Hospitality Solutions",
+    "Real Estate Solutions",
+    "Luxury Resorts",
+    "Luxury Hotels",
     "Real Estate",
     "Hospitality",
     "Vnexora",
@@ -26,7 +30,10 @@ export const metadata: Metadata = {
     "Investment",
     "Hotel",
     "Resort",
-    "Luxury Living"
+    "Luxury Living",
+    "Luxury Lifestyle",
+    "Luxury Properties",
+    "High End Luxury",
   ],
   authors: [{ name: "Vnexora Team", url: "https://vnexora.com" }],
   creator: "Vnexora",
