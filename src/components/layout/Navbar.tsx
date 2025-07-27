@@ -57,6 +57,7 @@ const Navbar = () => {
           <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>Our Story</b></Link>
           <Link href="/services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
           <Link href="/gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
+          <Link href="/blogs" className="hover:text-yellow-400 transition duration-300"><b>Blogs</b></Link>
         </div>
 
         {/* Center Logo */}
@@ -155,6 +156,11 @@ const Navbar = () => {
         <li>
           <Link href="/gallery" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
             Gallery
+          </Link>
+        </li>
+        <li>
+          <Link href="/blogs" className="hover:text-red-300" onClick={() => setIsOpen(false)}>
+            Blogs
           </Link>
         </li>
         <li>
