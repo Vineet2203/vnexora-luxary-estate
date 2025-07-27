@@ -127,6 +127,15 @@ const Navbar = () => {
                       Fact Sheet
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="/stayUpdated"
+                      className="block px-4 py-2 hover:bg-white/50"
+                      onClick={() => setIsQuickLinksOpen(false)}
+                    >
+                      Stay Updated With Us
+                    </Link>
+                  </li>
                 </ul>
               </div>
             )}
@@ -200,6 +209,7 @@ const Navbar = () => {
             <li><Link href="/contact" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Contact</Link></li>
             <li><Link href="/partnerWithUs" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Partner With Us</Link></li>
             <li><Link href="/factSheet" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Fact Sheet</Link></li>
+            <li><Link href="/stayUpdated" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Stay Updated With Us</Link></li>
           </ul>
         </div>
       )}
