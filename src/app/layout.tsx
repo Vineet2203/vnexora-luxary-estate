@@ -15,8 +15,69 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vnexora  Luxury Estate",
-  description: "Strategic Hospitality Solutions",
+  title: "Vnexora Luxury Estate",
+  description: "Strategic Hospitality Solutions.  We help luxury hotels and resorts scale with personalized branding, operational excellence.",
+  keywords: [
+    "Luxury Estate",
+    "Hospitality Solutions",
+    "Real Estate Solutions",
+    "Five star hotels branding",
+    "hospitality branding",
+    "hospitality",
+    "Luxury Resorts",
+    "Luxury Hotels",
+    "Real Estate",
+    "Hospitality",
+    "Vnexora",
+    "Property",
+    "Investment",
+    "Hotel",
+    "Resort",
+    "Luxury Living",
+    "Luxury Lifestyle",
+    "Luxury Properties",
+    "High End Luxury",
+    "Varanasi",
+    "India",
+    "India's Leading Hospitality Solutions",
+  ],
+  authors: [{ name: "Vnexora Team", url: "https://vnexora.com" }],
+  creator: "Vnexora",
+  openGraph: {
+    title: "Vnexora Luxury Estate",
+    description: "Strategic Hospitality Solutions.  We help luxury hotels and resorts scale with personalized branding, operational excellence.",
+    url: "https://vnexora.com",
+    siteName: "Vnexora Luxury Estate",
+    images: [
+      {
+        url: "/Images/Logo.png",
+        width: 800,
+        height: 600,
+        alt: "Vnexora Logo"
+      }
+    ],
+    locale: "en_US",
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vnexora Luxury Estate",
+    description: "Strategic Hospitality Solutions",
+    images: ["/Images/Logo.png"]
+  },
+  // Google Search Headlines (Sitelinks Searchbox & Rich Results)
+  alternates: {
+    canonical: "https://vnexora.com",
+  },
+  other: {
+    "google-site-verification": "YOUR_GOOGLE_SITE_VERIFICATION_CODE",
+    "headline": [
+      "Luxury Hospitality Solutions",
+      "Personalized Branding for Hotels",
+      "Operational Excellence for Resorts",
+      "India's Leading Hospitality Solutions"
+    ].join(" | ")
+  }
 };
 
 export default function RootLayout({
