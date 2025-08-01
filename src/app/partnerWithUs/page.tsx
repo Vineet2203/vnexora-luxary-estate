@@ -10,16 +10,22 @@ const PartnerPage = () => {
   return (
     <main className={`w-full bg-[#f7f5f1] px-4 pb-20 ${poppins.className}`}>
   {/* Hero */}
-  <section className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen h-[60vh] flex items-center justify-center text-center bg-[#432c15] text-white">
-    <div className="px-4">
-      <h1 className={`text-4xl md:text-5xl font-extrabold ${playfair.className}`}>
-        Partner With VNEXORA
-      </h1>
-      <p className="mt-4 max-w-2xl mx-auto text-lg">
-        Shape the future of your hospitality asset with our tailor-made collaboration models.
-      </p>
-    </div>
-  </section>
+  <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+        <video
+          src="/Videos/partnerus.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute w-full h-full object-cover"
+        />
+        <div className="absolute text-center text-[#f5e8d7] z-10">
+          <h1 className={`text-4xl md:text-5xl font-extrabold ${playfair.className}`}>Partner with us</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Shape the future of the hospitality industry with VNEXORA.
+          </p>
+        </div>
+      </section>
 
       {/* Intro */}
       <section className="max-w-6xl mx-auto mt-16 space-y-6">
