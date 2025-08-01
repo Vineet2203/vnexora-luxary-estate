@@ -117,11 +117,13 @@ const WhyChooseUs = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-12">
-          <button
-            className={`${poppins.className} bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] transition`}
-          >
-            Partner with Us
-          </button>
+          <a href="/partnerWithUs">
+            <button
+              className={`${poppins.className} bg-[#705C2E] text-white px-8 py-4 rounded-full text-lg hover:bg-[#5e4f2a] cursor-pointer`}
+            >
+              Partner with Us
+            </button>
+          </a>
         </div>
       </div>
 
