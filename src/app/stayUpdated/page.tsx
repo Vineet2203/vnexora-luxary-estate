@@ -6,14 +6,14 @@ import { Poppins, Playfair_Display } from 'next/font/google';
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 const videos = [
-  'https://www.youtube.com/embed/VIDEO_ID1',
-  'https://www.youtube.com/embed/VIDEO_ID2',
-  'https://www.youtube.com/embed/VIDEO_ID3',
-  'https://www.youtube.com/embed/VIDEO_ID4',
-  'https://www.youtube.com/embed/VIDEO_ID5',
-  'https://www.youtube.com/embed/VIDEO_ID6',
-  'https://www.youtube.com/embed/VIDEO_ID7',
-  'https://www.youtube.com/embed/VIDEO_ID8',
+  'https://www.youtube.com/embed/LJV71kKlEi0',
+  'https://www.youtube.com/embed/qQ4U_iQtMRc',
+  'https://www.youtube.com/embed/AfZ_vSrQ0iI',
+  'https://www.youtube.com/embed/p7sDLjLEY4A',
+  'https://www.youtube.com/embed/mJ8DdX4ro84',
+  'https://www.youtube.com/embed/Gs2qsHob9A8',
+  'https://www.youtube.com/embed/CaXRMNmcqhA',
+  'https://www.youtube.com/embed/Xyuob-SHSPU',
   'https://www.youtube.com/embed/VIDEO_ID9',
 ];
 
@@ -69,16 +69,16 @@ export default function StayUpdatedPage() {
           {visibleCount < videos.length && (
             <button
               onClick={handleLoadMore}
-              className="px-6 py-3 border border-[#C88C1F] text-[#C88C1F] text-sm font-medium rounded hover:bg-[#C88C1F] hover:text-white transition-all"
+              className="px-6 py-3 border border-[#C88C1F] text-[#C88C1F] text-sm font-medium rounded flex items-center gap-2 hover:bg-[#705C2E] hover:text-white transition-all"
             >
               LOAD MORE...
             </button>
           )}
           <a
-            href="https://www.youtube.com/@yourchannel"
+            href="https://www.youtube.com/@VNEXORA"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-3 border border-[#C88C1F] text-[#C88C1F] text-sm font-medium rounded flex items-center gap-2 hover:bg-[#C88C1F] hover:text-white transition-all"
+            className="px-6 py-3 border border-[#C88C1F] text-[#C88C1F] text-sm font-medium rounded flex items-center gap-2 hover:bg-[#705C2E] hover:text-white transition-all"
           >
             <FaYoutube /> SUBSCRIBE
           </a>
