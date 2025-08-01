@@ -55,7 +55,7 @@ const Navbar = () => {
           <Link href="/" className="hover:text-yellow-400 transition duration-300"><b>Home</b></Link>
           <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>Our Story</b></Link>
           <Link href="/services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
-          <Link href="/gallery" className="hover:text-yellow-400 transition duration-300"><b>Gallery</b></Link>
+          <Link href="/weding" className="hover:text-yellow-400 transition duration-300"><b>Wedding</b></Link>
           {/* <Link href="/blogs" className="hover:text-yellow-400 transition duration-300"><b>Blogs</b></Link> */}
         </div>
 
@@ -100,7 +100,7 @@ const Navbar = () => {
                       Partner With Us
                     </Link>
                   </li>
-                  {/* <li>
+                  {<li>
                     <Link
                       href="/blogs"
                       className="block px-4 py-2 hover:bg-white/50"
@@ -108,7 +108,7 @@ const Navbar = () => {
                     >
                       Blogs
                     </Link>
-                  </li> */}
+                  </li> }
                   <li>
                     <Link
                       href="/OurAllies"
@@ -118,15 +118,15 @@ const Navbar = () => {
                       Our Allies
                     </Link>
                   </li>
-                  {/* <li>
+                  { <li>
                     <Link
-                      href="/factSheet"
+                      href="/gallery"
                       className="block px-4 py-2 hover:bg-white/50"
                       onClick={() => setIsQuickLinksOpen(false)}
                     >
-                      Fact Sheet
+                      Gallery
                     </Link>
-                  </li> */}
+                  </li> }
                   <li>
                     <Link
                       href="/stayUpdated"
@@ -202,7 +202,7 @@ const Navbar = () => {
           <ul className="space-y-2 pt-2">
             <li><Link href="/about" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Our Story</Link></li>
             <li><Link href="/services" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Services</Link></li>
-            <li><Link href="/gallery" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Gallery</Link></li>
+            <li><Link href="/weding" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Wedding</Link></li>
             {/* <li><Link href="/blogs" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Blogs</Link></li> */}
             <li><Link href="/OurAllies" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Our Allies</Link></li>
             <li><Link href="/career" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Careers</Link></li>

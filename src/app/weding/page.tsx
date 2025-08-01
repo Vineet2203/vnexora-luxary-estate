@@ -1,0 +1,319 @@
+// /src/app/weding/page.tsx 
+
+'use client';
+
+import { useState } from "react";
+import Image from "next/image";
+import { Poppins, Playfair_Display } from 'next/font/google';
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
+
+// GuestRoomSelector component included inline for full completeness,
+// --> message by Akshat
+// if worked then needed to be imported from a separate file like `GuestRoomSelector.tsx` in `src/components/forms/GuestRoomSelector.tsx`  
+type Room = { adults: number; children: number };
+
+function GuestRoomSelector({
+  onChange,
+}: {
+  onChange?: (summary: string, rooms: Room[]) => void;
+}) {
+  const [rooms, setRooms] = useState<Room[]>([{ adults: 2, children: 0 }]);
+  const [open, setOpen] = useState(false);
+
+  // Generate summary like: "6 Adults, 2 Children - 3 Rooms"
+  const totalAdults = rooms.reduce((sum, r) => sum + r.adults, 0);
+  const totalChildren = rooms.reduce((sum, r) => sum + r.children, 0);
+  const summary = `${totalAdults} Adult${totalAdults > 1 ? "s" : ""}, ${totalChildren} Child${totalChildren !== 1 ? "ren" : ""} - ${rooms.length} Room${rooms.length > 1 ? "s" : ""}`;
+
+  if (onChange) onChange(summary, rooms);
+
+  const updateRoom = (idx: number, key: keyof Room, delta: number) => {
+    setRooms((prev) =>
+      prev.map((room, i) =>
+        i === idx
+          ? {
+              ...room,
+              [key]: Math.max(key === "adults" ? 1 : 0, room[key] + delta),
+            }
+          : room
+      )
+    );
+  };
+
+  const addRoom = () => setRooms((prev) => [...prev, { adults: 2, children: 0 }]);
+  const removeRoom = (idx: number) =>
+    setRooms((prev) => (prev.length === 1 ? prev : prev.filter((_, i) => i !== idx)));
+
+  return (
+    <div className="relative w-full">
+      {/* Trigger */}
+      <button
+        type="button"
+        className="w-full py-2 px-3 border border-gray-300 rounded text-left"
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+      >
+        {summary}
+      </button>
+
+      {/* Dropdown */}
+      {open && (
+        <div
+          role="listbox"
+          className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border z-50 p-4"
+        >
+          {rooms.map((room, idx) => (
+            <div className="mb-4 last:mb-0" key={idx}>
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-semibold">Room {idx + 1}</span>
+                {rooms.length > 1 && (
+                  <button
+                    className="text-xs text-red-500"
+                    type="button"
+                    onClick={() => removeRoom(idx)}
+                    aria-label={`Remove Room ${idx + 1}`}
+                  >
+                    Remove
+                  </button>
+                )}
+              </div>
+
+              {/* Adults */}
+              <div className="flex items-center mb-2">
+                <label className="w-16" htmlFor={`adults-room-${idx}`}>
+                  Adult
+                </label>
+                <button
+                  type="button"
+                  className="w-7 h-7 border rounded font-bold mr-2 disabled:opacity-50"
+                  onClick={() => updateRoom(idx, "adults", -1)}
+                  disabled={rooms[idx].adults <= 1}
+                  aria-label="Decrease number of adults"
+                >
+                  -
+                </button>
+                <span id={`adults-room-${idx}`}>{rooms[idx].adults}</span>
+                <button
+                  type="button"
+                  className="w-7 h-7 border rounded font-bold ml-2"
+                  onClick={() => updateRoom(idx, "adults", 1)}
+                  aria-label="Increase number of adults"
+                >
+                  +
+                </button>
+              </div>
+
+              {/* Children */}
+              <div className="flex items-center">
+                <label className="w-16" htmlFor={`children-room-${idx}`}>
+                  Child
+                  <span className="ml-1 text-xs text-gray-500">(0-12 yrs)</span>
+                </label>
+                <button
+                  type="button"
+                  className="w-7 h-7 border rounded font-bold mr-2 disabled:opacity-50"
+                  onClick={() => updateRoom(idx, "children", -1)}
+                  disabled={rooms[idx].children <= 0}
+                  aria-label="Decrease number of children"
+                >
+                  -
+                </button>
+                <span id={`children-room-${idx}`}>{rooms[idx].children}</span>
+                <button
+                  type="button"
+                  className="w-7 h-7 border rounded font-bold ml-2"
+                  onClick={() => updateRoom(idx, "children", 1)}
+                  aria-label="Increase number of children"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+          ))}
+
+          <button
+            type="button"
+            onClick={addRoom}
+            className="text-blue-600 mt-2 text-sm font-medium hover:underline"
+            aria-label="Add another room"
+          >
+            + Add Another Room
+          </button>
+
+          <div className="flex justify-end mt-4">
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="bg-gold-600 hover:bg-gold-700 text-white font-semibold py-2 px-5 rounded"
+            >
+              Done
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default function WeddingsPage() {
+  const [city, setCity] = useState("");
+  const [hotel, setHotel] = useState("");
+  const [dates, setDates] = useState({ from: "", to: "" });
+  const [guestSummary, setGuestSummary] = useState("2 Adults, 0 Children - 1 Room");
+
+  // Cities and Hotels (adjust these as needed)
+  const cities = ["Goa", "New Delhi", "Bhowali", "Jaipur", "Jaisalmer", "Agra"];
+  const hotels = [
+    "Foxoso Hotel Goa",
+    "Foxoso Hotel Jaipur",
+    "Foxoso Agra",
+    "Foxoso New Delhi",
+  ];
+
+  return (
+    <main className={`w-full mx-auto space-y-16 px-0 pb-10 relative bg-[#f7f5f1] wedding-page ${poppins.className}`}>
+      {/* Hero Section */}
+      <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+        <video
+            className="absolute inset-0 w-full h-full object-cover z-10"
+            src="/Videos/wedding.mp4"
+            autoPlay
+            loop 
+            muted
+            playsInline
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-60 z-10"/>
+        {/* Floating Booking Bar Overlay */}
+        <div className="absolute top-1/2 left-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 max-w-5xl">
+          <div className="bg-white/90 backdrop-blur-md shadow-lg rounded-lg flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-between py-6 px-6 md:px-10">
+            {/* City Dropdown */}
+            <div className="flex-1 w-full px-2">
+              <label htmlFor="city" className="block text-xs font-semibold text-gray-700 mb-1">
+                City
+              </label>
+              <select
+                id="city"
+                className="w-full py-2 px-3 border border-gray-300 rounded"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+              >
+                <option value="">Select City</option>
+                {cities.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Hotel Dropdown */}
+            <div className="flex-1 w-full px-2">
+              <label htmlFor="hotel" className="block text-xs font-semibold text-gray-700 mb-1">
+                Hotel
+              </label>
+              <select
+                id="hotel"
+                className="w-full py-2 px-3 border border-gray-300 rounded"
+                value={hotel}
+                onChange={(e) => setHotel(e.target.value)}
+              >
+                <option value="">Select Hotel</option>
+                {hotels.map((h) => (
+                  <option key={h} value={h}>
+                    {h}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Date Pickers */}
+            <div className="flex-1 w-full flex gap-2 px-2">
+              <div className="flex flex-col w-1/2">
+                <label htmlFor="fromDate" className="block text-xs font-semibold text-gray-700 mb-1">
+                  From
+                </label>
+                <input
+                  type="date"
+                  id="fromDate"
+                  className="py-2 px-3 border border-gray-300 rounded"
+                  value={dates.from}
+                  onChange={(e) => setDates((d) => ({ ...d, from: e.target.value }))}
+                />
+              </div>
+              <div className="flex flex-col w-1/2">
+                <label htmlFor="toDate" className="block text-xs font-semibold text-gray-700 mb-1">
+                  To
+                </label>
+                <input
+                  type="date"
+                  id="toDate"
+                  className="py-2 px-3 border border-gray-300 rounded"
+                  value={dates.to}
+                  onChange={(e) => setDates((d) => ({ ...d, to: e.target.value }))}
+                />
+              </div>
+            </div>
+
+            {/* Guest/Room Selector */}
+            <div className="flex-1 w-full px-2">
+              <label className="block text-xs font-semibold text-gray-700 mb-1">Guests</label>
+              <GuestRoomSelector onChange={(summary) => setGuestSummary(summary)} />
+            </div>
+
+            {/* Book Now Button */}
+            <div className="flex-shrink-0 mt-3 md:mt-0 px-2 w-full md:w-auto">
+              <button
+                className="bg-gold-600 hover:bg-gold-700 transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
+                aria-label="Book Now"
+                onClick={() => alert(`Booking from ${dates.from} to ${dates.to} at ${hotel} in ${city} for ${guestSummary}`)}
+              >
+                Book Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Main Hero Text */}
+        <div className="absolute bottom-14 left-1/2 z-20 transform -translate-x-1/2 text-center px-6 max-w-4xl">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Weddings</h1>
+          <p className="text-lg md:text-xl text-white drop-shadow">
+            Indulge your guests with a culinary experience they’ll never forget. Our world-class chefs and culinary team
+            create custom menus using the finest locally sourced ingredients, crafting exquisite dishes that showcase creativity and
+            gastronomic expertise. Whether you desire a lavish banquet or an intimate dining experience, our culinary creations will delight
+            even the most discerning palates.
+          </p>
+        </div>
+      </section>
+
+      {/* Highlights Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24 grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900">Elegant Venues</h2>
+            <p className="text-gray-700">
+              Celebrate in grand banquet halls or enchanting outdoor spaces, tailored for both intimate gatherings and large events.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900">Personalized Planning</h2>
+            <p className="text-gray-700">
+              Our expert wedding planners assist you through every detail—decor, themes, menus, and entertainment—for a seamless celebration.
+            </p>
+          </div>
+          <div>
+            <h2 className="text-2xl font-semibold mb-4 text-gray-900">Luxurious Hospitality</h2>
+            <p className="text-gray-700">
+              Guests are pampered with luxurious accommodations, attentive service, and amenities that make your special day truly memorable.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+
+
