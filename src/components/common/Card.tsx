@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaInstagram, FaGithub} from 'react-icons/fa';
 
 interface CardProps {
   name: string;
@@ -12,6 +12,7 @@ interface CardProps {
   email?: string;
   linkedin?: string;
   instagram?: string;
+  github?: string;
   size?: 'small' | 'medium' | 'large';
 }
 
@@ -29,6 +30,7 @@ const Card: React.FC<CardProps> = ({
   email,
   linkedin,
   instagram,
+  github,
   size = 'medium',
 }) => {
   return (
@@ -77,6 +79,17 @@ const Card: React.FC<CardProps> = ({
                 <FaInstagram className="text-[#E4405F] hover:text-[#C13584] drop-shadow" size={22} />
                 </a>
             )}
+            {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform duration-200 hover:scale-110"
+                >
+                  <FaGithub className="text-black hover:text-gray-800 drop-shadow" size={22} />
+                </a>
+              )}
+
             </div>
           </div>
         </div>

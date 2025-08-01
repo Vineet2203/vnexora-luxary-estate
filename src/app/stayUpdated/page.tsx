@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import { FaYoutube } from 'react-icons/fa';
-
+import { Poppins, Playfair_Display } from 'next/font/google';
+const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
+const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
 const videos = [
   'https://www.youtube.com/embed/VIDEO_ID1',
   'https://www.youtube.com/embed/VIDEO_ID2',
@@ -25,16 +27,22 @@ export default function StayUpdatedPage() {
   return (
     <main className="w-full min-h-screen bg-[#f7f5f1]">
 {/* Hero */}
-<section className="relative w-full h-[60vh] flex items-center justify-center text-center bg-[#432c15] text-white">
-  <div>
-    <h1 className="text-4xl md:text-5xl font-extrabold font-serif">
-      Stay Updated With Us
-    </h1>
-    <p className="mt-4 text-lg max-w-2xl mx-auto">
-      Explore the latest updates, highlights, and happenings across our properties and brand through engaging video content.
-    </p>
-  </div>
-</section>
+<section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+        <video
+          src="/Videos/stayupdated.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute w-full h-full object-cover"
+        />
+        <div className="absolute text-center text-[#f5e8d7] z-10">
+          <h1 className={`text-4xl md:text-5xl font-extrabold ${playfair.className}`}>Stay Updated With Us</h1>
+          <p className="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+            Explore our latest updates, news, and insights across our properties and brand through engaging video content.
+          </p>
+        </div>
+      </section>
 
 
       {/* Video Grid */}
