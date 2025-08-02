@@ -140,9 +140,9 @@ const AboutPage = () => {
        image: "/Images/kesar.jpg",
        linkedin: "http://www.linkedin.com/in/kesar-chaurasia-97703533b",
     },
-      {name: "Subhash Chandra",
-       role: "Banquet & Event Manager",
-       image: "/Images/subhash.jpg",
+      {name: "Dilip Dey",
+       role: "Business Development Manager",
+       image: "/Images/dilip.jpg",
        linkedin: "https://www.linkedin.com/in/subhash-chandra-9002a7374/",
       },  
       {
