@@ -73,8 +73,8 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] flex items-center justify-center px-4 py-8 overflow-auto">
-      <div className="bg-white/50 p-10 rounded-2xl shadow-2xl max-w-2xl w-full space-y-6 relative">
+    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] flex items-center justify-center overflow-hidden">
+  <div className="max-h-[90vh] overflow-y-auto bg-white/50 p-10 rounded-2xl shadow-2xl max-w-2xl w-full space-y-6 relative">
         <button onClick={onClose} className="absolute top-2 right-4 text-2xl font-bold">×</button>
 
         <div className="space-y-1">
