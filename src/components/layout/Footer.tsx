@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { Playfair_Display, Poppins } from 'next/font/google';
 
@@ -48,8 +49,8 @@ const Footer = () => {
             <li><a href="/about" className=" hover:decoration-[#705C2E]">About Us</a></li>
             <li><a href="/about#who" className=" hover:decoration-[#705C2E]">Who We Are</a></li>
             <li><a href="/about#philosophy" className=" hover:decoration-[#705C2E]">Our Mission</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Milestones</a></li>
-            <li><a href="#" className="hover:decoration-[#705C2E]">Awards and Recognition</a></li>
+            {/* <li><a href="#" className=" hover:decoration-[#705C2E]">Milestones</a></li>
+            <li><a href="#" className="hover:decoration-[#705C2E]">Awards and Recognition</a></li> */}
           </ul>
         </div>
 
@@ -58,7 +59,7 @@ const Footer = () => {
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>SERVICES</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/services" className=" hover:decoration-[#705C2E]">Strategic Consulting</a></li>
-            <li><a href="/services" className=" hover:decoration-[#705C2E]">Operational Excellence</a></li>
+            {/* <li><a href="/services" className=" hover:decoration-[#705C2E]">Operational Excellence</a></li> */}
             <li><a href="/services" className=" hover:decoration-[#705C2E]">Hotel Management</a></li>
             <li><a href="/services" className=" hover:decoration-[#705C2E]">Marketing Plan</a></li>
             <li><a href="/services" className=" hover:decoration-[#705C2E]">Finance & Accounting</a></li>
@@ -72,11 +73,11 @@ const Footer = () => {
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>PORTFOLIO</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="#" className=" hover:decoration-[#705C2E]">Restaurants</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Banquerts</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Banquets</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Destination Wedding</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Retails</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Co-Working</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Villas</a></li>
+            {/* <li><a href="#" className=" hover:decoration-[#705C2E]">Villas</a></li> */}
             <li><a href="#" className=" hover:decoration-[#705C2E]">Residentials</a></li>
           </ul>
         </div>
@@ -86,11 +87,19 @@ const Footer = () => {
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>CONTACT</h4>
           <ul className="space-y-2 text-sm">
             <li>VNEXORA Luxury Estate Pvt. Ltd.</li>
-            <li>
-              5th Floor, CDC Building,<br />
-              AIC, BHU Campus,<br />
-              Varanasi - 221005
-            </li>
+              <li className="flex items-start gap-2">
+                <FaMapMarkerAlt className="mt-1 text-[#705C2E]" />
+                <a
+                  href="https://www.google.com/maps/place/AIC,+BHU+Campus,+Varanasi+-+221005"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" hover:text-[#432c15] transition"
+                >
+                  5th Floor, CDC Building,<br />
+                  AIC, BHU Campus,<br />
+                  Varanasi - 221005
+                </a>
+              </li>
             <li>+91 7980829403</li>
             <li>+91 8318195911</li>
             <li>
