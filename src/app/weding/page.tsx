@@ -51,7 +51,7 @@ function GuestRoomSelector({
       {/* Trigger */}
       <button
         type="button"
-        className="w-full py-2 px-3 border border-gray-300 rounded text-left"
+        className="w-full   border border-gray-300 rounded text-left"
         onClick={() => setOpen((o) => !o)}
         aria-haspopup="listbox"
         aria-expanded={open}
@@ -63,7 +63,7 @@ function GuestRoomSelector({
       {open && (
         <div
           role="listbox"
-          className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border z-50 p-4"
+          className="absolute left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border z-60 p-4"
         >
           {rooms.map((room, idx) => (
             <div className="mb-4 last:mb-0" key={idx}>
@@ -165,30 +165,32 @@ export default function WeddingsPage() {
   const [guestSummary, setGuestSummary] = useState("2 Adults, 0 Children - 1 Room");
 
   // Cities and Hotels (adjust these as needed)
-  const cities = ["Goa", "New Delhi", "Bhowali", "Jaipur", "Jaisalmer", "Agra"];
+  const cities = ["Varanasi"];
   const hotels = [
-    "Foxoso Hotel Goa",
-    "Foxoso Hotel Jaipur",
-    "Foxoso Agra",
-    "Foxoso New Delhi",
+    "Bnaras kila, Varanasi",
   ];
 
   return (
     <main className={`w-full mx-auto space-y-16 px-0 pb-10 relative bg-[#f7f5f1] wedding-page ${poppins.className}`}>
       {/* Hero Section */}
-      <section className="relative w-full h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-[70vh] flex items-center justify-center pb-32">
         <video
-            className="absolute inset-0 w-full h-full object-cover z-10"
-            src="/Videos/wedding.mp4"
-            autoPlay
-            loop 
-            muted
-            playsInline
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          src="/Videos/wedding.mp4"
+          autoPlay
+          loop 
+          muted
+          playsInline
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60 z-10"/>
+        {/* <div className="absolute inset-0 bg-black bg-opacity-10 z-10"/> */}
+        
+        {/* Main Hero Text */}
+        <div className="absolute inset-0 flex items-center justify-center text-center text-[#f5e8d7] z-20 pointer-events-none">
+          <h1 className={`text-4xl md:text-5xl font-extrabold ${playfair.className}`}>WEDDING</h1>
+        </div>
         {/* Floating Booking Bar Overlay */}
-        <div className="absolute top-1/2 left-1/2 z-10 transform -translate-x-1/2 -translate-y-1/2 w-full px-4 max-w-5xl">
-          <div className="bg-white/90 backdrop-blur-md shadow-lg rounded-lg flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-between py-6 px-6 md:px-10">
+        <div className="absolute left-1/2 bottom-0 z-50 transform -translate-x-1/2 w-full">
+          <div className="bg-white/90 backdrop-blur-lg shadow-2xl rounded-lg flex flex-col md:flex-row gap-4 md:gap-2 items-center justify-between py-6 px-6 md:px-10">
             {/* City Dropdown */}
             <div className="flex-1 w-full px-2">
               <label htmlFor="city" className="block text-xs font-semibold text-gray-700 mb-1">
@@ -208,7 +210,6 @@ export default function WeddingsPage() {
                 ))}
               </select>
             </div>
-
             {/* Hotel Dropdown */}
             <div className="flex-1 w-full px-2">
               <label htmlFor="hotel" className="block text-xs font-semibold text-gray-700 mb-1">
@@ -258,7 +259,7 @@ export default function WeddingsPage() {
             </div>
 
             {/* Guest/Room Selector */}
-            <div className="flex-1 w-full px-2">
+            <div className="flex-1 w-full px-2" style={{ position: "relative", zIndex: 60 }}>
               <label className="block text-xs font-semibold text-gray-700 mb-1">Guests</label>
               <GuestRoomSelector onChange={(summary) => setGuestSummary(summary)} />
             </div>
@@ -266,7 +267,7 @@ export default function WeddingsPage() {
             {/* Book Now Button */}
             <div className="flex-shrink-0 mt-3 md:mt-0 px-2 w-full md:w-auto">
               <button
-                className="bg-gold-600 hover:bg-gold-700 transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
+                className="bg-[#ff3020] hover:bg-[#ff3045] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
                 aria-label="Book Now"
                 onClick={() => alert(`Booking from ${dates.from} to ${dates.to} at ${hotel} in ${city} for ${guestSummary}`)}
               >
@@ -274,17 +275,6 @@ export default function WeddingsPage() {
               </button>
             </div>
           </div>
-        </div>
-
-        {/* Main Hero Text */}
-        <div className="absolute bottom-14 left-1/2 z-20 transform -translate-x-1/2 text-center px-6 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-4 drop-shadow-lg">Weddings</h1>
-          <p className="text-lg md:text-xl text-white drop-shadow">
-            Indulge your guests with a culinary experience they’ll never forget. Our world-class chefs and culinary team
-            create custom menus using the finest locally sourced ingredients, crafting exquisite dishes that showcase creativity and
-            gastronomic expertise. Whether you desire a lavish banquet or an intimate dining experience, our culinary creations will delight
-            even the most discerning palates.
-          </p>
         </div>
       </section>
 
@@ -311,6 +301,11 @@ export default function WeddingsPage() {
           </div>
         </div>
       </section>
+      
+      <section className="py-16 bg-white">
+
+      </section>
+
     </main>
   );
 }
