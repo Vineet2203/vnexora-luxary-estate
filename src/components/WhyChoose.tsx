@@ -7,6 +7,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Playfair_Display, Poppins } from 'next/font/google';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
@@ -74,45 +76,57 @@ const WhyChooseUs = () => {
           client.
         </p>
 
-        {/* === Swiper Slider === */}
-        <Swiper
-  modules={[Navigation, Pagination]}
-  navigation
-  pagination={{ clickable: true }}
-  spaceBetween={30}
-  slidesPerView={1}
-  className="w-full max-w-8xl mx-auto"
->
-  {slides.map((slide, index) => (
-    <SwiperSlide key={index}>
-      <div className="flex flex-col items-center text-center">
-        {/* === Image === */}
-        <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg mb-6">
-          <Image
-            src={slide.image}
-            alt={slide.title}
-            fill
-            className="object-cover"
-            sizes="100vw"
-            priority
-          />
-        </div>
+       <div className="w-full max-w-6xl mx-auto relative">
+  <Swiper
+    modules={[Navigation, Pagination]}
+    navigation={{
+      prevEl: '.custom-prev',
+      nextEl: '.custom-next',
+    }}
+    pagination={{ clickable: true }}
+    spaceBetween={30}
+    slidesPerView={1}
+    className="w-full"
+  >
+    {slides.map((slide, index) => (
+      <SwiperSlide key={index}>
+        <div className="flex flex-col items-center text-center">
+          {/* Image */}
+          <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg mb-6">
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+          </div>
 
-        {/* === Text BELOW image === */}
-        <h3
-          className={`${poppins.className} text-2xl font-semibold text-[#705C2E] mb-2`}
-        >
-          {slide.title}
-        </h3>
-        <p
-          className={`${poppins.className} text-gray-700 max-w-xl px-6`}
-        >
-          {slide.description}
-        </p>
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+          {/* Text Below */}
+          <h3
+            className={`${poppins.className} text-2xl font-semibold text-[#705C2E] mb-2`}
+          >
+            {slide.title}
+          </h3>
+          <p className={`${poppins.className} text-gray-700 max-w-xl px-6`}>
+            {slide.description}
+          </p>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+
+  {/* Custom Bottom Arrows */}
+  <div className="flex justify-center items-center gap-6 mt-6">
+    <button className="custom-prev w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
+      <FaArrowLeft />
+    </button>
+    <button className="custom-next w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
+      <FaArrowRight />
+    </button>
+  </div>
+</div>
 
 
         {/* CTA Button */}

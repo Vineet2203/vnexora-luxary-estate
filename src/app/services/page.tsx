@@ -7,6 +7,8 @@ import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { useRef } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { Playfair_Display, Poppins } from 'next/font/google';
 
 const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
@@ -130,44 +132,60 @@ const ServicesPage = () => {
         </p>
       </div>
 
-      <Swiper
-        modules={[Navigation, Pagination]}
-        navigation
-        pagination={{ clickable: true }}
-        spaceBetween={30}
-        slidesPerView={1}
-        className="w-full max-w-6xl"
-      >
-        {services.map((service, idx) => (
-          <SwiperSlide key={idx}>
-            <div className="grid md:grid-cols-2 gap-0 bg-white border border-[#f1e3d3] rounded-2xl overflow-hidden shadow-xl h-[600px]">
-              <div className="relative w-full h-full">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-8 flex flex-col justify-between h-full">
-                <div>
-                  <h3 className={`${playfair.className} text-3xl text-[#432c15] mb-4`}>
-                    {service.title}
-                  </h3>
-                  <p className={`${poppins.className} text-gray-700 mb-4`}>
-                    {service.description}
-                  </p>
-                  <ul className={`${poppins.className} text-gray-700 list-disc pl-5 space-y-2 mb-4`}>
-                    {service.points.map((point, index) => (
-                      <li key={index}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+      {/* Swiper Slider */}
+<div className="w-full max-w-6xl relative">
+  <Swiper
+    modules={[Navigation, Pagination]}
+    navigation={{
+      prevEl: '.custom-prev',
+      nextEl: '.custom-next',
+    }}
+    pagination={{ clickable: true }}
+    spaceBetween={30}
+    slidesPerView={1}
+    className="w-full"
+  >
+    {services.map((service, idx) => (
+      <SwiperSlide key={idx}>
+        <div className="grid md:grid-cols-2 gap-0 bg-white border border-[#f1e3d3] rounded-2xl overflow-hidden shadow-xl h-[600px]">
+          <div className="relative w-full h-full">
+            <Image
+              src={service.image}
+              alt={service.title}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <div className="p-8 flex flex-col justify-between h-full">
+            <div>
+              <h3 className={`${playfair.className} text-3xl text-[#432c15] mb-4`}>
+                {service.title}
+              </h3>
+              <p className={`${poppins.className} text-gray-700 mb-4`}>
+                {service.description}
+              </p>
+              <ul className={`${poppins.className} text-gray-700 list-disc pl-5 space-y-2 mb-4`}>
+                {service.points.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+          </div>
+        </div>
+      </SwiperSlide>
+    ))}
+  </Swiper>
+
+  {/* Custom Navigation Arrows */}
+  <div className="flex justify-center items-center gap-6 mt-6">
+    <button className="custom-prev w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
+      <FaArrowLeft />
+    </button>
+    <button className="custom-next w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
+      <FaArrowRight />
+    </button>
+  </div>
+</div>
 
       <style jsx global>{`
         .swiper-button-next,

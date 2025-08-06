@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Poppins, Playfair_Display } from 'next/font/google';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
@@ -96,7 +97,7 @@ const PartnerPage = () => {
             ],
           },
         ].map((model, idx) => (
-          <div key={idx} className="bg-white p-6 rounded-xl shadow-sm space-y-4">
+          <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg space-y-4 transition-transform hover:scale-[1.02]">
             <h2 className={`text-2xl font-semibold text-[#432c15] ${playfair.className}`}>
               {model.title}
             </h2>
@@ -111,19 +112,52 @@ const PartnerPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="max-w-6xl mx-auto mt-16 text-center bg-[#fdf6e9] p-10 rounded-xl shadow">
-        <h2 className={`text-3xl font-bold text-[#432c15] ${playfair.className}`}>
-          Let’s Collaborate!
-        </h2>
-        <p className="mt-4 text-lg text-gray-700">
-          Partner with VNEXORA or our collaborated hotel brands to elevate your property.
-        </p>
-        <div className="mt-6 space-y-2 text-base text-gray-800">
-          <p><strong>Email:</strong> <a className="text-blue-600" href="mailto:connect@vnexora.com">connect@vnexora.com</a></p>
-          <p><strong>Call / WhatsApp:</strong> <a href="tel:+917980829403">+91-7980829403</a></p>
-          <p><strong>Website:</strong> <a className="text-blue-600" href="https://www.vnexora.com" target="_blank">www.vnexora.com</a></p>
-        </div>
-      </section>
+      <section className="max-w-6xl mx-auto mt-16 bg-[#fdf6e9]/10 p-10 rounded-xl shadow transition-transform hover:scale-[1.02]">
+  <h2 className={`text-3xl font-bold text-[#432c15] text-center ${playfair.className}`}>
+    Let’s Collaborate!
+  </h2>
+
+  <div className="mt-8 flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
+    {/* Left Side Text */}
+    <p className="text-lg text-gray-700 md:w-1/2">
+      Partner with <strong>VNEXORA</strong> or our collaborated hotel brands to elevate your property.
+    </p>
+
+    {/* Right Side Contact Info */}
+    <div className="space-y-2 text-base text-gray-800 md:w-1/2">
+      <p>
+        <strong>Email:</strong>{' '}
+        <a className="text-blue-600" href="mailto:connect@vnexora.com">
+          connect@vnexora.com
+        </a>
+      </p>
+      <p className="flex items-center gap-2">
+        <strong>Call / WhatsApp:</strong>{' '}
+        <a
+          className="text-green-600 flex items-center gap-2"
+          href="https://wa.me/917980829403"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaWhatsapp size={18} />
+          +91-7980829403
+        </a>
+      </p>
+      <p>
+        <strong>Website:</strong>{' '}
+        <a
+          className="text-blue-600"
+          href="https://www.vnexora.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          www.vnexora.com
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 };
