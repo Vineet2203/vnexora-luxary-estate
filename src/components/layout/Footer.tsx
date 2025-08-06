@@ -18,8 +18,8 @@ const Footer = () => {
           <h3 className={`text-3xl font-bold text-[#432c15] ${playfair.className}`}>VNEXORA</h3>
           <p className="text-sm">&copy; 2025 VNEXORA Luxury Estate Pvt. Ltd.</p>
           <div className="space-y-2">
-            <a href="#" className="block text-sm  hover:decoration-[#432c15]">Terms & Conditions</a>
-            <a href="#" className="block text-sm  hover:decoration-[#432c15]">Privacy Policy</a>
+            <a href="/terms&cond" className="block text-sm  hover:decoration-[#432c15]">Terms & Conditions</a>
+            <a href="/privacy-policy" className="block text-sm  hover:decoration-[#432c15]">Privacy Policy</a>
           </div>
           <div className="flex space-x-3 pt-4">
             <a href="https://www.linkedin.com/company/vnexora" target="_blank" rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Footer = () => {
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>ABOUT</h4>
           <ul className="space-y-2 text-sm">
             <li><a href="/about" className=" hover:decoration-[#705C2E]">About Us</a></li>
-            <li><a href="/about#who" className=" hover:decoration-[#705C2E]">Introduction</a></li>
+            <li><a href="/about#who" className=" hover:decoration-[#705C2E]">Who We Are</a></li>
             <li><a href="/about#philosophy" className=" hover:decoration-[#705C2E]">Our Mission</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Milestones</a></li>
             <li><a href="#" className="hover:decoration-[#705C2E]">Awards and Recognition</a></li>
@@ -57,13 +57,13 @@ const Footer = () => {
         <div>
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>SERVICES</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Strategic Consulting</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Operational Excellence</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Hotel Management</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Marketing Plan</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Finance & Accounting</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Brand Collaboration</a></li>
-            <li><a href="#services" className=" hover:decoration-[#705C2E]">Property Management</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Strategic Consulting</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Operational Excellence</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Hotel Management</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Marketing Plan</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Finance & Accounting</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Brand Collaboration</a></li>
+            <li><a href="/services" className=" hover:decoration-[#705C2E]">Property Management</a></li>
           </ul>
         </div>
 
@@ -103,9 +103,14 @@ const Footer = () => {
       </div>
 
       {/* Divider */}
-      <div className="mt-16 border-t border-[#705C2E] pt-6 text-center text-sm text-[#705C2E]">
-        Designed & Developed by VNEXORA Tech Team.
-      </div>
+     <div className="mt-16 border-t border-[#705C2E] pt-6 text-center text-sm text-[#705C2E]">
+  <a
+    href="/tech-team"
+    className="hover:underline hover:text-[#432c15] transition"
+  >
+    Designed & Developed by VNEXORA Developers Team.
+  </a>
+</div>
     </footer>
   );
 };

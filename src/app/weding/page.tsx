@@ -267,7 +267,7 @@ export default function WeddingsPage() {
             {/* Book Now Button */}
             <div className="flex-shrink-0 mt-3 md:mt-0 px-2 w-full md:w-auto">
               <button
-                className="bg-[#ff3020] hover:bg-[#ff3045] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
+                className="bg-[#1234ff] hover:bg-[#ff3020] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
                 aria-label="Book Now"
                 onClick={() => alert(`Booking from ${dates.from} to ${dates.to} at ${hotel} in ${city} for ${guestSummary}`)}
               >
