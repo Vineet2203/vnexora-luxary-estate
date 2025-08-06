@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { ArrowLeft } from 'lucide-react';
+import { useRef, useEffect } from 'react';
 
 type AppointmentType = 'video' | 'office' | 'site';
 
@@ -29,6 +30,12 @@ const timeSlots = [
 ];
 
 export default function AppointmentModal({ onClose, type }: AppointmentModalProps) {
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    modalRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }, []);
+  
   const [date, setDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({ Fname: '', Lname: '', email: '', phone: '', subject: '', address: '' });
@@ -74,7 +81,10 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
 
   return (
     <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] flex items-center justify-center overflow-hidden">
-  <div className="max-h-[90vh] overflow-y-auto bg-white/50 p-10 rounded-2xl shadow-2xl max-w-2xl w-full space-y-6 relative">
+  <div
+  ref={modalRef}
+  className="max-h-[90vh] overflow-y-auto bg-white/50 p-10 rounded-2xl shadow-2xl max-w-2xl w-full space-y-6 relative"
+>
         <button onClick={onClose} className="absolute top-2 right-4 text-2xl font-bold">×</button>
 
         <div className="space-y-1">
