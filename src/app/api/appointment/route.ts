@@ -22,20 +22,30 @@ export async function POST(req: NextRequest) {
       platform,
     } = body;
 
-    const newAppointment = await Appointment.create({
-      type,
-      date,
-      time,
-      Fname,
-      Lname,
-      email,
-      phone,
-      subject,
-      address,
-      platform,
-    });
+    // 1️⃣ Save appointment to DB
+    let newAppointment;
+    try {
+      newAppointment = await Appointment.create({
+        type,
+        date,
+        time,
+        Fname,
+        Lname,
+        email,
+        phone,
+        subject,
+        address,
+        platform,
+      });
+    } catch (dbError) {
+      console.error("❌ DB Save Error:", dbError);
+      return NextResponse.json(
+        { success: false, error: 'Failed to save appointment' },
+        { status: 500 }
+      );
+    }
 
-    // HTML for user
+    // 2️⃣ Prepare emails
     const userHtml = `
       <h2>Hi ${Fname},</h2>
       <p>Your <strong>${type}</strong> meeting has been successfully scheduled.</p>
@@ -49,7 +59,6 @@ export async function POST(req: NextRequest) {
       <p>Thanks,<br/>Team Vnexora</p>
     `;
 
-    // HTML for HR
     const hrHtml = `
       <h2>New Appointment Scheduled</h2>
       <p><strong>Name:</strong> ${Fname} ${Lname}</p>
@@ -63,22 +72,32 @@ export async function POST(req: NextRequest) {
       ${address ? `<p><strong>Address:</strong> ${address}</p>` : ''}
     `;
 
-    // Send to user
-    await sendMail(email, 'Your Appointment Confirmation', userHtml);
-
-    const hrEmail = process.env.HR_EMAIL;
-    if (!hrEmail) {
-      throw new Error('HR_EMAIL environment variable is not set.');
+    // 3️⃣ Send email to user
+    try {
+      await sendMail(email, 'Your Appointment Confirmation', userHtml);
+    } catch (userMailError) {
+      console.error("⚠️ Failed to send confirmation email to user:", userMailError);
     }
 
-    // Send to HR
-    await sendMail(hrEmail, 'New Appointment Scheduled', hrHtml);
+    // 4️⃣ Send email to HR (only if HR_EMAIL is set)
+    const hrEmail = process.env.HR_EMAIL;
+    if (!hrEmail) {
+      console.warn("⚠️ HR_EMAIL environment variable is missing. Skipping HR email.");
+    } else {
+      try {
+        await sendMail(hrEmail, 'New Appointment Scheduled', hrHtml);
+      } catch (hrMailError) {
+        console.error("⚠️ Failed to send email to HR:", hrMailError);
+      }
+    }
 
+    // 5️⃣ Always return success if DB save worked
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error(error);
+
+  } catch (error: any) {
+    console.error("🔥 Appointment POST fatal error:", error);
     return NextResponse.json(
-      { success: false, error: 'Something went wrong' },
+      { success: false, error: error?.message || 'Something went wrong' },
       { status: 500 }
     );
   }
