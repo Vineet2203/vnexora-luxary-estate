@@ -74,7 +74,7 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li><a href="#" className=" hover:decoration-[#705C2E]">Restaurants</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Banquets</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Destination Wedding</a></li>
+            <li><a href="/wedding" className=" hover:decoration-[#705C2E]">Destination Wedding</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Retails</a></li>
             <li><a href="#" className=" hover:decoration-[#705C2E]">Co-Working</a></li>
             {/* <li><a href="#" className=" hover:decoration-[#705C2E]">Villas</a></li> */}
@@ -90,7 +90,7 @@ const Footer = () => {
               <li className="flex items-start gap-2">
                 <FaMapMarkerAlt className="mt-1 text-[#705C2E]" />
                 <a
-                  href="https://www.google.com/maps/place/AIC,+BHU+Campus,+Varanasi+-+221005"
+                  href="https://www.google.com/maps/place/25%C2%B015'48.2%22N+82%C2%B059'39.0%22E/@25.2633983,82.9915848,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.2633983!4d82.9941597?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className=" hover:text-[#432c15] transition"
