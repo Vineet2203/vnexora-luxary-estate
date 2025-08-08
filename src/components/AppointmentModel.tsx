@@ -77,6 +77,11 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
       setFormData({ Fname: '', Lname: '', email: '', phone: '', subject: '', address: '' });
       setSelectedTime('');
       setDate(null);
+
+       setTimeout(() => {
+        onClose();
+      }, 1500);
+
     } catch (error) {
       console.error(error);
     } finally {
