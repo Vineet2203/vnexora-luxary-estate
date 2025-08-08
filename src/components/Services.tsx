@@ -96,7 +96,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="bg-[#f7f5f1] py-20 px-4 sm:px-8 lg:px-24 min-h-screen flex flex-col items-center justify-center"
+      className="bg-[#f7f5f1] py-8 px-4 sm:px-8 lg:px-24 min-h-screen flex flex-col items-center justify-center"
     >
       <div className="text-center mb-12">
         <h2 className={`${playfair.className} text-4xl font-bold text-[#432c15] mb-2`}>
