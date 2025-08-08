@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 import { Playfair_Display, Poppins } from 'next/font/google';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
-
 const playfair = Playfair_Display({ subsets: ['latin'], weight: '700' });
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
@@ -35,7 +34,7 @@ const slides = [
   {
     title: 'Expert-Led Operations',
     description:
-      'Decades of industry experience across F&B, finance, marketing, and tech — for consistently excellent execution.',
+      'Decades of industry experience across F&B, finance, marketing, and tech for consistently excellent execution.',
     image: '/Images/gen_images/executive_team.png',
   },
   {
@@ -47,7 +46,7 @@ const slides = [
   {
     title: 'Transparent & Trusted Partnerships',
     description:
-      'We prioritize transparency and trust — with clear goals, reports, and results.',
+      'We prioritize transparency and trust with clear goals, reports, and results.',
     image: '/Images/gen_images/report.png',
   },
 ];
@@ -76,58 +75,58 @@ const WhyChooseUs = () => {
           client.
         </p>
 
-       <div className="w-full max-w-6xl mx-auto relative">
-  <Swiper
-    modules={[Navigation, Pagination]}
-    navigation={{
-      prevEl: '.custom-prev',
-      nextEl: '.custom-next',
-    }}
-    pagination={{ clickable: true }}
-    spaceBetween={30}
-    slidesPerView={1}
-    className="w-full"
-  >
-    {slides.map((slide, index) => (
-      <SwiperSlide key={index}>
-        <div className="flex flex-col items-center text-center">
-          {/* Image */}
-          <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg mb-6">
-            <Image
-              src={slide.image}
-              alt={slide.title}
-              fill
-              className="object-cover"
-              sizes="100vw"
-              priority
-            />
-          </div>
-
-          {/* Text Below */}
-          <h3
-            className={`${poppins.className} text-2xl font-semibold text-[#705C2E] mb-2`}
-          >
-            {slide.title}
-          </h3>
-          <p className={`${poppins.className} text-gray-700 max-w-xl px-6`}>
-            {slide.description}
-          </p>
+        <div className="w-full max-w-6xl mx-auto relative">
+        <Swiper
+  modules={[Navigation, Pagination]}
+  navigation={{
+    prevEl: '.custom-prev',
+    nextEl: '.custom-next',
+  }}
+  pagination={{
+    el: '.custom-pagination', // Tell Swiper to use OUR container
+    clickable: true,
+  }}
+  spaceBetween={30}
+  slidesPerView={1}
+  className="w-full"
+>
+  {slides.map((slide, index) => (
+    <SwiperSlide key={index}>
+      <div className="flex flex-col items-center text-center">
+        {/* Image */}
+        <div className="relative w-full h-[600px] rounded-xl overflow-hidden shadow-lg mb-6">
+          <Image
+            src={slide.image}
+            alt={slide.title}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          {/* Custom pagination container */}
+          <div className="custom-pagination absolute bottom-4 left-1/2 -translate-x-1/2 z-10"></div>
         </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
 
-  {/* Custom Bottom Arrows */}
-  <div className="flex justify-center items-center gap-6 mt-6">
-    <button className="custom-prev w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
-      <FaArrowLeft />
-    </button>
-    <button className="custom-next w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
-      <FaArrowRight />
-    </button>
-  </div>
-</div>
+        {/* Text */}
+        <h3 className="text-2xl font-semibold text-[#705C2E] mb-2">
+          {slide.title}
+        </h3>
+        <p className="text-gray-700 max-w-xl px-6">{slide.description}</p>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
+          {/* Custom Bottom Arrows */}
+          <div className="flex justify-center items-center gap-6 mt-6">
+            <button className="custom-prev w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
+              <FaArrowLeft />
+            </button>
+            <button className="custom-next w-12 h-12 bg-[#705C2E] text-white rounded-full flex items-center justify-center hover:bg-[#5e4f2a] transition-transform hover:scale-[1.02]">
+              <FaArrowRight />
+            </button>
+          </div>
+        </div>
 
         {/* CTA Button */}
         <div className="text-center mt-12">
@@ -143,17 +142,19 @@ const WhyChooseUs = () => {
 
       {/* Custom Styling */}
       <style jsx global>{`
-  .swiper-button-next,
-  .swiper-button-prev {
-    color: #705c2e;
-  }
-  .swiper-pagination-bullet {
-    background: #705c2e;
-  }
-  .swiper-pagination {
-    bottom: 10px !important;
-  }
-`}</style>
+        .swiper-button-next,
+        .swiper-button-prev {
+          color: #705c2e;
+        }
+        .swiper-pagination-bullet {
+          background: #705c2e;
+          opacity: 0.7;
+        }
+        .swiper-pagination-bullet-active {
+          background: #705c2e;
+          opacity: 1;
+        }
+      `}</style>
     </section>
   );
 };
