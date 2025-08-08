@@ -112,29 +112,31 @@ const PartnerPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="max-w-6xl mx-auto mt-16 bg-[#fdf6e9]/10 p-10 rounded-xl shadow transition-transform hover:scale-[1.02]">
+<section className="max-w-6xl mx-auto mt-16 bg-[#fdf6e9]/10 p-10 rounded-xl shadow transition-transform hover:scale-[1.02]">
   <h2 className={`text-3xl font-bold text-[#432c15] text-center ${playfair.className}`}>
     Let’s Collaborate!
   </h2>
 
-  <div className="mt-8 flex flex-col md:flex-row justify-between gap-8 items-start md:items-center">
+  <div className="mt-8 flex flex-col md:flex-row items-center md:items-center gap-8">
     {/* Left Side Text */}
-    <p className="text-lg text-gray-700 md:w-1/2">
-      Partner with <strong>VNEXORA</strong> or our collaborated hotel brands to elevate your property.
-    </p>
+    <div className="md:w-1/2 text-center md:text-left">
+      <p className="text-lg text-gray-700 leading-relaxed">
+        Partner with <strong>VNEXORA</strong> or our collaborated hotel brands to elevate your property.
+      </p>
+    </div>
 
     {/* Right Side Contact Info */}
-    <div className="space-y-2 text-base text-gray-800 md:w-1/2">
+    <div className="md:w-1/2 space-y-3 text-base text-gray-800">
       <p>
         <strong>Email:</strong>{' '}
-        <a className="text-blue-600" href="mailto:connect@vnexora.com">
+        <a className="text-blue-600 hover:underline" href="mailto:connect@vnexora.com">
           connect@vnexora.com
         </a>
       </p>
       <p className="flex items-center gap-2">
         <strong>Call / WhatsApp:</strong>{' '}
         <a
-          className="text-green-600 flex items-center gap-2"
+          className="text-green-600 flex items-center gap-2 hover:underline"
           href="https://wa.me/917980829403"
           target="_blank"
           rel="noopener noreferrer"
@@ -146,7 +148,7 @@ const PartnerPage = () => {
       <p>
         <strong>Website:</strong>{' '}
         <a
-          className="text-blue-600"
+          className="text-blue-600 hover:underline"
           href="https://www.vnexora.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -157,6 +159,7 @@ const PartnerPage = () => {
     </div>
   </div>
 </section>
+
 
     </main>
   );
