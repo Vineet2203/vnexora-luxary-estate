@@ -1,10 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { ArrowLeft } from 'lucide-react';
-import { useRef, useEffect } from 'react';
+import { FaMapMarkerAlt } from 'react-icons/fa';
 
 type AppointmentType = 'video' | 'office' | 'site';
 
@@ -31,11 +31,16 @@ const timeSlots = [
 
 export default function AppointmentModal({ onClose, type }: AppointmentModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    modalRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50); // becomes true after scrolling 50px
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   const [date, setDate] = useState<Date | null>(null);
   const [selectedTime, setSelectedTime] = useState('');
   const [formData, setFormData] = useState({ Fname: '', Lname: '', email: '', phone: '', subject: '', address: '' });
@@ -80,11 +85,17 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
   };
 
   return (
-    <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] flex items-center justify-center overflow-hidden">
-  <div
-  ref={modalRef}
-  className="max-h-[90vh] overflow-y-auto bg-white/50 p-10 rounded-2xl shadow-2xl max-w-2xl w-full space-y-6 relative"
->
+    <>
+      {/* Background overlay */}
+      <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-[1000] pointer-events-none"></div>
+
+      {/* Fixed modal card */}
+      <div
+        ref={modalRef}
+        className={`fixed top-1/2 left-1/2 -translate-x-1/2 
+                   z-[1001] p-10 rounded-2xl shadow-2xl max-w-2xl w-full space-y-6 relative 
+                   transition-colors duration-300 ${scrolled ? 'bg-white' : 'bg-white/50 backdrop-blur-md'}`}
+      >
         <button onClick={onClose} className="absolute top-2 right-4 text-2xl font-bold">×</button>
 
         <div className="space-y-1">
@@ -180,12 +191,18 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
 
               {type === 'office' && (
                 <div className="w-full border border-gray-300 px-4 py-2 rounded-md">
-                  <p className="text-base text-black font-semibold mb-2">Office Address</p>
                   <p>Vnexora Luxury Estate Pvt. Ltd. 5th Floor, CDC Building, AIC, BHU Campus,</p>
-                  <p>Varanasi - 221005</p>
-                  <p className="mt-2">📞 +91 7980829403</p>
-                  <p>📞 +91 8318195911</p>
-                  <p className="mt-2">Gmail: connect@vnexora.com</p>
+                  <p className="flex items-center gap-2">
+                    Varanasi - 221005
+                    <a
+                      href="https://www.google.com/maps/place/25%C2%B015'48.2%22N+82%C2%B059'39.0%22E/@25.2633983,82.9915848,17z/data=!3m1!4b1!4m4!3m3!8m2!3d25.2633983!4d82.9941597?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#705C2E] hover:text-[#432c15] transition"
+                    >
+                      <FaMapMarkerAlt className="mt-1" />
+                    </a>
+                  </p>
                 </div>
               )}
 
@@ -233,6 +250,6 @@ export default function AppointmentModal({ onClose, type }: AppointmentModalProp
           </>
         )}
       </div>
-    </div>
+    </>
   );
 }
