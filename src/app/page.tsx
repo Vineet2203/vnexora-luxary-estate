@@ -5,6 +5,7 @@ import Gallery from "../components/Gallery";
 import OurAllies from '../components/OurAllies';
 import Services from "../components/Services";
 import WhatsAppButton from "../components/core/whatsapp";
+import ChatbotButton from "../components/core/chatbot";
 
 
 
@@ -20,6 +21,10 @@ export default function Home() {
       {/* WhatsApp Button Component */}
       <div className="fixed bottom-4 right-4 z-50">
         <WhatsAppButton />
+      </div>
+      {/* Chatbot Button Component */}
+      <div className="fixed bottom-4 right-4 z-50">  
+        <ChatbotButton />
       </div>
     </main>
   );
