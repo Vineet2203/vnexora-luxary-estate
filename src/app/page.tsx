@@ -4,6 +4,7 @@ import WhyChooseUs from "../components/WhyChoose";
 import Gallery from "../components/Gallery";
 import OurAllies from '../components/OurAllies';
 import Services from "../components/Services";
+import GlassCard from "@/components/brand";
 import WhatsAppButton from "../components/core/whatsapp";
 import ChatbotButton from "../components/core/chatbot";
 
@@ -16,6 +17,7 @@ export default function Home() {
       <AboutUs />
       <WhyChooseUs />
       <Services />
+      <GlassCard />
       <OurAllies />
       <Gallery />
       {/* WhatsApp Button Component */}
