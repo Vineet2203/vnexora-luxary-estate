@@ -39,7 +39,7 @@ const PartnerPage = () => {
       </section>
 
       {/* Models */}
-      <section className="max-w-6xl mx-auto mt-12 space-y-10">
+      <section className="max-w-6xl bg-[#f7f5f1] mx-auto mt-12 space-y-10">
         {[
           {
             title: '1. Hotel Management Contract',
@@ -97,7 +97,7 @@ const PartnerPage = () => {
             ],
           },
         ].map((model, idx) => (
-          <div key={idx} className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg space-y-4 transition-transform hover:scale-[1.02]">
+          <div key={idx} className="bg-[#f1e6dd] backdrop-blur-md border border-white/20 p-6 rounded-xl shadow-lg space-y-4 transition-transform hover:scale-[1.02]">
             <h2 className={`text-2xl font-semibold text-[#432c15] ${playfair.className}`}>
               {model.title}
             </h2>
@@ -112,7 +112,7 @@ const PartnerPage = () => {
       </section>
 
       {/* CTA */}
-<section className="max-w-6xl mx-auto mt-16 bg-[#fdf6e9]/10 p-10 rounded-xl shadow transition-transform hover:scale-[1.02]">
+<section className="max-w-6xl mx-auto mt-16 bg-[#f1e6dd] p-10 rounded-xl shadow transition-transform hover:scale-[1.02]">
   <h2 className={`text-3xl font-bold text-[#432c15] text-center ${playfair.className}`}>
     Let’s Collaborate!
   </h2>
