@@ -5,6 +5,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Poppins, Playfair_Display } from 'next/font/google';
+import CubeCard from "@/components/common/CubeCard";
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
@@ -171,7 +172,7 @@ export default function WeddingsPage() {
   ];
 
   return (
-    <main className={`w-full mx-auto space-y-16 px-0 pb-10 relative bg-[#f7f5f1] wedding-page ${poppins.className}`}>
+    <main className={`w-full mx-auto space-y-16 px-0 relative bg-[#f7f5f1] wedding-page ${poppins.className}`}>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] flex items-center justify-center pb-32">
         <video
@@ -267,7 +268,7 @@ export default function WeddingsPage() {
             {/* Book Now Button */}
             <div className="flex-shrink-0 mt-3 md:mt-0 px-2 w-full md:w-auto">
               <button
-                className="bg-[#1234ff] hover:bg-[#ff3020] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
+                className="bg-[#123456] hover:bg-[#ff3020] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
                 aria-label="Book Now"
                 onClick={() => alert(`Booking from ${dates.from} to ${dates.to} at ${hotel} in ${city} for ${guestSummary}`)}
               >
@@ -301,9 +302,37 @@ export default function WeddingsPage() {
           </div>
         </div>
       </section>
-      
-      <section className="py-16 bg-white">
-
+      {/* Unique Hotels Section */}
+      <section className="relative w-full h-screen flex flex-col md:flex-row items-center justify-center gap-12 overflow-hidden">
+        {/* Fixed Floral BG Image */}
+        <div
+          className="pointer-events-none absolute inset-0 w-full h-full z-0"
+          aria-hidden="true"
+        >
+          <Image
+        src="/Images/floral.jpg"
+        alt="Floral background"
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+        style={{ objectFit: "cover" }}
+          />
+        </div>
+        <div className="inset-0 bg-black bg-opacity-40 z-10 pointer-events-none" />
+        {/* Overlay Content */}
+        <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center gap-12">
+          {/* Place your overlay content here */}
+          <div className="max-w-lg w-full px-6">
+        <h2 className="text-3xl font-bold mb-4 text-gray-900">Experience Our Unique Hotels</h2>
+        <p className="text-lg text-gray-700">
+          Each VNexora hotel is a testament to luxury and innovation—from tranquil retreats to vibrant cityscapes. Discover our properties and their distinct hospitality, ambiance, and amenities.
+        </p>
+          </div>
+          <div className="w-[540px] h-[360px] flex items-center justify-center">
+        <CubeCard images={['/Images/bk1.webp','/Images/hotel1.jpg' , '/Images/hotel3.jpg','/Images/bk2.webp']} />
+          </div>
+        </div>
       </section>
 
     </main>
