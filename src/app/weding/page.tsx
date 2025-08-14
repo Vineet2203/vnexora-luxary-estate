@@ -334,6 +334,84 @@ export default function WeddingsPage() {
           </div>
         </div>
       </section>
+      {/* Wedding Destinations Section */}
+      <section className="bg-rgba(248, 243, 232, 0.9) pb-10">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            OUR WEDDING DESTINATIONS
+          </h2>
+
+          {/* Destination 1 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+            {/* Text */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-gold-700">
+                Banaras Kila by Vnexora, Varanasi
+              </h3>
+              <p className="text-gray-700 mb-6 text-justify">
+                Escape to the spiritual oasis of Varanasi and immerse yourself in the timeless charm of Banaras Kila by VNexora.
+                Our heritage riverside property offers a majestic blend of royal elegance and contemporary luxury, set against the sacred banks of the Ganges.
+                Discover Varanasi’s rich cultural heritage, spiritual essence, and exquisite cuisine, all while enjoying unparalleled hospitality in an atmosphere of regal sophistication.
+                Book your stay at the finest luxury hotel in Varanasi and experience a journey that’s as unforgettable as the city itself.
+
+
+              </p>
+              <div className="flex gap-4">
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Enquire Now
+                </button>
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Explore More
+                </button>
+              </div>
+            </div>
+            {/* Image */}
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/Images/bk1.webp"
+                alt="Foxoso La Beach Resort, Goa"
+                width={800}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Destination 2 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Image */}
+            <div className="order-1 md:order-2 overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/Images/princediamond.jpg"
+                alt="Foxoso Misty Oaks Resort, Bhowali"
+                width={800}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            {/* Text */}
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl font-semibold mb-4 text-gold-700">
+                Prince Diamond by Vnexora, Varanasi
+              </h3>
+              <p className="text-gray-700 mb-6 text-justify">
+                Indulge in a world of elegance at Prince Diamond by VNexora, Varanasi.
+                Nestled in the heart of the city, our contemporary luxury hotel offers a refined blend of modern sophistication and warm hospitality.
+                Whether you’re here for business, leisure, or a spiritual journey, Prince Diamond provides an exceptional stay with thoughtfully designed interiors, exquisite dining, and impeccable service.
+                Book your experience at Varanasi’s premier urban luxury destination and immerse yourself in comfort, style, and the vibrant culture of India’s sacred city.
+              </p>
+              <div className="flex gap-4">
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Enquire Now
+                </button>
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Explore More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </main>
   );
