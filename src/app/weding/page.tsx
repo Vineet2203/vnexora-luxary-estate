@@ -5,6 +5,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Poppins, Playfair_Display } from 'next/font/google';
+import CubeCard from "@/components/common/CubeCard";
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400'] });
 const playfair = Playfair_Display({ subsets: ['latin'], weight: ['700'] });
@@ -171,7 +172,7 @@ export default function WeddingsPage() {
   ];
 
   return (
-    <main className={`w-full mx-auto space-y-16 px-0 pb-10 relative bg-[#f7f5f1] wedding-page ${poppins.className}`}>
+    <main className={`w-full mx-auto space-y-16 px-0 relative bg-[#f7f5f1] wedding-page ${poppins.className}`}>
       {/* Hero Section */}
       <section className="relative w-full h-[70vh] flex items-center justify-center pb-32">
         <video
@@ -267,7 +268,7 @@ export default function WeddingsPage() {
             {/* Book Now Button */}
             <div className="flex-shrink-0 mt-3 md:mt-0 px-2 w-full md:w-auto">
               <button
-                className="bg-[#1234ff] hover:bg-[#ff3020] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
+                className="bg-[#123456] hover:bg-[#ff3020] transition-colors text-white font-semibold py-3 px-8 rounded-lg shadow-lg w-full"
                 aria-label="Book Now"
                 onClick={() => alert(`Booking from ${dates.from} to ${dates.to} at ${hotel} in ${city} for ${guestSummary}`)}
               >
@@ -301,9 +302,115 @@ export default function WeddingsPage() {
           </div>
         </div>
       </section>
-      
-      <section className="py-16 bg-white">
+      {/* Unique Hotels Section */}
+      <section className="relative w-full h-screen flex flex-col md:flex-row items-center justify-center gap-12 overflow-hidden">
+        {/* Fixed Floral BG Image */}
+        <div
+          className="pointer-events-none absolute inset-0 w-full h-full z-0"
+          aria-hidden="true"
+        >
+          <Image
+        src="/Images/floral.jpg"
+        alt="Floral background"
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+        style={{ objectFit: "cover" }}
+          />
+        </div>
+        <div className="inset-0 bg-black bg-opacity-40 z-10 pointer-events-none" />
+        {/* Overlay Content */}
+        <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center gap-12">
+          {/* Place your overlay content here */}
+          <div className="max-w-lg w-full px-6">
+        <h2 className="text-3xl font-bold mb-4 text-gray-900">Experience Our Unique Hotels</h2>
+        <p className="text-lg text-gray-700">
+          Each VNexora hotel is a testament to luxury and innovation—from tranquil retreats to vibrant cityscapes. Discover our properties and their distinct hospitality, ambiance, and amenities.
+        </p>
+          </div>
+          <div className="w-[540px] h-[360px] flex items-center justify-center">
+        <CubeCard images={['/Images/bk1.webp','/Images/hotel1.jpg' , '/Images/hotel3.jpg','/Images/bk2.webp']} />
+          </div>
+        </div>
+      </section>
+      {/* Wedding Destinations Section */}
+      <section className="bg-rgba(248, 243, 232, 0.9) pb-10">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            OUR WEDDING DESTINATIONS
+          </h2>
 
+          {/* Destination 1 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+            {/* Text */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-4 text-gold-700">
+                Banaras Kila by Vnexora, Varanasi
+              </h3>
+              <p className="text-gray-700 mb-6 text-justify">
+                Escape to the spiritual oasis of Varanasi and immerse yourself in the timeless charm of Banaras Kila by VNexora.
+                Our heritage riverside property offers a majestic blend of royal elegance and contemporary luxury, set against the sacred banks of the Ganges.
+                Discover Varanasi’s rich cultural heritage, spiritual essence, and exquisite cuisine, all while enjoying unparalleled hospitality in an atmosphere of regal sophistication.
+                Book your stay at the finest luxury hotel in Varanasi and experience a journey that’s as unforgettable as the city itself.
+
+
+              </p>
+              <div className="flex gap-4">
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Enquire Now
+                </button>
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Explore More
+                </button>
+              </div>
+            </div>
+            {/* Image */}
+            <div className="overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/Images/bk1.webp"
+                alt="Foxoso La Beach Resort, Goa"
+                width={800}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Destination 2 */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Image */}
+            <div className="order-1 md:order-2 overflow-hidden rounded-lg shadow-lg">
+              <Image
+                src="/Images/princediamond.jpg"
+                alt="Foxoso Misty Oaks Resort, Bhowali"
+                width={800}
+                height={500}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            {/* Text */}
+            <div className="order-2 md:order-1">
+              <h3 className="text-2xl font-semibold mb-4 text-gold-700">
+                Prince Diamond by Vnexora, Varanasi
+              </h3>
+              <p className="text-gray-700 mb-6 text-justify">
+                Indulge in a world of elegance at Prince Diamond by VNexora, Varanasi.
+                Nestled in the heart of the city, our contemporary luxury hotel offers a refined blend of modern sophistication and warm hospitality.
+                Whether you’re here for business, leisure, or a spiritual journey, Prince Diamond provides an exceptional stay with thoughtfully designed interiors, exquisite dining, and impeccable service.
+                Book your experience at Varanasi’s premier urban luxury destination and immerse yourself in comfort, style, and the vibrant culture of India’s sacred city.
+              </p>
+              <div className="flex gap-4">
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Enquire Now
+                </button>
+                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                  Explore More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
     </main>
