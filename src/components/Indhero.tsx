@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function HeroWithTricolorOverlay() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-screen overflow-hidden flex items-center justify-center font-serif">
       {/* Background video */}
       <video
         autoPlay
