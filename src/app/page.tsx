@@ -7,13 +7,19 @@ import Services from "../components/Services";
 import GlassCard from "@/components/brand";
 import WhatsAppButton from "../components/core/whatsapp";
 import ChatbotButton from "../components/core/chatbot";
+import HeroWithTricolorOverlay from "@/components/Indhero";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Vnexora Luxury Estate",
+  description: "Experience the epitome of luxury with Vnexora, your gateway to exquisite living and unforgettable moments.",
+};
 
 
 
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <HeroWithTricolorOverlay />
       <AboutUs />
       <WhyChooseUs />
       <Services />
