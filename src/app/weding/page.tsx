@@ -168,7 +168,8 @@ export default function WeddingsPage() {
   // Cities and Hotels (adjust these as needed)
   const cities = ["Varanasi"];
   const hotels = [
-    "Bnaras kila, Varanasi",
+    "Vnexora Bnaras kila, Varanasi",
+    "Vnexora Prince Diamond, Varanasi",
   ];
 
   return (
@@ -357,10 +358,10 @@ export default function WeddingsPage() {
 
               </p>
               <div className="flex gap-4">
-                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                <button className="border border-[#B8860B] text-[#B8860B] px-6 py-2 rounded hover:bg-[#B8860B] hover:text-white transition">
                   Enquire Now
                 </button>
-                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                <button className="border border-[#B8860B] text-[#B8860B] px-6 py-2 rounded hover:bg-[#B8860B] hover:text-white transition">
                   Explore More
                 </button>
               </div>
@@ -401,10 +402,10 @@ export default function WeddingsPage() {
                 Book your experience at Varanasi’s premier urban luxury destination and immerse yourself in comfort, style, and the vibrant culture of India’s sacred city.
               </p>
               <div className="flex gap-4">
-                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                <button className="border border-[#B8860B] text-[#B8860B] px-6 py-2 rounded hover:bg-[#B8860B] hover:text-white transition">
                   Enquire Now
                 </button>
-                <button className="border border-gold-700 text-gold-700 px-6 py-2 rounded hover:bg-gold-700 hover:text-white transition">
+                <button className="border border-[#B8860B] text-[#B8860B] px-6 py-2 rounded hover:bg-[#B8860B] hover:text-white transition">
                   Explore More
                 </button>
               </div>
