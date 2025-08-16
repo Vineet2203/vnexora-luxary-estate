@@ -10,7 +10,10 @@ module.exports = {
       },
       colors: {
         testRed: "#ff0000",
-        gold: "#D4AF37",
+         gold: {
+          500: '#FFD700',   // classic gold
+          700: '#B8860B',   // darker "gold" (DarkGoldenRod-ish)
+        },
         brown: '#3B1F0D',
         darkBrown: "#3B1F0D",
         bronzeGold: "#D4AF37",
