@@ -1,4 +1,4 @@
-// /src/app/weding/page.tsx 
+// /src/app/wedding/page.tsx 
 
 'use client';
 

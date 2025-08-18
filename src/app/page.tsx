@@ -19,7 +19,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <HeroWithTricolorOverlay />
+      <Hero />
+      {/* <HeroWithTricolorOverlay /> */}
       <AboutUs />
       <WhyChooseUs />
       <Services />
