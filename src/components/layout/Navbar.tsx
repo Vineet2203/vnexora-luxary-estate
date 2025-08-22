@@ -198,28 +198,88 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden backdrop-blur-lg shadow-md px-4 pb-4 text-[#F5E9D3] z-40"
-          style={{
-            background: 'linear-gradient(90deg, rgba(106, 74, 38, 0.9) 0%, rgba(205, 140, 59, 0.63) 25%, rgba(128, 111, 64, 0.85) 50%, rgba(220, 180, 80, 0.73) 75%, rgba(106, 74, 38, 0.9))',
-            WebkitBackdropFilter: 'blur(16px)',
-            backdropFilter: 'blur(16px)',
-            borderTop: '1px solid rgba(255, 255, 255, 0.2)',
-          }}>
-          <ul className="space-y-2 pt-2">
-            <li><Link href="/about" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Our Story</Link></li>
-            <li><Link href="/services" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Services</Link></li>
-            <li><Link href="/weding" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Wedding</Link></li>
-            {/* <li><Link href="/blogs" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Blogs</Link></li> */}
-            <li><Link href="/OurAllies" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Our Allies</Link></li>
-            <li><Link href="/career" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Careers</Link></li>
-            <li><Link href="/contact" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Contact</Link></li>
-            <li><Link href="/partnerWithUs" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Partner With Us</Link></li>
-            {/* <li><Link href="/factSheet" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Fact Sheet</Link></li> */}
-            <li><Link href="/stayUpdated" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Stay Updated With Us</Link></li>
+{isOpen && (
+  <div
+    className="md:hidden backdrop-blur-lg shadow-md px-4 pb-4 text-[#F5E9D3] z-40"
+    style={{
+      background:
+        'linear-gradient(90deg, rgba(106, 74, 38, 0.9) 0%, rgba(205, 140, 59, 0.63) 25%, rgba(128, 111, 64, 0.85) 50%, rgba(220, 180, 80, 0.73) 75%, rgba(106, 74, 38, 0.9))',
+      WebkitBackdropFilter: 'blur(16px)',
+      backdropFilter: 'blur(16px)',
+      borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+    }}
+  >
+    <ul className="space-y-3 pt-2">
+      {/* Same as desktop left links */}
+      <li><Link href="/" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Home</Link></li>
+      <li><Link href="/about" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Our Story</Link></li>
+      <li><Link href="/services" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Services</Link></li>
+      <li><Link href="/wedding" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Wedding</Link></li>
+
+      {/* Same as desktop right links */}
+      <li><Link href="/hotels" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Our Hotels</Link></li>
+      <li><Link href="/contact" className="hover:text-red-300" onClick={() => setIsOpen(false)}>Contact</Link></li>
+
+      {/* Quick Links Dropdown (collapsible in mobile) */}
+      <li>
+        <details>
+          <summary className="cursor-pointer hover:text-red-300">Quick Links</summary>
+          <ul className="ml-4 mt-2 space-y-2 text-sm">
+            <li><Link href="/career" onClick={() => setIsOpen(false)}>Careers</Link></li>
+            <li><Link href="/partnerWithUs" onClick={() => setIsOpen(false)}>Partner With Us</Link></li>
+            <li><Link href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link></li>
+            <li><Link href="/OurAllies" onClick={() => setIsOpen(false)}>Our Allies</Link></li>
+            <li><Link href="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link></li>
+            <li><Link href="/stayUpdated" onClick={() => setIsOpen(false)}>Stay Updated With Us</Link></li>
           </ul>
-        </div>
-      )}
+        </details>
+      </li>
+
+      {/* Book Appointment Dropdown (collapsible in mobile) */}
+      <li>
+        <details>
+          <summary className="cursor-pointer hover:text-red-300">Book Appointment</summary>
+          <ul className="ml-4 mt-2 space-y-2 text-sm">
+            <li>
+              <button
+                onClick={() => {
+                  setOpenModalType('video');
+                  setIsOpen(false);
+                }}
+                className="w-full text-left"
+              >
+                Schedule Video Call
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  setOpenModalType('office');
+                  setIsOpen(false);
+                }}
+                className="w-full text-left"
+              >
+                Office Visit
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  setOpenModalType('site');
+                  setIsOpen(false);
+                }}
+                className="w-full text-left"
+              >
+                Site Visit
+              </button>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+)}
+
 
       {/* Appointment Modal */}
       {openModalType && (
