@@ -56,7 +56,6 @@ const Navbar = () => {
           <Link href="/about" className="hover:text-yellow-400 transition duration-300"><b>Our Story</b></Link>
           <Link href="/services" className="hover:text-yellow-400 transition duration-300"><b>Services</b></Link>
           <Link href="/wedding" className="hover:text-yellow-400 transition duration-300"><b>Wedding</b></Link>
-          {/* <Link href="/blogs" className="hover:text-yellow-400 transition duration-300"><b>Blogs</b></Link> */}
         </div>
 
         {/* Center Logo */}
@@ -76,8 +75,7 @@ const Navbar = () => {
 
         {/* Right Links */}
         <div className="hidden md:flex gap-8 items-center font-medium text-[#F5E9D3]">
-          {/* <Link href="/OurAllies" className="hover:text-yellow-400 transition duration-300"><b>Our Allies</b></Link> */}
-          <Link href="/career" className="hover:text-yellow-400 transition duration-300"><b>Careers</b></Link>
+          <Link href="/hotels" className="hover:text-yellow-400 transition duration-300"><b>Our Hotels</b></Link>
           <Link href="/contact" className="hover:text-yellow-400 transition duration-300"><b>Contact</b></Link>
 
           {/* Quick Links Dropdown */}
@@ -91,6 +89,15 @@ const Navbar = () => {
             {isQuickLinksOpen && (
               <div className="absolute right-0 mt-2 w-48 bg-white/30 text-black rounded shadow-md z-50">
                 <ul className="flex flex-col text-sm">
+                  <li>
+                    <Link
+                      href="/career"
+                      className="block px-4 py-2 hover:bg-white/50"
+                      onClick={() => setIsQuickLinksOpen(false)}
+                    >
+                     Careers
+                    </Link>
+                  </li>
                   <li>
                     <Link
                       href="/partnerWithUs"
