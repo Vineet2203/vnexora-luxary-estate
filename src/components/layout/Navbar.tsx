@@ -107,7 +107,7 @@ const Navbar = () => {
                       Partner With Us
                     </Link>
                   </li>
-                  {<li>
+                  {/* {<li>
                     <Link
                       href="/blogs"
                       className="block px-4 py-2 hover:bg-white/50"
@@ -115,7 +115,7 @@ const Navbar = () => {
                     >
                       Blogs
                     </Link>
-                  </li> }
+                  </li> } */}
                   <li>
                     <Link
                       href="/OurAllies"
@@ -227,7 +227,7 @@ const Navbar = () => {
           <ul className="ml-4 mt-2 space-y-2 text-sm">
             <li><Link href="/career" onClick={() => setIsOpen(false)}>Careers</Link></li>
             <li><Link href="/partnerWithUs" onClick={() => setIsOpen(false)}>Partner With Us</Link></li>
-            <li><Link href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link></li>
+            {/* <li><Link href="/blogs" onClick={() => setIsOpen(false)}>Blogs</Link></li> */}
             <li><Link href="/OurAllies" onClick={() => setIsOpen(false)}>Our Allies</Link></li>
             <li><Link href="/gallery" onClick={() => setIsOpen(false)}>Gallery</Link></li>
             <li><Link href="/stayUpdated" onClick={() => setIsOpen(false)}>Stay Updated With Us</Link></li>
