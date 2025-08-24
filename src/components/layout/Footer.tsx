@@ -72,13 +72,16 @@ const Footer = () => {
         <div>
           <h4 className={`font-semibold mb-4 text-[#432c15] text-lg ${playfair.className}`}>PORTFOLIO</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Restaurants</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Banquets</a></li>
+            {/* <li><a href="#" className=" hover:decoration-[#705C2E]">Restaurants</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Banquets</a></li> */}
+            <li><a href="/hotels" className=" hover:decoration-[#705C2E]">Our Hotels</a></li>
             <li><a href="/wedding" className=" hover:decoration-[#705C2E]">Destination Wedding</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Retails</a></li>
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Co-Working</a></li>
+            <li><a href="/career" className=" hover:decoration-[#705C2E]">Career with us</a></li>
+            {/* <li><a href="#" className=" hover:decoration-[#705C2E]">Retails</a></li>
+            <li><a href="#" className=" hover:decoration-[#705C2E]">Co-Working</a></li> */}
             {/* <li><a href="#" className=" hover:decoration-[#705C2E]">Villas</a></li> */}
-            <li><a href="#" className=" hover:decoration-[#705C2E]">Residentials</a></li>
+            <li><a href="/partnerWithUs" className=" hover:decoration-[#705C2E]">Partner with us</a></li>
+            <li><a href="/gallery" className=" hover:decoration-[#705C2E]">Gallery</a></li>
           </ul>
         </div>
 
